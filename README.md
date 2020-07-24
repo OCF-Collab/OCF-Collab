@@ -1,24 +1,54 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# OCF-Collab
 
-Things you may want to cover:
 
-* Ruby version
+# New Developer Setup
+* [Bootstrap 4.5 docs](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+* [Slim view templates](https://rdoc.info/gems/slim/frames)
 
-* System dependencies
+Dependencies:
+- Elasticsearch
+- Redis
+- Postgres
+- NPM & Yarn
 
-* Configuration
+1. `bundle install`
 
-* Database creation
+2. `cp config/database.yml.example config/database.yml`
 
-* Database initialization
+3. Setup yarn
+  * `yarn install`
 
-* How to run the test suite
+4. Setup database and migrate
+  * `rake db:create db:migrate db:test:prepare`
 
-* Services (job queues, cache servers, search engines, etc.)
+5. Run rake db:seed
 
-* Deployment instructions
+## Deploying on heroku
+Configure to deploy to both staging and production in `.git/config` add heroku to your sources:
+```
+[remote "heroku-production"]
+        url = https://git.heroku.com/ocf-collab-production.git
+        fetch = +refs/heads/*:refs/remotes/heroku/*
+```
 
-* ...
+Deploy master:
+`git push heroku-staging master`
+
+Deploy your branch - for eg:
+`git push heroku-staging your-feature-branch:master`
+
+
+
+## Reindexing Elasticsearch
+
+`rake searchkick:reindex:all`
+
+# Run you development environment locally
+
+Run your webserver on http://localhost:3000/
+`bundle exec rails server`
+
+Run webpacker
+`bundle exec bin/webpack-dev-server`
+
