@@ -27,8 +27,8 @@ Dependencies:
 ## Deploying on heroku
 Configure to deploy to both staging and production in `.git/config` add heroku to your sources:
 ```
-[remote "heroku-production"]
-        url = https://git.heroku.com/ocf-collab-production.git
+[remote "heroku"]
+        url = https://git.heroku.com/ocf-collab.git
         fetch = +refs/heads/*:refs/remotes/heroku/*
 ```
 
