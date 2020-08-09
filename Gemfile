@@ -25,8 +25,9 @@ gem 'sass-rails'
 # Templating
 gem 'slim-rails'
 
-# Pagination
-gem 'pagy'
+# pagination
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 # Exception tracking
 gem 'honeybadger'

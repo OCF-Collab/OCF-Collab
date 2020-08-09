@@ -3,7 +3,7 @@ namespace :local_sync do
   task registry_and_node_directory: :environment do
     puts "Clearing all data."
 
-    # [RegistryDirectory, RegistryEntry, NodeFramework, NodeDirectory, NodeCompetency].map(&:destroy_all)
+    [RegistryDirectory, RegistryEntry, NodeFramework, NodeDirectory, NodeCompetency].map(&:delete_all)
 
     puts "Import started at #{DateTime.now}\n\n"
 
@@ -38,7 +38,7 @@ namespace :local_sync do
     parsed_data["@graph"].each do |entry|
       case entry["@type"]
       when "RegistryDirectory"
-        registry_directory = RegistryDirectory.create({
+        registry_directory = RegistryDirectory.create!({
           uuid: parse_uuid_from_url(entry["@id"]),
           reference_id: entry["@id"],
           payload: entry
@@ -46,15 +46,14 @@ namespace :local_sync do
 
         puts "RegistryDirectory Upserted: #{registry_directory.inspect}\n\m"
       when 'RegistryEntry'
-        registry_entry = RegistryEntry.create({
+        registry_entry = RegistryEntry.create!({
           uuid: parse_uuid_from_url(entry["@id"]),
           reference_id: entry["@id"],
           registry_directory: registry_directory,
-          name: entry["name"]["en-us"],
+          name: entry["name"]["en-us"] || entry["name"]["en:us"],
           description: entry["description"]["en-us"],
           payload: entry
         })
-
         puts "RegistryEntry Upserted: #{registry_entry.inspect}\n\m"
       else
         puts "\nWARNING: Invalid data type for:"
@@ -79,7 +78,7 @@ namespace :local_sync do
     json_data = File.read(pathname)
     parsed_data = JSON.parse(json_data)
 
-    node_directory = NodeDirectory.create({
+    node_directory = NodeDirectory.create!({
       uuid: parse_uuid_from_url(parsed_data["directory"]["@id"]),
       reference_id: parsed_data["directory"]["@id"],
       payload: parsed_data["directory"]
@@ -88,7 +87,7 @@ namespace :local_sync do
     puts "NodeDirectory Upserted: #{node_directory.inspect}\n\m"
 
 
-    node_framework = NodeFramework.create({
+    node_framework = NodeFramework.create!({
       node_directory: node_directory,
       uuid: parse_uuid_from_url(parsed_data["framework"]["@id"]),
       reference_id: parsed_data["framework"]["@id"],
@@ -100,8 +99,9 @@ namespace :local_sync do
     puts "NodeFramework Upserted: #{node_framework.inspect}\n\m"
 
     parsed_data["competencies"].each do |entry|
-      node_competency = NodeCompetency.create({
-        text: entry["text"],
+
+      node_competency = NodeCompetency.create!({
+        text: entry["text"] || entry["competencyText"],
         comment: entry["comment"]&.first,
         node_framework: node_framework,
         payload: entry

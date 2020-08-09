@@ -1,0 +1,24 @@
+.nav-scroller.bg-white.shadow-sm
+  nav.nav.nav-underline
+    a.nav-link[href="#"]
+      | Node Competencies
+      span.badge.badge-pill.bg-light.align-text-bottom
+        = @node_competencies.total_count
+    a.nav-link[href="#"]
+      | Node Directory
+      span.badge.badge-pill.bg-light.align-text-bottom
+        = @node_directories.total_count
+    a.nav-link[href="#"]
+      | Node Framework
+      span.badge.badge-pill.bg-light.align-text-bottom
+        = @node_frameworks.total_count
+
+    a.nav-link[href="#"]
+      | Registry Directory
+      span.badge.badge-pill.bg-light.align-text-bottom
+        = @registry_directories.total_count
+
+    a.nav-link[href="#"]
+      | Registry Entry
+      span.badge.badge-pill.bg-light.align-text-bottom
+        = @registry_entries.total_count

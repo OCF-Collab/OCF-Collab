@@ -1,0 +1,30 @@
+html[lang="en"]
+  head
+    title OCF-Collab
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  body.bg-light
+    nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-dark
+      a.navbar-brand.mr-auto.mr-lg-0(href="/")
+        = image_tag 'USChamberFoundation-Logo.svg', height: 50, style: 'margin-right: 20px'
+        | | Open Competency Framework Collaborative (OCF Collab)
+      button.navbar-toggler.p-0.border-0[type="button" data-toggle="offcanvas"]
+        span.navbar-toggler-icon
+      #navbarsExampleDefault.navbar-collapse.offcanvas-collapse
+        ul.navbar-nav.mr-auto
+
+        = form_tag params.permit!, method: :get, class: 'form-inline my-2 my-lg-0' do
+          input.form-control.mr-sm-2(type="text" name="search" placeholder="Search" aria-label="Search")
+          button.btn.btn-outline-success.my-2.my-sm-0[type="submit"]
+            | Search
+
+    = yield
+
+    footer.footer
+      = image_tag 'Black T3-Inno-Network-01-K100.png', class: 'float-right', style: 'margin-top: -60px; margin-right: 20px'
+      .container
+        .text-center
+          = "© The U.S. Chamber of Commerce Foundation All Rights Reserved."
