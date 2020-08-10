@@ -10,9 +10,10 @@
         strong.d-block.text-gray-dark
           = registry_entry.name
         = registry_entry.payload["description"]["en:us"] || registry_entry.payload["description"]["en-us"]
-        br
-        br
-        code= registry_entry.payload
+        - if params.key?(:debug)
+          br
+          br
+          code= registry_entry.payload
 
 .text-center.pt-4.pb-4
   = paginate @registry_entries, theme: 'twitter-bootstrap-4'

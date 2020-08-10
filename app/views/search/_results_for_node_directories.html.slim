@@ -2,9 +2,9 @@
   h4.pb-2.border-bottom
     | Node Directories : Credential Engine Competency Registry
 
-  / - if @node_directories.blank?
-  /   p
-  /     | No results found.
+  - if @node_frameworks.blank?
+    p
+      | No results found.
 
   / - @node_directories.each do |node_directory|
   /   .media.text-muted
@@ -18,11 +18,13 @@
     .media.text-muted
       p.media-body.pt-3.pb-3.mb-0.small.lh-125.border-bottom.border-gray
         strong.d-block.text-gray-dark
-          = node_framework.name
+          = link_to node_framework.payload["@id"] do
+            = node_framework.name
         = node_framework.description
-        br
-        br
-        code= node_framework.payload
+        - if params.key?(:debug)
+          br
+          br
+          code= node_framework.payload
 
 
 .text-center.pt-4.pb-4

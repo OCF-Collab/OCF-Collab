@@ -8,10 +8,12 @@
     .media.text-muted
       p.media-body.pt-3.pb-3.mb-0.small.lh-125.border-bottom.border-gray
         strong.d-block.text-gray-dark
-          = node_framework.name
+          = link_to node_framework.payload["@id"] do
+            = node_framework.name
         = node_framework.description
-        br
-        code= node_framework.payload
+        - if params.key?(:debug)
+          br
+          code= node_framework.payload
 
 .text-center.pt-4.pb-4
   = paginate @node_frameworks, theme: 'twitter-bootstrap-4'

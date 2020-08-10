@@ -11,10 +11,11 @@
           = node_competency.text
         | Framework:
         = node_competency.node_framework.name
-        br
-        = node_competency.comment
-        br
-        code= node_competency.payload
+        - if params.key?(:debug)
+          br
+          = node_competency.comment
+          br
+          code= node_competency.payload
 
 .text-center.pt-4.pb-4
   = paginate @node_competencies, theme: 'twitter-bootstrap-4'

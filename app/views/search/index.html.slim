@@ -11,8 +11,8 @@
         = link_to params.permit!.except(:search, :page, :per_page) do
           | x Clear Results
 
-  = render 'results_for_node_competencies' if params[:filter] == 'node_competencies' || params[:filter].blank?
-  = render 'results_for_node_directories' if params[:filter] == 'node_directories'
+  = render 'results_for_node_competencies' if params[:filter] == 'node_competencies'
+  = render 'results_for_node_directories' if params[:filter] == 'node_directories' || params[:filter].blank?
   = render 'results_for_node_frameworks' if params[:filter] == 'node_frameworks'
 
   = render 'results_for_registry_directories' if params[:filter] == 'registry_directories'

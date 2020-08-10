@@ -17,6 +17,7 @@ html[lang="en"]
         ul.navbar-nav.mr-auto
 
         = form_tag params.permit!, method: :get, class: 'form-inline my-2 my-lg-0' do
+
           input.form-control.mr-sm-2(type="text" name="search" placeholder="Search" aria-label="Search")
           button.btn.btn-outline-success.my-2.my-sm-0[type="submit"]
             | Search
