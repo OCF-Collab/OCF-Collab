@@ -9,6 +9,9 @@
       p.media-body.pt-3.pb-3.mb-0.small.lh-125.border-bottom.border-gray
         strong.d-block.text-gray-dark
           = node_competency.text
+        | Framework:
+        = node_competency.node_framework.name
+        br
         = node_competency.comment
         br
         code= node_competency.payload

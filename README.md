@@ -3,7 +3,7 @@
 
 ## Import Node Directory and Registry Directory Files
 
-`rake local_sync:registry_and_node_directory`
+` `
 `rake searchkick:reindex:all`
 
 # New Developer Setup

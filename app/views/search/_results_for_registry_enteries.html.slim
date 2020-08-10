@@ -9,6 +9,8 @@
       p.media-body.pt-3.pb-3.mb-0.small.lh-125.border-bottom.border-gray
         strong.d-block.text-gray-dark
           = registry_entry.name
+        = registry_entry.payload["description"]["en:us"] || registry_entry.payload["description"]["en-us"]
+        br
         br
         code= registry_entry.payload
 
