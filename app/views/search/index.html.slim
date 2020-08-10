@@ -1,11 +1,19 @@
-= render 'result_summary' if params.key?(:search)
+= render 'result_summary'
 
-.my-3.p-3.m-3.bg-white.rounded.shadow-sm
-  h6.border-bottom.border-gray.pb-2.mb-0
-    | Search Results for "Stuff"
-  .media.text-muted.pt-3
-    p.media-body.pb-3.mb-0.small.lh-125.border-bottom.border-gray
-      strong.d-block.text-gray-dark
-        | @username
-      |  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
 
+.m-3
+  h5.pb-2.mb-0
+    - if params[:search].blank?
+      | Displaying All Results
+    - else
+      | Search Results for "#{params[:search]}"
+      small.ml-2
+        = link_to params.permit!.except(:search, :page, :per_page) do
+          | x Clear Results
+
+  = render 'results_for_node_competencies' if params[:filter] == 'node_competencies' || params[:filter].blank?
+  = render 'results_for_node_directories' if params[:filter] == 'node_directories'
+  = render 'results_for_node_frameworks' if params[:filter] == 'node_frameworks'
+
+  = render 'results_for_registry_directories' if params[:filter] == 'registry_directories'
+  = render 'results_for_registry_enteries' if params[:filter] == 'registry_enteries'

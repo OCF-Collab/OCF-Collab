@@ -1,6 +1,11 @@
 # OCF-Collab
 [https://www.ocf-collab.org/](https://www.ocf-collab.org/)
 
+## Import Node Directory and Registry Directory Files
+
+`rake local_sync:registry_and_node_directory`
+`rake searchkick:reindex:all`
+
 # New Developer Setup
 * [Bootstrap 4.5 docs](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 * [Slim view templates](https://rdoc.info/gems/slim/frames)
@@ -36,8 +41,6 @@ Deploy master:
 
 Deploy your branch - for eg:
 `git push heroku-staging your-feature-branch:master`
-
-
 
 ## Reindexing Elasticsearch
 

@@ -1,0 +1,16 @@
+.p-3.bg-white.rounded.shadow-sm
+  h4.pb-2.border-bottom Node Directories
+  - if @node_directories.blank?
+    p
+      | No results found.
+
+  - @node_directories.each do |node_directory|
+    .media.text-muted
+      p.media-body.pt-3.pb-3.mb-0.small.lh-125.border-bottom.border-gray
+        strong.d-block.text-gray-dark
+          = node_directory.uuid
+        br
+        code= node_directory.payload
+
+.text-center.pt-4.pb-4
+  = paginate @node_directories, theme: 'twitter-bootstrap-4'
