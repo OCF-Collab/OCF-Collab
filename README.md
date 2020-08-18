@@ -57,23 +57,27 @@ Run webpacker
 
 ## Project Terminology
 
-RNA User = Request Node Agent User [Person accessing the app]
-
+Acronyms:
+```
+RNA User = Request Node Agent User
 RNA = Request Node Agent
 RB = Request Broker
 PNA = Provider Node Agent
 OCF = Open Competency Framework
+```
 
 Registries:
 
+```
 CER = Credential Engine Registry
 IMS = IMS Global CASE Network
 D2L = Desire2Learn (D2L) Competency Registry
+```
 
+Registry -> Language/Vocab Mappings:
 
-Registry -> Language/Vocab Mapping
-
+```
 CER -> CTDL/ASN
 IMS -> CASE
 D2L -> ASN
-
+```
