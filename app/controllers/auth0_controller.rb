@@ -6,6 +6,7 @@ class Auth0Controller < ApplicationController
     # Refer to https://github.com/auth0/omniauth-auth0#auth-hash for complete information on 'omniauth.auth' contents.
     session[:userinfo] = request.env['omniauth.auth']
 
+    Authentication.create(auth: request.env['omniauth.auth'].to_hash, enabled: true)
     redirect_to '/?auth0=success'
   end
 
