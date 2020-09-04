@@ -13,9 +13,10 @@ gem 'puma'
 gem 'bootsnap', require: false
 
 # Auth0
-# gem 'omniauth'
-gem 'omniauth-auth0', '~> 2.2'
+gem 'activerecord-session_store'
 gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-auth0', '~> 2.2'
+
 
 
 # CSS / Assets
