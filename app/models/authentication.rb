@@ -1,6 +1,4 @@
 class Authentication < ApplicationRecord
-  searchkick
-
   validates :auth, presence: true
 
   def self.app_authenticated?

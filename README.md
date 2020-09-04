@@ -71,6 +71,10 @@ RB = Request Broker
 PNA = Provider Node Agent
 OCF = Open Competency Framework
 MI / Metamodel Interchanger = The service that takes the provider’s framework instance that has been modeled using one metamodel and transforms it into the requester’s prefered metamodel.
+
+CER -> CTDL/ASN
+IMS -> CASE
+D2L -> ASN
 ```
 
 Registries:
