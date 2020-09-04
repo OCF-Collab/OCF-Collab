@@ -6,6 +6,6 @@ module Secured
   end
 
   def logged_in_using_omniauth?
-    redirect_to login_path unless session[:userinfo].present? || Authentication.app_authenticated?
+    redirect_to login_path unless Authentication.app_authenticated?
   end
 end
