@@ -54,6 +54,11 @@ Run your webserver on http://localhost:3000/
 Run webpacker
 `bundle exec bin/webpack-dev-server`
 
+## API Credentails & ENV Variables
+
+App secrets/credentials:
+1. Ensure you have a copy of `touch config/master.key` locally (Check Heroku ENV vars)
+2. Edit your credentials with `EDITOR=nano bundle exec bin/rails credentials:edit`
 
 ## Project Terminology
 

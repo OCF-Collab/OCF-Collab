@@ -72,7 +72,7 @@ namespace :local_sync do
   ############################
 
   def process_node_directory!
-    node_data_pathnames = Dir["#{Rails.root}/private/node_directory/*.json"]
+    node_data_pathnames = Dir["#{Rails.root}/private/node_directory/*/*.json"]
 
     node_data_pathnames.each do |pathname|
       import_node_directory_json_file!(pathname)

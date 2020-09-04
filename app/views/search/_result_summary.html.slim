@@ -10,13 +10,13 @@
       span.badge.badge-pill.bg-light.align-text-bottom
         =< @node_directories.total_count
 
-    - if false
+    - if true #false
       = link_to params.permit!.merge(filter: 'node_frameworks'), class: "nav-link #{'active' if params[:filter] == 'node_frameworks'}" do
         | Node Framework
         span.badge.badge-pill.bg-light.align-text-bottom
           = @node_frameworks.total_count
 
-    - if false
+    - if true # false
       = link_to params.permit!.merge(filter: 'registry_directories'), class: "nav-link #{'active' if params[:filter] == 'registry_directories'}" do
         | Registry Directory
         span.badge.badge-pill.bg-light.align-text-bottom
