@@ -13,7 +13,8 @@ WORKDIR $APP_PATH
 
 COPY Gemfile $APP_PATH
 COPY Gemfile.lock $APP_PATH
-
+COPY package.json $APP_PATH
+COPY yarn.lock $APP_PATH
 
 RUN bundle install
 RUN yarn install --check-files
