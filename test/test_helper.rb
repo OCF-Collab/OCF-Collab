@@ -12,4 +12,8 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
   include FactoryBot::Syntax::Methods
+
+  class << self
+    alias_method :context, :describe
+  end
 end
