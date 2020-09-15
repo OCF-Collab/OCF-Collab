@@ -26,7 +26,7 @@ class NodeDirectorySync
 
   class NodeDirectoryPageSync
     attr_reader :node_directory,
-                :continuation_token
+      :continuation_token
 
     def initialize(node_directory:, continuation_token:)
       @node_directory = node_directory

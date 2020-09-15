@@ -1,6 +1,6 @@
 class NodeDirectoryEntrySync
   attr_reader :node_directory,
-              :s3_key
+    :s3_key
 
   def initialize(node_directory:, s3_key:)
     @node_directory = node_directory

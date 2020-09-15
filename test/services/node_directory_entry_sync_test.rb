@@ -51,9 +51,9 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
           context "competency framework already exists" do
             it "updates existing competency framework" do
               competency_framework = create(:competency_framework,
-                                            node_directory: node_directory,
-                                            node_directory_s3_key: s3_key,
-                                          )
+                node_directory: node_directory,
+                node_directory_s3_key: s3_key,
+              )
 
               node_directory_entry_sync = NodeDirectoryEntrySync.new(
                 node_directory: node_directory,
@@ -183,8 +183,8 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
 
   class GetObjectResponseStub
     attr_reader :bucket,
-                :key,
-                :body
+      :key,
+      :body
 
     def initialize(bucket:, key:, body:)
       @bucket = bucket
