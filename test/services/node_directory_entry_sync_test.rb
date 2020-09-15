@@ -121,6 +121,63 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
           end
         end
       end
+
+      context "S3 object doesn't exist" do
+        before do
+          S3Client.stub_responses(:get_object, Aws::S3::Errors::NoSuchKey.new(nil, nil))
+        end
+
+        context "competency framework doesn't exist" do
+          it "passes gracefully" do
+            node_directory_entry_sync = NodeDirectoryEntrySync.new(
+              node_directory: node_directory,
+              s3_key: s3_key,
+            )
+
+            # Making sure it doesn't throw any exception
+            node_directory_entry_sync.sync!
+          end
+        end
+
+        context "competency framework exists" do
+          it "deletes existing competency framework" do
+            create(:competency_framework,
+              node_directory: node_directory,
+              node_directory_s3_key: s3_key,
+            )
+
+            node_directory_entry_sync = NodeDirectoryEntrySync.new(
+              node_directory: node_directory,
+              s3_key: s3_key,
+            )
+
+            node_directory_entry_sync.sync!
+
+            assert_not CompetencyFramework.exists?(node_directory_s3_key: s3_key)
+          end
+        end
+      end
+
+      context "S3 throws connection error" do
+        let(:exception) do
+          Seahorse::Client::NetworkingError.new(SocketError.new)
+        end
+
+        before do
+          S3Client.stub_responses(:get_object, exception)
+        end
+
+        it "bubbles up the exception" do
+          node_directory_entry_sync = NodeDirectoryEntrySync.new(
+            node_directory: node_directory,
+            s3_key: s3_key,
+          )
+
+          assert_raises(exception.class) do
+            node_directory_entry_sync.sync!
+          end
+        end
+      end
     end
   end
 

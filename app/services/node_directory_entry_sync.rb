@@ -9,6 +9,8 @@ class NodeDirectoryEntrySync
 
   def sync!
     update_framework!
+  rescue Aws::S3::Errors::NoSuchKey
+    delete_existing_framework!
   end
 
   private
@@ -64,5 +66,9 @@ class NodeDirectoryEntrySync
         comment: parsed_competency[:comment],
       )
     end
+  end
+
+  def delete_existing_framework!
+    CompetencyFramework.find_by(node_directory_s3_key: s3_key)&.destroy
   end
 end

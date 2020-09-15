@@ -1,6 +1,6 @@
 class CompetencyFramework < ApplicationRecord
   belongs_to :node_directory
-  has_many :competencies
+  has_many :competencies, dependent: :destroy
 
   validates :node_directory_s3_key, presence: true
   validates :external_id, presence: true
