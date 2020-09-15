@@ -36,7 +36,7 @@ class NodeDirectorySync
     def sync!
       s3_objects.each do |s3_object|
         NodeDirectoryEntrySyncJob.perform_later(
-          node_directory_id: node_directory.id,
+          node_directory: node_directory,
           s3_key: s3_object[:key],
         )
       end
