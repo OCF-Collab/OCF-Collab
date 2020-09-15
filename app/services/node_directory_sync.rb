@@ -6,10 +6,15 @@ class NodeDirectorySync
   end
 
   def sync!
+    destroy_existing_frameworks!
     sync_page!
   end
 
   private
+
+  def destroy_existing_frameworks!
+    node_directory.competency_frameworks.destroy_all
+  end
 
   def sync_page!(continuation_token: nil)
     page_sync = NodeDirectoryPageSync.new(

@@ -1,30 +1,61 @@
 require 'test_helper'
 
 class NodeDirectorySyncTest < ActiveSupport::TestCase
-  test "it enqueues entry sync job for each S3 object supporting pagination" do
-    node_directory = create(:node_directory)
-    node_directory_sync = NodeDirectorySync.new(node_directory: node_directory)
+  let(:node_directory) do
+    create(:node_directory)
+  end
 
-    list_objects_response_stub = S3ListObjectsResponseStub.new(
+  let(:list_objects_response_stub) do
+    S3ListObjectsResponseStub.new(
       bucket: node_directory.s3_bucket,
       total_objects: 20,
       max_keys: 3,
     )
-    S3Client.stub_responses(:list_objects_v2, proc { |context| list_objects_response_stub.response(params: context.params) })
+  end
 
-    entry_sync_job_perform_later = Minitest::Mock.new
-    list_objects_response_stub.objects.each do |object|
-      entry_sync_job_perform_later.expect(:call, nil, [{
-        node_directory_id: node_directory.id,
-        s3_key: object[:key],
-      }])
+  subject do
+    NodeDirectorySync.new(node_directory: node_directory)
+  end
+
+  describe ".sync!" do
+    before do
+      S3Client.stub_responses(:list_objects_v2, proc { |context| list_objects_response_stub.response(params: context.params) })
     end
 
-    NodeDirectoryEntrySyncJob.stub(:perform_later, entry_sync_job_perform_later) do
-      node_directory_sync.sync!
+    it "deletes existing node directory competency frameworks" do
+      another_node_directory = create(:node_directory)
+      another_node_directory_competency_framework = create(:competency_framework,
+        node_directory: another_node_directory,
+      )
+
+      competency_framework = create(:competency_framework,
+        node_directory: node_directory,
+      )
+
+      NodeDirectoryEntrySyncJob.stub(:perform_later, nil) do
+        subject.sync!
+      end
+
+      assert CompetencyFramework.exists?(another_node_directory_competency_framework.id)
+      assert_not CompetencyFramework.exists?(competency_framework.id)
     end
 
-    entry_sync_job_perform_later.verify
+
+    it "enqueues entry sync job for each S3 object (supporting pagination)" do
+      entry_sync_job_perform_later = Minitest::Mock.new
+      list_objects_response_stub.objects.each do |object|
+        entry_sync_job_perform_later.expect(:call, nil, [{
+          node_directory: node_directory,
+          s3_key: object[:key],
+        }])
+      end
+
+      NodeDirectoryEntrySyncJob.stub(:perform_later, entry_sync_job_perform_later) do
+        subject.sync!
+      end
+
+      entry_sync_job_perform_later.verify
+    end
   end
 
   class S3ListObjectsResponseStub
