@@ -1,0 +1,18 @@
+* Status
+** Infrastructure
+*** 1 - 2 days needed to setup Cloud66 environment
+** Indexing worker
+*** 2 - 3 days needed to implement S3 notifications and ES sync
+** Search API
+*** Attach plan ready. Needs 3-4 days to implement.
+** Single freamwork fetch API
+*** Suggestion #2: Instead of using multipart/mixed for returning the actual asset expose assetUrl in the response envelope.
+**** The asset endpoint can be authenticated in the same way as main request endpoint or simply public URL if it's already exposed.
+*** MI looks good for what we need it to do
+**** Open item: Will it be authenticated in final version?
+*** PNA verifying received access token as described in specification makes sense. We don't need another authentication method.
+** Policies/Licenses
+*** Still a black box. Would be nice to have a chat with anyone who provided the specification.
+** Transaction/Logging
+*** Looks good.
+** We look great for end of November

@@ -1,4 +1,6 @@
 class CompetencyFramework < ApplicationRecord
+  searchkick
+
   belongs_to :node_directory
   has_many :competencies, dependent: :destroy
 
