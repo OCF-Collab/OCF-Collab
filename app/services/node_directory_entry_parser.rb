@@ -10,6 +10,7 @@ class NodeDirectoryEntryParser
       id: framework_id,
       name: framework_data["name"],
       description: framework_data["description"],
+      concept_keywords: framework_data["conceptKeyword"],
       competencies: parsed_competencies,
     }
   end

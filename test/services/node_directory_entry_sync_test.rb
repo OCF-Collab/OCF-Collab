@@ -104,6 +104,10 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
             assert_equal framework_data["description"], subject.description
           end
 
+          it "sets proper concept keywords" do
+            assert_equal framework_data["conceptKeyword"], subject.concept_keywords
+          end
+
           it "creates competencies with proper attributes" do
             assert_equal competencies_data.count, subject.competencies.count
 

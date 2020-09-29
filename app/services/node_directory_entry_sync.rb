@@ -55,6 +55,7 @@ class NodeDirectoryEntrySync
       external_id: parsed_framework[:id],
       name: parsed_framework[:name],
       description: parsed_framework[:description],
+      concept_keywords: parsed_framework[:concept_keywords],
       competencies: competencies,
     }
   end
