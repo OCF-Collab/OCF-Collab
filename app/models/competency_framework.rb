@@ -7,4 +7,17 @@ class CompetencyFramework < ApplicationRecord
   validates :node_directory_s3_key, presence: true
   validates :external_id, presence: true
   validates :name, presence: true
+
+  def search_data
+    as_json(
+      include: {
+        competencies: {
+          only: [
+            :name,
+            :comment,
+          ]
+        }
+      }
+    )
+  end
 end

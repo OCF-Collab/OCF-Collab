@@ -7,7 +7,12 @@ FactoryBot.define do
     node_directory
     node_directory_s3_key { "%s.json" % uuid }
     external_id { "https://example.com/%s" % uuid }
+
     name { Faker::Company.industry }
     description { Faker::Lorem.paragraph }
+  end
+
+  factory :competency do
+    name { Faker::Job.title }
   end
 end

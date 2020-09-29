@@ -3,6 +3,8 @@ require_relative '../config/environment'
 require 'rails/test_help'
 require 'minitest/mock'
 
+require 'helpers/doorkeeper_helpers'
+
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
@@ -16,4 +18,8 @@ class ActiveSupport::TestCase
   class << self
     alias_method :context, :describe
   end
+end
+
+class ActionDispatch::IntegrationTest
+  include DoorkeeperHelpers
 end

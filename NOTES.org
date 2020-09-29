@@ -14,5 +14,6 @@
 ** Policies/Licenses
 *** Still a black box. Would be nice to have a chat with anyone who provided the specification.
 ** Transaction/Logging
-*** Looks good.
+*** Central because of law reasons
+*** Signed/Immutable ?
 ** We look great for end of November
