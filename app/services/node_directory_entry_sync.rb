@@ -56,6 +56,12 @@ class NodeDirectoryEntrySync
       name: parsed_framework[:name],
       description: parsed_framework[:description],
       concept_keywords: parsed_framework[:concept_keywords],
+      attribution_name: parsed_framework[:attribution_name],
+      attribution_url: parsed_framework[:attribution_url],
+      provider_node_agent: parsed_framework[:provider_node_agent],
+      provider_meta_model: parsed_framework[:provider_meta_model],
+      beneficiary_rights: parsed_framework[:beneficiary_rights],
+      registry_rights: parsed_framework[:registry_rights],
       competencies: competencies,
     }
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_29_124647) do
+ActiveRecord::Schema.define(version: 2020_09_29_150109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 2020_09_29_124647) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "concept_keywords", array: true
+    t.string "attribution_name", null: false
+    t.string "attribution_url", null: false
+    t.string "provider_node_agent", null: false
+    t.string "provider_meta_model", null: false
+    t.string "beneficiary_rights", null: false
+    t.string "registry_rights", null: false
     t.index ["external_id"], name: "index_competency_frameworks_on_external_id"
     t.index ["node_directory_id"], name: "index_competency_frameworks_on_node_directory_id"
   end

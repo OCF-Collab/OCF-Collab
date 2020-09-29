@@ -11,6 +11,12 @@ class NodeDirectoryEntryParser
       name: framework_data["name"],
       description: framework_data["description"],
       concept_keywords: framework_data["conceptKeyword"],
+      attribution_name: framework_data["attributionName"],
+      attribution_url: framework_data["attributionURL"],
+      provider_node_agent: framework_data["providerNodeAgent"],
+      provider_meta_model: framework_data["providerMetaModel"],
+      beneficiary_rights: framework_data["beneficiaryRights"],
+      registry_rights: framework_data["registryRights"],
       competencies: parsed_competencies,
     }
   end

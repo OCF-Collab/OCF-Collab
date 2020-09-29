@@ -108,6 +108,30 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
             assert_equal framework_data["conceptKeyword"], subject.concept_keywords
           end
 
+          it "sets proper attribution name" do
+            assert_equal framework_data["attributionName"], subject.attribution_name
+          end
+
+          it "sets proper attribution URL" do
+            assert_equal framework_data["attributionURL"], subject.attribution_url
+          end
+
+          it "sets proper provider node agent" do
+            assert_equal framework_data["providerNodeAgent"], subject.provider_node_agent
+          end
+
+          it "sets proper provider meta model" do
+            assert_equal framework_data["providerMetaModel"], subject.provider_meta_model
+          end
+
+          it "sets proper beneficiary rights" do
+            assert_equal framework_data["beneficiaryRights"], subject.beneficiary_rights
+          end
+
+          it "sets proper registry rights" do
+            assert_equal framework_data["registryRights"], subject.registry_rights
+          end
+
           it "creates competencies with proper attributes" do
             assert_equal competencies_data.count, subject.competencies.count
 
