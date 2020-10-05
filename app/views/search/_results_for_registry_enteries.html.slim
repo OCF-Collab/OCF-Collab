@@ -1,0 +1,19 @@
+.p-3.bg-white.rounded.shadow-sm
+  h4.pb-2.border-bottom Registry Entries
+  - if @registry_entries.blank?
+    p
+      | No results found.
+
+  - @registry_entries.each do |registry_entry|
+    .media.text-muted
+      p.media-body.pt-3.pb-3.mb-0.small.lh-125.border-bottom.border-gray
+        strong.d-block.text-gray-dark
+          = registry_entry.name
+        = registry_entry.payload["description"]["en:us"] || registry_entry.payload["description"]["en-us"]
+        - if params.key?(:debug)
+          br
+          br
+          code= registry_entry.payload
+
+.text-center.pt-4.pb-4
+  = paginate @registry_entries, theme: 'twitter-bootstrap-4'

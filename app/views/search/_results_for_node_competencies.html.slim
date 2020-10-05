@@ -1,0 +1,21 @@
+.p-3.bg-white.rounded.shadow-sm
+  h4.pb-2.border-bottom Node Competencies
+  - if @node_competencies.blank?
+    p
+      | No results found.
+
+  - @node_competencies.each do |node_competency|
+    .media.text-muted
+      p.media-body.pt-3.pb-3.mb-0.small.lh-125.border-bottom.border-gray
+        strong.d-block.text-gray-dark
+          = node_competency.text
+        | Framework:
+        = node_competency.node_framework.name
+        - if params.key?(:debug)
+          br
+          = node_competency.comment
+          br
+          code= node_competency.payload
+
+.text-center.pt-4.pb-4
+  = paginate @node_competencies, theme: 'twitter-bootstrap-4'

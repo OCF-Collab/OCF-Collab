@@ -7,10 +7,18 @@ end
 
 ruby '2.7.1'
 
-gem 'rails', '6.0.3'
+gem 'rails', '6.0.3.2'
 gem 'pg'
 gem 'puma'
 gem 'bootsnap', require: false
+
+# Auth0
+gem 'activerecord-session_store'
+gem 'omniauth-rails_csrf_protection', '~> 0.1'
+gem 'omniauth-auth0', '~> 2.2'
+
+# Parse XML Files to render
+gem 'nokogiri'
 
 # CSS / Assets
 gem 'webpacker'
@@ -25,8 +33,9 @@ gem 'sass-rails'
 # Templating
 gem 'slim-rails'
 
-# Pagination
-gem 'pagy'
+# pagination
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 # Exception tracking
 gem 'honeybadger'

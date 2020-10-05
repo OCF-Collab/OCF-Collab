@@ -1,0 +1,9 @@
+.row.p-5
+  .col-sm-4
+  .col-sm-4
+    .card
+      .card-body.p-5
+        h3.text-center Please Authenticate Application
+        hr
+        = button_to 'auth/auth0', method: :post, class: 'btn btn-success btn-lg btn-block' do
+          | Authorize with Auth0

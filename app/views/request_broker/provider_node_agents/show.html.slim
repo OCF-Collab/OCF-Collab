@@ -1,0 +1,12 @@
+.row.p-5
+  .col-sm-12
+    .card
+      .card-body
+        h3
+          = @resource_content["ceasn:name"]["en-us"]
+        p
+          = @resource_content["ceasn:description"]["en-us"]
+
+        = link_to 'View Source', '#', onclick: "$('.view-source').slideDown(); $(this).hide(); return false;"
+        pre.view-source(style="display: none;")
+          = debug @resource_content

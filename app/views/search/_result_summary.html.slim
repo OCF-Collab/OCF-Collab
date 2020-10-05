@@ -1,0 +1,28 @@
+.nav-scroller.bg-white.shadow-sm
+  nav.nav.nav-underline
+    - if false
+      = link_to params.permit!.merge(filter: 'node_competencies'), class: "nav-link #{'active' if params[:filter].blank? || params[:filter] == 'node_competencies'}" do
+        | Competencies
+        span.badge.badge-pill.bg-light.align-text-bottom
+          = @node_competencies.total_count
+    = link_to params.permit!.merge(filter: 'node_directories'), class: "nav-link #{'active' if params[:filter] == 'node_directories'}" do
+      | Node Directory & Frameworks
+      span.badge.badge-pill.bg-light.align-text-bottom
+        =< @node_directories.total_count
+
+    - if params.key?(:debug)
+      = link_to params.permit!.merge(filter: 'node_frameworks'), class: "nav-link #{'active' if params[:filter] == 'node_frameworks'}" do
+        | Node Framework
+        span.badge.badge-pill.bg-light.align-text-bottom
+          = @node_frameworks.total_count
+
+    - if params.key?(:debug)
+      = link_to params.permit!.merge(filter: 'registry_directories'), class: "nav-link #{'active' if params[:filter] == 'registry_directories'}" do
+        | Registry Directory
+        span.badge.badge-pill.bg-light.align-text-bottom
+          = @registry_directories.total_count
+
+    = link_to params.permit!.merge(filter: 'registry_enteries'), class: "nav-link #{'active' if params[:filter] == 'registry_enteries'}" do
+      | Registry Entry
+      span.badge.badge-pill.bg-light.align-text-bottom
+        = @registry_entries.total_count
