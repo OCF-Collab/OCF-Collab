@@ -1,0 +1,118 @@
+{
+  "@context": "https://ocf-collab.org.org/ns/context.json",
+  "@graph": [
+    {
+      "@id": "https://ocf-collab.org/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7",
+      "@type": "RegistryDirectory",
+      "dateCreated": "2020-01-01",
+      "dateModified": "2020-08-29",
+      "asset": [
+          "https://ocf-collab.org/registryDirectory/42a83781-8a07-47ae-a169-b699c5c03073",
+          "https://ocf-collab.org/registryDirectory/fdde2304-4735-4351-a68d-524d24a996ab",
+          "https://ocf-collab.org/registryDirectory/43816605-58cf-4eb9-9aa1-1796000c202a"  
+      ]
+    },
+    {
+      "@id": "https://ocf-collab.org/registryDirectory/42a83781-8a07-47ae-a169-b699c5c03073",
+      "@type": "RegistryEntry",
+      "name": {"en-us": "Credential Engine Registry"},
+      "description": {"en-us": "Credential Engine competency frameworks based on the CTDL-ASN metamodel."},
+      "contactPoint": [
+         {
+            "@type": "schema:ContactPoint",
+            "name": "Jeanne Kitchens",
+            "email": "jkitchens@credentialengine.org",
+            "contactType": "Chief Technology Services Officer"
+        },
+        {
+            "@type": "schema:ContactPoint",
+            "name": "Nathan Argo",
+            "email": "nargo@credentialengine.org",
+            "contactType": "Associate Solutions Architect"
+        }
+      ],
+      "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/logo@2x.png",
+      "s3Production": {
+         "bucketName": "credential-engine-registry",
+         "arn": "arn:aws:s3:::credential-engine-registry",
+         "bucketURL": "http://s3.amazonaws.com/credential-engine-registry/"
+      },
+      "s3Test": {
+         "bucketName": "test-credential-engine-registry",
+         "arn": "arn:aws:s3:::test-credential-engine-registry",
+         "bucketURL": "http://s3.amazonaws.com/test-credential-engine-registry/"
+      },
+      "requesterNodeAgent": "[Some identifier string]",
+      "providerNodeAgent": "[Some identifier string]",
+      "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
+    },
+    {
+      "@id": "https://ocf-collab.org/registryDirectory/fdde2304-4735-4351-a68d-524d24a996ab",
+      "@type": "RegistryEntry",
+      "name": {"en-us": "IMS Global CASE Network"},
+      "description": {"en-us": "IMS Global's Competency frameworks based on the IMS Global CASE metamodel."},
+      "contactPoint": [
+         {
+            "@type": "schema:ContactPoint",
+            "name": "Mark Leuba",
+            "email": "mleuba@imsglobal.org",
+            "contactType": "Vice President, Product Management"
+        },
+        {
+            "@type": "schema:ContactPoint",
+            "name": "Kathryn Green",
+            "email": "kgreen@imsglobal.org",
+            "contactType": "Technical Program Manager"
+        }
+      ],
+      "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/imslogo.png",
+      "s3Production": {
+         "bucketName": "ims-global",
+         "arn": "arn:aws:s3:::ims-global",
+         "bucketURL": "http://s3.amazonaws.com/ims-global/"
+      },
+      "s3Test": {
+         "bucketName": "test-ims-global",
+         "arn": "arn:aws:s3:::test-ims-global",
+         "bucketURL": "http://s3.amazonaws.com/test-ims-global/"
+      },
+      "requesterNodeAgent": "[Some identifier string]",
+      "providerNodeAgent": "[Some identifier string]",
+      "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
+    },
+    {
+      "@id": "https://ocf-collab.org/registryDirectory/43816605-58cf-4eb9-9aa1-1796000c202a",
+      "@type": "RegistryEntry",
+      "name": {"en-us": "Desire2Learn (D2L) Competency Registry"},
+      "description": {"en-us": "D2L's competency frameworks based on the ASN metamodel."},
+      "contactPoint": [
+         {
+            "@type": "schema:ContactPoint",
+            "name": "Micheal Moore",
+            "email": "Mike.Moore@d2l.com",
+            "contactType": "[TBD]"
+        },
+        {
+            "@type": "schema:ContactPoint",
+            "name": "Joseph Chapman",
+            "email": "Joseph.Chapman@d2l.com",
+            "contactType": "[TBD]"
+        }
+      ],
+      "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/d2l-logo-full-2x.png",
+      "s3Production": {
+         "bucketName": "desire2learn",
+         "arn": "arn:aws:s3:::desire2learn",
+         "bucketURL": "http://s3.amazonaws.com/desire2learn/"
+      },
+      "s3Test": {
+         "bucketName": "test-desire2learn",
+         "arn": "arn:aws:s3:::test-desire2learn",
+         "bucketURL": "http://s3.amazonaws.com/test-desire2learn/"
+      },
+      "requesterNodeAgent": "[Some identifier string]",
+      "providerNodeAgent": "[Some identifier string]",
+      "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
+    }
+  ]
+}

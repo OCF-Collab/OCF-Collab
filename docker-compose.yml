@@ -43,6 +43,7 @@ services:
     depends_on:
       - db
       - redis
+      - elasticsearch
 
 networks:
   ocf_collab:

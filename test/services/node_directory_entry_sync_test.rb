@@ -23,7 +23,7 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
     end
 
     let(:node_directory_entry_file_body) do
-      file_fixture("node_directory/credential-engine-registry/ce-ee8c01f1-05fe-4d09-99ff-7dd4ec12a571.json").read
+      file_fixture("node_directory/credential-engine-registry/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2.json").read
     end
 
     describe ".sync!" do
@@ -93,19 +93,19 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
           end
 
           it "sets proper external_id" do
-            assert_equal framework_data["@id"], subject.external_id
+            assert_equal framework_data["frameworkURL"], subject.external_id
           end
 
           it "sets proper name" do
-            assert_equal framework_data["name"], subject.name
+            assert_equal framework_data["name"]["en-us"], subject.name
           end
 
           it "sets proper description" do
-            assert_equal framework_data["description"], subject.description
+            assert_equal framework_data["description"]["en-us"], subject.description
           end
 
           it "sets proper concept keywords" do
-            assert_equal framework_data["conceptKeyword"], subject.concept_keywords
+            assert_equal framework_data["conceptKeyword"]["en-us"], subject.concept_keywords
           end
 
           it "sets proper attribution name" do
@@ -114,10 +114,6 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
 
           it "sets proper attribution URL" do
             assert_equal framework_data["attributionURL"], subject.attribution_url
-          end
-
-          it "sets proper provider node agent" do
-            assert_equal framework_data["providerNodeAgent"], subject.provider_node_agent
           end
 
           it "sets proper provider meta model" do
@@ -138,12 +134,12 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
             assert subject.competencies.all?(&:persisted?)
 
             competencies_data.each do |competency_data|
-              competency = subject.competencies.find_by(name: competency_data["competencyText"])
+              competency = subject.competencies.find_by(name: competency_data["competencyText"]["en-us"])
 
               assert competency.present?
 
               if competency_data["comment"].present?
-                assert_equal competency_data["comment"].join("\n"), competency.comment
+                assert_equal competency_data["comment"]["en-us"].join("\n"), competency.comment
               end
             end
           end

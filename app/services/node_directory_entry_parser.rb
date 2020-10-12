@@ -7,13 +7,12 @@ class NodeDirectoryEntryParser
 
   def parsed_framework
     {
-      id: framework_id,
-      name: framework_data["name"],
-      description: framework_data["description"],
-      concept_keywords: framework_data["conceptKeyword"],
+      url: framework_data["frameworkURL"],
+      name: framework_data.dig("name", "en-us"),
+      description: framework_data.dig("description", "en-us"),
+      concept_keywords: framework_data.dig("conceptKeyword", "en-us"),
       attribution_name: framework_data["attributionName"],
       attribution_url: framework_data["attributionURL"],
-      provider_node_agent: framework_data["providerNodeAgent"],
       provider_meta_model: framework_data["providerMetaModel"],
       beneficiary_rights: framework_data["beneficiaryRights"],
       registry_rights: framework_data["registryRights"],
@@ -23,10 +22,6 @@ class NodeDirectoryEntryParser
 
   private
 
-  def framework_id
-    framework_data["@id"]
-  end
-
   def framework_data
     entry_data["framework"]
   end
@@ -34,8 +29,8 @@ class NodeDirectoryEntryParser
   def parsed_competencies
     competencies_data.map do |competency_data|
       {
-        competency_text: competency_data["competencyText"],
-        comment: competency_data["comment"]&.join("\n"),
+        competency_text: competency_data.dig("competencyText", "en-us"),
+        comment: competency_data.dig("comment", "en-us")&.join("\n"),
       }
     end
   end

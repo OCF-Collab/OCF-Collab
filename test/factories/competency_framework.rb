@@ -13,7 +13,6 @@ FactoryBot.define do
 
     attribution_name { Faker::Company.name }
     attribution_url { Faker::Internet.url }
-    provider_node_agent { Faker::Internet.url }
     provider_meta_model { Faker::Internet.url }
     beneficiary_rights { Faker::Internet.url }
     registry_rights { Faker::Internet.url }
