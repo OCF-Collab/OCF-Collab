@@ -11,6 +11,8 @@ class CompetencyFrameworkSearchResultRepresenter
         "@id" => attribute(:external_id),
         "name" => attribute(:name),
         "description" => attribute(:description),
+        "attributionName" => attribute(:attribution_name),
+        "providerLogoUrl" => node_directory.logo_url,
       }
     }
   end
@@ -21,5 +23,9 @@ class CompetencyFrameworkSearchResultRepresenter
 
   def attribute(name)
     competency_framework[name]
+  end
+
+  def node_directory
+    competency_framework.node_directory
   end
 end

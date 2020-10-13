@@ -6,6 +6,7 @@ module Api
       search = CompetencyFrameworksSearch.new(
         query: input[:query],
         limit: input[:limit],
+        includes: [:node_directory],
       )
 
       render json: {

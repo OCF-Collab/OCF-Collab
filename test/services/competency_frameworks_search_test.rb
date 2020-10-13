@@ -16,7 +16,8 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
       context "without specified limit" do
         it "returns competency frameworks search results for given query with max limit" do
           verify_search_call(query, {
-            limit: CompetencyFrameworksSearch::MAX_LIMIT
+            limit: CompetencyFrameworksSearch::MAX_LIMIT,
+            includes: nil,
           })
         end
       end
@@ -37,6 +38,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
           it "returns competency frameworks search results for given query with provided limit" do
             verify_search_call(query, {
               limit: limit,
+              includes: nil,
             })
           end
         end
@@ -49,8 +51,29 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
           it "returns competency frameworks search results for given query with provided limit" do
             verify_search_call(query, {
               limit: CompetencyFrameworksSearch::MAX_LIMIT,
+              includes: nil,
             })
           end
+        end
+      end
+
+      context "with specified includes" do
+        let(:includes) do
+          [:node_directory]
+        end
+
+        subject do
+          CompetencyFrameworksSearch.new(
+            query: query,
+            includes: includes,
+          )
+        end
+
+        it "passes includes option to Searchkick" do
+          verify_search_call(query, {
+            limit: CompetencyFrameworksSearch::MAX_LIMIT,
+            includes: includes,
+          })
         end
       end
     end

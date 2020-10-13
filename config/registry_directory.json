@@ -65,7 +65,7 @@
             "contactType": "Technical Program Manager"
         }
       ],
-      "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/imslogo.png",
+      "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/IMS/imslogo.png",
       "s3Production": {
          "bucketName": "ims-global",
          "arn": "arn:aws:s3:::ims-global",
@@ -99,7 +99,7 @@
             "contactType": "[TBD]"
         }
       ],
-      "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/d2l-logo-full-2x.png",
+      "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/D2L/d2l-logo-full-2x.png",
       "s3Production": {
          "bucketName": "desire2learn",
          "arn": "arn:aws:s3:::desire2learn",
