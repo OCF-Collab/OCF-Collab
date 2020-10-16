@@ -18,6 +18,9 @@ COPY Gemfile.lock $APP_PATH
 COPY package.json $APP_PATH
 COPY yarn.lock $APP_PATH
 
+RUN bundle install
+RUN yarn install
+
 COPY . $APP_PATH
 
 # Add a script to be executed every time the container starts.
