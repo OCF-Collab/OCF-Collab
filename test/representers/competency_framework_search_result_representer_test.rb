@@ -22,7 +22,7 @@ class CompetencyFrameworkSearchResultRepresenterTest < ActiveSupport::TestCase
             "name" => competency_framework.name,
             "description" => competency_framework.description,
             "attributionName" => competency_framework.attribution_name,
-            "providerLogoUrl" => competency_framework.node_directory.logo_url,
+            "attributionLogoUrl" => competency_framework.node_directory.logo_url,
           }
         }
 

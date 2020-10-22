@@ -12,7 +12,7 @@ class CompetencyFrameworkSearchResultRepresenter
         "name" => attribute(:name),
         "description" => attribute(:description),
         "attributionName" => attribute(:attribution_name),
-        "providerLogoUrl" => node_directory.logo_url,
+        "attributionLogoUrl" => node_directory.logo_url,
       }
     }
   end
