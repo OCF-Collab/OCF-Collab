@@ -1,6 +1,14 @@
 * Todo
-** Prepare for changes in specification
-** Display different attributes in the widget UI
-** TODO Upload logos and update registry file
+** Competency fetch
 * Sparkler
 ** Dashboard children page
+
+
+* Open items
+** Working for IMS (id scrape)
+** Logo on details page
+** Expand/collapse all
+** Fix table on scroll
+** Ensure proper attribute values
+** Deploy to C66
+

@@ -51,6 +51,7 @@ module RegistryDirectory
         name: data["name"]["en-us"],
         description: data["description"]["en-us"],
         logo_url: data["registryLogo"],
+        pna_url: data["providerNodeAgent"],
         s3_bucket: s3_bucket,
         contact_points: contact_points,
       }

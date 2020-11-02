@@ -1,0 +1,2749 @@
+{
+  "@context": "https://credreg.net/ctdlasn/schema/context/json",
+  "@id": "https://credentialengineregistry.org/graph/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+  "@graph": [
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "@type": "ceasn:CompetencyFramework",
+      "ceasn:name": {
+        "en-us": "Financial Services Competency Model: U.S. Department of Labor (DOL)"
+      },
+      "ceasn:source": [
+        "https://www.careeronestop.org/CompetencyModel/Competency-Models/financial-services.aspx"
+      ],
+      "ceterms:ctid": "ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:publisher": [
+        "https://credentialengineregistry.org/resources/ce-00efc2bd-d322-4242-a7fd-4a9783d99e54"
+      ],
+      "ceasn:inLanguage": [
+        "en"
+      ],
+      "ceasn:dateCreated": "2019-06-30",
+      "ceasn:description": {
+        "en-us": "Over the past year the Employment and Training Administration (ETA) has collaborated with leading industry organizations to develop a comprehensive competency model framework for the Financial Services Industry. The framework is designed to evolve along with changing skill requirements. The Financial Services Roundtable has committed to working with industry partners to keep this tool current."
+      },
+      "ceasn:hasTopChild": [
+        "https://credentialengineregistry.org/resources/ce-5534ccfa-ab56-4d0c-99bb-5e6499d5ec1a",
+        "https://credentialengineregistry.org/resources/ce-bea79173-53d2-4fef-9c63-8473eaa81b0e",
+        "https://credentialengineregistry.org/resources/ce-4975d4ce-dfe4-4d6f-a3ef-274b1ad777fc",
+        "https://credentialengineregistry.org/resources/ce-574a89eb-0602-4baf-a6dd-c2ed87e03dff"
+      ],
+      "ceasn:dateModified": "2019-08-06T18:10:24.13Z",
+      "ceasn:publisherName": {
+        "en-us": [
+          "U.S. Department of Labor Employment and Training Administration"
+        ]
+      },
+      "ceasn:conceptKeyword": {
+        "en-us": [
+          "financial",
+          "services",
+          "Competency Model Clearinghouse"
+        ]
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-5534ccfa-ab56-4d0c-99bb-5e6499d5ec1a",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-5534ccfa-ab56-4d0c-99bb-5e6499d5ec1a",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-529992d2-0e63-42e7-9e25-b759fa1f6488",
+        "https://credentialengineregistry.org/resources/ce-1803d661-41d3-47cb-a722-459b354d9461",
+        "https://credentialengineregistry.org/resources/ce-fa733631-f9cf-4709-8b83-7bb9433cdeda",
+        "https://credentialengineregistry.org/resources/ce-0a1a8ef4-9412-41a4-be02-02817d83f4cd",
+        "https://credentialengineregistry.org/resources/ce-d0f7f271-8ea5-4cfd-a3c4-b834251660d8"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isTopChildOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:codedNotation": "1",
+      "ceasn:competencyText": {
+        "en-us": "Personal Effectiveness Competencies"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-529992d2-0e63-42e7-9e25-b759fa1f6488",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-529992d2-0e63-42e7-9e25-b759fa1f6488",
+      "ceasn:comment": {
+        "en-us": [
+          "Demonstrating the ability to work effectively with others."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-d6ad055b-74c5-437a-8439-2a4b83ca6e93",
+        "https://credentialengineregistry.org/resources/ce-665f5d94-72bc-454a-90c3-bef99492ee0a",
+        "https://credentialengineregistry.org/resources/ce-b52ee895-cea1-4de5-afc3-d5f09b7d0b57",
+        "https://credentialengineregistry.org/resources/ce-a3d06ea8-76da-4cea-bfb0-1c66988f833d",
+        "https://credentialengineregistry.org/resources/ce-cb9ce645-bc17-48fd-bb4b-322ade676d9c"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5534ccfa-ab56-4d0c-99bb-5e6499d5ec1a"
+      ],
+      "ceasn:codedNotation": "1.1",
+      "ceasn:competencyText": {
+        "en-us": "Interpersonal Skills:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d6ad055b-74c5-437a-8439-2a4b83ca6e93",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d6ad055b-74c5-437a-8439-2a4b83ca6e93",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-529992d2-0e63-42e7-9e25-b759fa1f6488"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.1.1",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrating sensitivity/empathy"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-665f5d94-72bc-454a-90c3-bef99492ee0a",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-665f5d94-72bc-454a-90c3-bef99492ee0a",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-529992d2-0e63-42e7-9e25-b759fa1f6488"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.1.2",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrating insight into behavior"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-b52ee895-cea1-4de5-afc3-d5f09b7d0b57",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-b52ee895-cea1-4de5-afc3-d5f09b7d0b57",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-529992d2-0e63-42e7-9e25-b759fa1f6488"
+      ],
+      "ceasn:codedNotation": "1.1.3",
+      "ceasn:competencyText": {
+        "en-us": "Maintaining open relationships."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a3d06ea8-76da-4cea-bfb0-1c66988f833d",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a3d06ea8-76da-4cea-bfb0-1c66988f833d",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-529992d2-0e63-42e7-9e25-b759fa1f6488"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.1.4",
+      "ceasn:competencyText": {
+        "en-us": "Respecting diversity"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-cb9ce645-bc17-48fd-bb4b-322ade676d9c",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-cb9ce645-bc17-48fd-bb4b-322ade676d9c",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-529992d2-0e63-42e7-9e25-b759fa1f6488"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "1.1.5",
+      "ceasn:competencyText": {
+        "en-us": "Working with diverse people"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-1803d661-41d3-47cb-a722-459b354d9461",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-1803d661-41d3-47cb-a722-459b354d9461",
+      "ceasn:comment": {
+        "en-us": [
+          "Displaying accepted social and work behaviors."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-018fbe71-7e84-4161-9329-fd27a80863ed",
+        "https://credentialengineregistry.org/resources/ce-0ae3ddfe-399f-40db-95b9-f28de12e22f5",
+        "https://credentialengineregistry.org/resources/ce-7c55a26c-fe88-4640-b77e-28a875aa5f80"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5534ccfa-ab56-4d0c-99bb-5e6499d5ec1a"
+      ],
+      "ceasn:codedNotation": "1.2",
+      "ceasn:competencyText": {
+        "en-us": "Integrity and Ethics:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-018fbe71-7e84-4161-9329-fd27a80863ed",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-018fbe71-7e84-4161-9329-fd27a80863ed",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-1803d661-41d3-47cb-a722-459b354d9461"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Behaving ethically"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-0ae3ddfe-399f-40db-95b9-f28de12e22f5",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-0ae3ddfe-399f-40db-95b9-f28de12e22f5",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-1803d661-41d3-47cb-a722-459b354d9461"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Acting fairly"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-7c55a26c-fe88-4640-b77e-28a875aa5f80",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-7c55a26c-fe88-4640-b77e-28a875aa5f80",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-1803d661-41d3-47cb-a722-459b354d9461"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.2.3",
+      "ceasn:competencyText": {
+        "en-us": "Taking responsibility"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-fa733631-f9cf-4709-8b83-7bb9433cdeda",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-fa733631-f9cf-4709-8b83-7bb9433cdeda",
+      "ceasn:comment": {
+        "en-us": [
+          "Displaying responsible behaviors at work."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-ce770ce4-051e-41ce-8f53-1392e715f848",
+        "https://credentialengineregistry.org/resources/ce-4d713eea-0ade-4c63-8b21-43bf050a5c9b",
+        "https://credentialengineregistry.org/resources/ce-ae678e6f-b0a3-4b81-a5b4-5dbe5a518dfb",
+        "https://credentialengineregistry.org/resources/ce-b50ac70d-98c9-40e5-a0ca-fbfa28fc6c25"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5534ccfa-ab56-4d0c-99bb-5e6499d5ec1a"
+      ],
+      "ceasn:codedNotation": "1.3",
+      "ceasn:competencyText": {
+        "en-us": "Professionalism and Credibility:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-ce770ce4-051e-41ce-8f53-1392e715f848",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-ce770ce4-051e-41ce-8f53-1392e715f848",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-fa733631-f9cf-4709-8b83-7bb9433cdeda"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.3.1",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrating self-control"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-4d713eea-0ade-4c63-8b21-43bf050a5c9b",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-4d713eea-0ade-4c63-8b21-43bf050a5c9b",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-fa733631-f9cf-4709-8b83-7bb9433cdeda"
+      ],
+      "ceasn:codedNotation": "1.3.2",
+      "ceasn:competencyText": {
+        "en-us": "Maintaining a professional appearance"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-ae678e6f-b0a3-4b81-a5b4-5dbe5a518dfb",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-ae678e6f-b0a3-4b81-a5b4-5dbe5a518dfb",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-fa733631-f9cf-4709-8b83-7bb9433cdeda"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.3.3",
+      "ceasn:competencyText": {
+        "en-us": "Substance abuse free"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-b50ac70d-98c9-40e5-a0ca-fbfa28fc6c25",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-b50ac70d-98c9-40e5-a0ca-fbfa28fc6c25",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-fa733631-f9cf-4709-8b83-7bb9433cdeda"
+      ],
+      "ceasn:codedNotation": "1.3.4",
+      "ceasn:competencyText": {
+        "en-us": "Maintaining a positive attitude"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-0a1a8ef4-9412-41a4-be02-02817d83f4cd",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-0a1a8ef4-9412-41a4-be02-02817d83f4cd",
+      "ceasn:comment": {
+        "en-us": [
+          "Seeking out new work challenges and increasing the variety and scope of work."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-fed58118-617d-4e9c-9de4-c7260ee9c22d",
+        "https://credentialengineregistry.org/resources/ce-60064dea-6086-4b2b-a4da-c4e2b4dab7c8",
+        "https://credentialengineregistry.org/resources/ce-ff83722a-94a7-4d8e-a299-9c256eda492f",
+        "https://credentialengineregistry.org/resources/ce-6c35b237-9653-47d5-ab7a-98518a4e627f",
+        "https://credentialengineregistry.org/resources/ce-dd959dea-7dbe-483e-9eb0-fa16876dfcd3"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5534ccfa-ab56-4d0c-99bb-5e6499d5ec1a"
+      ],
+      "ceasn:codedNotation": "1.4",
+      "ceasn:competencyText": {
+        "en-us": "Initiative and Self-Management:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-fed58118-617d-4e9c-9de4-c7260ee9c22d",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-fed58118-617d-4e9c-9de4-c7260ee9c22d",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0a1a8ef4-9412-41a4-be02-02817d83f4cd"
+      ],
+      "ceasn:codedNotation": "1.4.1",
+      "ceasn:competencyText": {
+        "en-us": "Persisting"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-60064dea-6086-4b2b-a4da-c4e2b4dab7c8",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-60064dea-6086-4b2b-a4da-c4e2b4dab7c8",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0a1a8ef4-9412-41a4-be02-02817d83f4cd"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.4.2",
+      "ceasn:competencyText": {
+        "en-us": "Taking initiative"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-ff83722a-94a7-4d8e-a299-9c256eda492f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-ff83722a-94a7-4d8e-a299-9c256eda492f",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0a1a8ef4-9412-41a4-be02-02817d83f4cd"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.4.3",
+      "ceasn:competencyText": {
+        "en-us": "Setting challenging goals"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-6c35b237-9653-47d5-ab7a-98518a4e627f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-6c35b237-9653-47d5-ab7a-98518a4e627f",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0a1a8ef4-9412-41a4-be02-02817d83f4cd"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "1.4.4",
+      "ceasn:competencyText": {
+        "en-us": "Working independently"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-dd959dea-7dbe-483e-9eb0-fa16876dfcd3",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-dd959dea-7dbe-483e-9eb0-fa16876dfcd3",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0a1a8ef4-9412-41a4-be02-02817d83f4cd"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.4.5",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrating the motivation to achieve"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d0f7f271-8ea5-4cfd-a3c4-b834251660d8",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d0f7f271-8ea5-4cfd-a3c4-b834251660d8",
+      "ceasn:comment": {
+        "en-us": [
+          "Behaving consistently and predictably in fulfilling obligations."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-31ed79e3-5b42-41f6-a604-1da9d29bf35c",
+        "https://credentialengineregistry.org/resources/ce-56303fff-4c59-4341-b59d-16a219392e34",
+        "https://credentialengineregistry.org/resources/ce-fd77bb23-7734-43ab-9fd8-ad5108996e08",
+        "https://credentialengineregistry.org/resources/ce-2850123a-f37e-4595-aaa3-2a86a7fe0ede",
+        "https://credentialengineregistry.org/resources/ce-a7a67ca1-e247-4004-88ac-7c5561fa820f",
+        "https://credentialengineregistry.org/resources/ce-6d73b1d8-b6ff-4c87-b8e2-ab3de3d3c376"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5534ccfa-ab56-4d0c-99bb-5e6499d5ec1a"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.5",
+      "ceasn:competencyText": {
+        "en-us": "Dependability and Reliability:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-31ed79e3-5b42-41f6-a604-1da9d29bf35c",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-31ed79e3-5b42-41f6-a604-1da9d29bf35c",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d0f7f271-8ea5-4cfd-a3c4-b834251660d8"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.5.1",
+      "ceasn:competencyText": {
+        "en-us": "Showing up on time"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-56303fff-4c59-4341-b59d-16a219392e34",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-56303fff-4c59-4341-b59d-16a219392e34",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d0f7f271-8ea5-4cfd-a3c4-b834251660d8"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.5.2",
+      "ceasn:competencyText": {
+        "en-us": "Attending to details"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-fd77bb23-7734-43ab-9fd8-ad5108996e08",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-fd77bb23-7734-43ab-9fd8-ad5108996e08",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d0f7f271-8ea5-4cfd-a3c4-b834251660d8"
+      ],
+      "ceasn:codedNotation": "1.5.3",
+      "ceasn:competencyText": {
+        "en-us": "Detecting errors"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-2850123a-f37e-4595-aaa3-2a86a7fe0ede",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-2850123a-f37e-4595-aaa3-2a86a7fe0ede",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d0f7f271-8ea5-4cfd-a3c4-b834251660d8"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.5.4",
+      "ceasn:competencyText": {
+        "en-us": "Complying with policies"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a7a67ca1-e247-4004-88ac-7c5561fa820f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a7a67ca1-e247-4004-88ac-7c5561fa820f",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d0f7f271-8ea5-4cfd-a3c4-b834251660d8"
+      ],
+      "ceasn:codedNotation": "1.5.5",
+      "ceasn:competencyText": {
+        "en-us": "Honoring commitments"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-6d73b1d8-b6ff-4c87-b8e2-ab3de3d3c376",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-6d73b1d8-b6ff-4c87-b8e2-ab3de3d3c376",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d0f7f271-8ea5-4cfd-a3c4-b834251660d8"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "1.5.6",
+      "ceasn:competencyText": {
+        "en-us": "Accountability"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-bea79173-53d2-4fef-9c63-8473eaa81b0e",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-bea79173-53d2-4fef-9c63-8473eaa81b0e",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-72e1cf19-5c04-4a1a-a58e-a4190097aa45",
+        "https://credentialengineregistry.org/resources/ce-1fa7fbab-4962-4a54-8cdb-259d450d8681",
+        "https://credentialengineregistry.org/resources/ce-a665fe86-3e4e-467d-985b-3396c3007a98",
+        "https://credentialengineregistry.org/resources/ce-2d0106a4-be84-461b-a0c1-dba0cfbe8abe",
+        "https://credentialengineregistry.org/resources/ce-e587269a-9090-4060-8211-5d8b6cb8c7c3",
+        "https://credentialengineregistry.org/resources/ce-f058f306-f733-4180-970e-c485acd80796"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:isTopChildOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:codedNotation": "2",
+      "ceasn:competencyText": {
+        "en-us": "Academic Competencies"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-72e1cf19-5c04-4a1a-a58e-a4190097aa45",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-72e1cf19-5c04-4a1a-a58e-a4190097aa45",
+      "ceasn:comment": {
+        "en-us": [
+          "Understanding written sentences and paragraphs in work related documents."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-fa0e03bb-3f67-449f-8cfa-bbff9a08ffc9",
+        "https://credentialengineregistry.org/resources/ce-d283b013-1175-49db-ae7f-7375c2f31c42",
+        "https://credentialengineregistry.org/resources/ce-a55fa07c-9f13-4bfe-ab7d-be6c7781a9ee",
+        "https://credentialengineregistry.org/resources/ce-15a514c8-a0e8-4b53-98e9-af63d3b2cde5"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-bea79173-53d2-4fef-9c63-8473eaa81b0e"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.1",
+      "ceasn:competencyText": {
+        "en-us": "Reading for Information:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-fa0e03bb-3f67-449f-8cfa-bbff9a08ffc9",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-fa0e03bb-3f67-449f-8cfa-bbff9a08ffc9",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-72e1cf19-5c04-4a1a-a58e-a4190097aa45"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "2.1.1",
+      "ceasn:competencyText": {
+        "en-us": "Comprehension - Locates, understands and interprets written information in prose and in documents such as manuals, reports, memos, letters, forms, graphs, charts, tables, calendars, schedules, signs, notices, applications and directions; understands the purpose of written materials; attains meaning and comprehends core ideas."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d283b013-1175-49db-ae7f-7375c2f31c42",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d283b013-1175-49db-ae7f-7375c2f31c42",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-72e1cf19-5c04-4a1a-a58e-a4190097aa45"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.1.2",
+      "ceasn:competencyText": {
+        "en-us": "Attention to detail - Identifies main ideas; notes details and facts; detects inconsistencies; identifies implied meaning and details; identifies missing information; identifies trends."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a55fa07c-9f13-4bfe-ab7d-be6c7781a9ee",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a55fa07c-9f13-4bfe-ab7d-be6c7781a9ee",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-72e1cf19-5c04-4a1a-a58e-a4190097aa45"
+      ],
+      "ceasn:codedNotation": "2.1.3",
+      "ceasn:competencyText": {
+        "en-us": "Integration - Critically evaluates and analyzes information in written materials; integrates and synthesizes information from multiple written materials."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-15a514c8-a0e8-4b53-98e9-af63d3b2cde5",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-15a514c8-a0e8-4b53-98e9-af63d3b2cde5",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-72e1cf19-5c04-4a1a-a58e-a4190097aa45"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.1.4",
+      "ceasn:competencyText": {
+        "en-us": "Application - Integrates what is learned from written materials with prior knowledge; applies what is learned from written material to follow instructions and complete specific tasks; applies what is learned from written material to future situations."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-1fa7fbab-4962-4a54-8cdb-259d450d8681",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-1fa7fbab-4962-4a54-8cdb-259d450d8681",
+      "ceasn:comment": {
+        "en-us": [
+          "Using standard business English, defined as writing that is direct, courteous, grammatically correct, clear, succinct, and business-like."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-e471f8a3-a43a-4931-a33a-0780a83c05be",
+        "https://credentialengineregistry.org/resources/ce-b3ff60cc-6c1c-432c-becd-b2bcb763d358",
+        "https://credentialengineregistry.org/resources/ce-57405dc7-741d-406a-8c65-0d028364d958"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-bea79173-53d2-4fef-9c63-8473eaa81b0e"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.2",
+      "ceasn:competencyText": {
+        "en-us": "Business Writing:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-e471f8a3-a43a-4931-a33a-0780a83c05be",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-e471f8a3-a43a-4931-a33a-0780a83c05be",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-1fa7fbab-4962-4a54-8cdb-259d450d8681"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "2.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Organization and development - Creates documents such as letters, directions, manuals, reports, graphs, and flow charts; communicates thoughts, ideas, information, messages and other written information, which may contain technical material, in a logical, organized and coherent manner; ideas are well developed with supporting information and examples."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-b3ff60cc-6c1c-432c-becd-b2bcb763d358",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-b3ff60cc-6c1c-432c-becd-b2bcb763d358",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-1fa7fbab-4962-4a54-8cdb-259d450d8681"
+      ],
+      "ceasn:codedNotation": "2.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Mechanics - Uses standard syntax and sentence structure; uses correct spelling, punctuation, and capitalization; uses appropriate grammar (e.g., correct tense, subject-verb agreement, no missing words)."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-57405dc7-741d-406a-8c65-0d028364d958",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-57405dc7-741d-406a-8c65-0d028364d958",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-1fa7fbab-4962-4a54-8cdb-259d450d8681"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "2.2.3",
+      "ceasn:competencyText": {
+        "en-us": "Tone - Writes in a manner appropriate for business; uses language appropriate for the target audience; uses appropriate tone and word choice (e.g., writing is professional, courteous, and not overly casual)."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a665fe86-3e4e-467d-985b-3396c3007a98",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a665fe86-3e4e-467d-985b-3396c3007a98",
+      "ceasn:comment": {
+        "en-us": [
+          "Using mathematics to solve problems, tabulate, and analyze data."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-37f37d05-47b7-4601-8431-304887b0ec0f",
+        "https://credentialengineregistry.org/resources/ce-8ea45ebb-fec5-435a-be41-b84a2bc8dde4",
+        "https://credentialengineregistry.org/resources/ce-7ffdf14d-2012-45a0-a21f-6e74713832de",
+        "https://credentialengineregistry.org/resources/ce-2fbe3303-b3c6-4af6-9862-15cf246f5dad"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-bea79173-53d2-4fef-9c63-8473eaa81b0e"
+      ],
+      "ceasn:codedNotation": "2.3",
+      "ceasn:competencyText": {
+        "en-us": "Functional Mathematics/Bookkeeping/Accounting:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-37f37d05-47b7-4601-8431-304887b0ec0f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-37f37d05-47b7-4601-8431-304887b0ec0f",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a665fe86-3e4e-467d-985b-3396c3007a98"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.3.1",
+      "ceasn:competencyText": {
+        "en-us": "Quantification - Reads and writes numbers; counts and places numbers in sequence; recognizes whether one number is larger than another."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-8ea45ebb-fec5-435a-be41-b84a2bc8dde4",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-8ea45ebb-fec5-435a-be41-b84a2bc8dde4",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a665fe86-3e4e-467d-985b-3396c3007a98"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.3.2",
+      "ceasn:competencyText": {
+        "en-us": "Computation - Adds, subtracts, multiplies, and divides with whole numbers, fractions, decimals, and percents; calculates averages, ratios, proportions and rates; converts decimals to fractions; converts fractions to percents."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-7ffdf14d-2012-45a0-a21f-6e74713832de",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-7ffdf14d-2012-45a0-a21f-6e74713832de",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a665fe86-3e4e-467d-985b-3396c3007a98"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.3.3",
+      "ceasn:competencyText": {
+        "en-us": "Application - Performs basic math computations accurately; translates practical problems into useful mathematical expressions and uses appropriate mathematical formulas and techniques."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-2fbe3303-b3c6-4af6-9862-15cf246f5dad",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-2fbe3303-b3c6-4af6-9862-15cf246f5dad",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a665fe86-3e4e-467d-985b-3396c3007a98"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.3.4",
+      "ceasn:competencyText": {
+        "en-us": "Bookkeeping and Accounting - Performs basic bookkeeping and accounting procedures."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-2d0106a4-be84-461b-a0c1-dba0cfbe8abe",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-2d0106a4-be84-461b-a0c1-dba0cfbe8abe",
+      "ceasn:comment": {
+        "en-us": [
+          "Determining how an economy functions as a whole."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-77348a3f-445e-41da-af13-7063ca9c2930",
+        "https://credentialengineregistry.org/resources/ce-1287597f-a80a-4155-b36c-e540e4d5d4fd"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-bea79173-53d2-4fef-9c63-8473eaa81b0e"
+      ],
+      "ceasn:codedNotation": "2.4",
+      "ceasn:competencyText": {
+        "en-us": "Fundamentals of Market Economics:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-77348a3f-445e-41da-af13-7063ca9c2930",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-77348a3f-445e-41da-af13-7063ca9c2930",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-2d0106a4-be84-461b-a0c1-dba0cfbe8abe"
+      ],
+      "ceasn:codedNotation": "2.4.1",
+      "ceasn:competencyText": {
+        "en-us": "Principles of macro- and micro--economic"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-1287597f-a80a-4155-b36c-e540e4d5d4fd",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-1287597f-a80a-4155-b36c-e540e4d5d4fd",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-2d0106a4-be84-461b-a0c1-dba0cfbe8abe"
+      ],
+      "ceasn:codedNotation": "2.4.2",
+      "ceasn:competencyText": {
+        "en-us": "Principles of market analysis"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-e587269a-9090-4060-8211-5d8b6cb8c7c3",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-e587269a-9090-4060-8211-5d8b6cb8c7c3",
+      "ceasn:comment": {
+        "en-us": [
+          "Communicate in order to make oneself understood by supervisors and co-workers."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-b825379b-2a4a-4dd2-966e-fe928efb369a",
+        "https://credentialengineregistry.org/resources/ce-d9c9a21f-78a1-4212-ba5b-0f70f1569543",
+        "https://credentialengineregistry.org/resources/ce-5f980304-049e-4f2c-8c78-c4a33155c22d",
+        "https://credentialengineregistry.org/resources/ce-06479889-2c24-4561-9717-2f761e00e869"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-bea79173-53d2-4fef-9c63-8473eaa81b0e"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.5",
+      "ceasn:competencyText": {
+        "en-us": "Communication - Listening and Speaking:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-b825379b-2a4a-4dd2-966e-fe928efb369a",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-b825379b-2a4a-4dd2-966e-fe928efb369a",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-e587269a-9090-4060-8211-5d8b6cb8c7c3"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "2.5.1",
+      "ceasn:competencyText": {
+        "en-us": "Speaking - Expresses information to individuals or groups taking into account the audience and the nature of the information (e.g., technical or controversial); speaks clearly and confidently; information is organized in a logical manner; speaks using common English conventions including proper grammar, tone and pace; tracks audience responses and reacts appropriately to those responses; effectively uses eye contact and non-verbal expression."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d9c9a21f-78a1-4212-ba5b-0f70f1569543",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d9c9a21f-78a1-4212-ba5b-0f70f1569543",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-e587269a-9090-4060-8211-5d8b6cb8c7c3"
+      ],
+      "ceasn:codedNotation": "2.5.2",
+      "ceasn:competencyText": {
+        "en-us": "Listening - Receives, attends to, interprets, understands, and responds to verbal messages and other cues; picks out important information in verbal messages; understands complex instructions; appreciates feelings and concerns of verbal messages."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-5f980304-049e-4f2c-8c78-c4a33155c22d",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-5f980304-049e-4f2c-8c78-c4a33155c22d",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-e587269a-9090-4060-8211-5d8b6cb8c7c3"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "2.5.3",
+      "ceasn:competencyText": {
+        "en-us": "Two-way communication - Pays close attention and seeks to understand others, listens attentively and clarifies information; attends to nonverbal cues and responds appropriately."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-06479889-2c24-4561-9717-2f761e00e869",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-06479889-2c24-4561-9717-2f761e00e869",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-e587269a-9090-4060-8211-5d8b6cb8c7c3"
+      ],
+      "ceasn:codedNotation": "2.5.4",
+      "ceasn:competencyText": {
+        "en-us": "Persuasion/Influence - Influences others; persuasively presents thoughts and ideas; gains commitment and ensures support for proposed ideas."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-f058f306-f733-4180-970e-c485acd80796",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-f058f306-f733-4180-970e-c485acd80796",
+      "ceasn:comment": {
+        "en-us": [
+          "Processing information to make logical decisions."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-b953e734-ff28-4d16-88bc-970cb54990a0",
+        "https://credentialengineregistry.org/resources/ce-ccf12411-0218-4ff8-8853-ca9e9e5834ed"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-bea79173-53d2-4fef-9c63-8473eaa81b0e"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "2.6",
+      "ceasn:competencyText": {
+        "en-us": "Critical and Analytical Thinking:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-b953e734-ff28-4d16-88bc-970cb54990a0",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-b953e734-ff28-4d16-88bc-970cb54990a0",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-f058f306-f733-4180-970e-c485acd80796"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "2.6.1",
+      "ceasn:competencyText": {
+        "en-us": "Reasoning - Possesses sufficient inductive and deductive reasoning ability to perform job successfully; critically reviews, analyzes, synthesizes, compares and interprets information; draws conclusions from relevant and/or missing information; understands the principles underlying the relationship among facts and applies this understanding when solving problems."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-ccf12411-0218-4ff8-8853-ca9e9e5834ed",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-ccf12411-0218-4ff8-8853-ca9e9e5834ed",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-f058f306-f733-4180-970e-c485acd80796"
+      ],
+      "ceasn:codedNotation": "2.6.2",
+      "ceasn:competencyText": {
+        "en-us": "Mental agility - Identifies connections between issues; quickly understands, orients to, and learns new assignments."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-4975d4ce-dfe4-4d6f-a3ef-274b1ad777fc",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-4975d4ce-dfe4-4d6f-a3ef-274b1ad777fc",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-4fda595f-db5c-45e4-8bf7-9405b4fa8a15",
+        "https://credentialengineregistry.org/resources/ce-8e6f44b8-4991-4351-9a89-2bb075aaca0f",
+        "https://credentialengineregistry.org/resources/ce-792ef485-5286-404d-a2bc-5c746c22f475",
+        "https://credentialengineregistry.org/resources/ce-5dbb7371-b483-43ed-bfaa-25c135353793",
+        "https://credentialengineregistry.org/resources/ce-a17faa5e-e0fa-429e-b6c4-a64f5511d6f4",
+        "https://credentialengineregistry.org/resources/ce-0b2528df-1437-451f-b687-59dda7e2c69e"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:isTopChildOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:codedNotation": "3",
+      "ceasn:competencyText": {
+        "en-us": "Workplace Competencies"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-4fda595f-db5c-45e4-8bf7-9405b4fa8a15",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-4fda595f-db5c-45e4-8bf7-9405b4fa8a15",
+      "ceasn:comment": {
+        "en-us": [
+          "Developing capacities used to work with people to achieve goals.  Includes social perceptiveness, coordination, persuasion, negotiation, instructing, and service orientation."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-1b28b549-5864-4a6f-ae9f-42788897e9ad",
+        "https://credentialengineregistry.org/resources/ce-ce97080c-48a0-427a-8be8-9b1d557f8349",
+        "https://credentialengineregistry.org/resources/ce-162dbeac-e8f3-443e-a862-ba63f0ab9a3b",
+        "https://credentialengineregistry.org/resources/ce-cbe25d35-9df4-4353-9390-3b845b42f6c6",
+        "https://credentialengineregistry.org/resources/ce-235a2e8e-51d0-4620-b01f-72f65e128af1",
+        "https://credentialengineregistry.org/resources/ce-39375393-ae67-4744-89f0-baacf9cac497"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4975d4ce-dfe4-4d6f-a3ef-274b1ad777fc"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.1",
+      "ceasn:competencyText": {
+        "en-us": "Teamwork:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-1b28b549-5864-4a6f-ae9f-42788897e9ad",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-1b28b549-5864-4a6f-ae9f-42788897e9ad",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4fda595f-db5c-45e4-8bf7-9405b4fa8a15"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.1.1",
+      "ceasn:competencyText": {
+        "en-us": "Acknowledging team membership and role"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-ce97080c-48a0-427a-8be8-9b1d557f8349",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-ce97080c-48a0-427a-8be8-9b1d557f8349",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4fda595f-db5c-45e4-8bf7-9405b4fa8a15"
+      ],
+      "ceasn:codedNotation": "3.1.2",
+      "ceasn:competencyText": {
+        "en-us": "Establishing productive relationships"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-162dbeac-e8f3-443e-a862-ba63f0ab9a3b",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-162dbeac-e8f3-443e-a862-ba63f0ab9a3b",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4fda595f-db5c-45e4-8bf7-9405b4fa8a15"
+      ],
+      "ceasn:codedNotation": "3.1.3",
+      "ceasn:competencyText": {
+        "en-us": "Identifying with the team and its goals"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-cbe25d35-9df4-4353-9390-3b845b42f6c6",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-cbe25d35-9df4-4353-9390-3b845b42f6c6",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4fda595f-db5c-45e4-8bf7-9405b4fa8a15"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.1.4",
+      "ceasn:competencyText": {
+        "en-us": "Resolving conflicts"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-235a2e8e-51d0-4620-b01f-72f65e128af1",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-235a2e8e-51d0-4620-b01f-72f65e128af1",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4fda595f-db5c-45e4-8bf7-9405b4fa8a15"
+      ],
+      "ceasn:codedNotation": "3.1.5",
+      "ceasn:competencyText": {
+        "en-us": "Motivating others"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-39375393-ae67-4744-89f0-baacf9cac497",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-39375393-ae67-4744-89f0-baacf9cac497",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4fda595f-db5c-45e4-8bf7-9405b4fa8a15"
+      ],
+      "ceasn:codedNotation": "3.1.6",
+      "ceasn:competencyText": {
+        "en-us": "Negotiating solutions"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-8e6f44b8-4991-4351-9a89-2bb075aaca0f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-8e6f44b8-4991-4351-9a89-2bb075aaca0f",
+      "ceasn:comment": {
+        "en-us": [
+          "Being open to change (positive or negative) and to considerable variety in the workplace."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-117c880a-3641-459d-968c-4a828cffd583",
+        "https://credentialengineregistry.org/resources/ce-d9f1e6a8-ee65-4790-8b2d-472daed28acb",
+        "https://credentialengineregistry.org/resources/ce-1987de93-43f4-474c-ab2a-f7798428acb6",
+        "https://credentialengineregistry.org/resources/ce-4c6978e8-d7f0-4574-a822-f8b4a9bf1fa0",
+        "https://credentialengineregistry.org/resources/ce-2cfcf1fb-1bc2-4efd-9058-276b04862dd9",
+        "https://credentialengineregistry.org/resources/ce-80ccd9c3-755d-40d9-832a-3d10eeee682b"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4975d4ce-dfe4-4d6f-a3ef-274b1ad777fc"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.2",
+      "ceasn:competencyText": {
+        "en-us": "Adaptability/Flexibility:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-117c880a-3641-459d-968c-4a828cffd583",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-117c880a-3641-459d-968c-4a828cffd583",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8e6f44b8-4991-4351-9a89-2bb075aaca0f"
+      ],
+      "ceasn:codedNotation": "3.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Employing unique analyses"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d9f1e6a8-ee65-4790-8b2d-472daed28acb",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d9f1e6a8-ee65-4790-8b2d-472daed28acb",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8e6f44b8-4991-4351-9a89-2bb075aaca0f"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Ability to work in different environments"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-1987de93-43f4-474c-ab2a-f7798428acb6",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-1987de93-43f4-474c-ab2a-f7798428acb6",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8e6f44b8-4991-4351-9a89-2bb075aaca0f"
+      ],
+      "ceasn:codedNotation": "3.2.3",
+      "ceasn:competencyText": {
+        "en-us": "Entertaining new ideas"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-4c6978e8-d7f0-4574-a822-f8b4a9bf1fa0",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-4c6978e8-d7f0-4574-a822-f8b4a9bf1fa0",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8e6f44b8-4991-4351-9a89-2bb075aaca0f"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.2.4",
+      "ceasn:competencyText": {
+        "en-us": "Dealing with ambiguity"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-2cfcf1fb-1bc2-4efd-9058-276b04862dd9",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-2cfcf1fb-1bc2-4efd-9058-276b04862dd9",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8e6f44b8-4991-4351-9a89-2bb075aaca0f"
+      ],
+      "ceasn:codedNotation": "3.2.5",
+      "ceasn:competencyText": {
+        "en-us": "Managing multiple demands"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-80ccd9c3-755d-40d9-832a-3d10eeee682b",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-80ccd9c3-755d-40d9-832a-3d10eeee682b",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8e6f44b8-4991-4351-9a89-2bb075aaca0f"
+      ],
+      "ceasn:codedNotation": "3.2.6",
+      "ceasn:competencyText": {
+        "en-us": "Managing uncertainty"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-792ef485-5286-404d-a2bc-5c746c22f475",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-792ef485-5286-404d-a2bc-5c746c22f475",
+      "ceasn:comment": {
+        "en-us": [
+          "Actively looking for ways to identify market demands and meet the customer or client need."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-8dd460be-5642-4a99-97ef-f60a5f66360f",
+        "https://credentialengineregistry.org/resources/ce-7e7543c4-79ea-46f1-be50-f5dc0de826fe",
+        "https://credentialengineregistry.org/resources/ce-a2e101b2-acd5-4b20-b435-156f26d2a119",
+        "https://credentialengineregistry.org/resources/ce-07595072-5da3-4d01-8f95-6692dc1ede3a"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4975d4ce-dfe4-4d6f-a3ef-274b1ad777fc"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.3",
+      "ceasn:competencyText": {
+        "en-us": "Customer Service/Service Orientation:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-8dd460be-5642-4a99-97ef-f60a5f66360f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-8dd460be-5642-4a99-97ef-f60a5f66360f",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-792ef485-5286-404d-a2bc-5c746c22f475"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "3.3.1",
+      "ceasn:competencyText": {
+        "en-us": "Understanding customer needs"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-7e7543c4-79ea-46f1-be50-f5dc0de826fe",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-7e7543c4-79ea-46f1-be50-f5dc0de826fe",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-792ef485-5286-404d-a2bc-5c746c22f475"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.3.2",
+      "ceasn:competencyText": {
+        "en-us": "Providing personalized service"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a2e101b2-acd5-4b20-b435-156f26d2a119",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a2e101b2-acd5-4b20-b435-156f26d2a119",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-792ef485-5286-404d-a2bc-5c746c22f475"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.3.3",
+      "ceasn:competencyText": {
+        "en-us": "Acting professionally"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-07595072-5da3-4d01-8f95-6692dc1ede3a",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-07595072-5da3-4d01-8f95-6692dc1ede3a",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-792ef485-5286-404d-a2bc-5c746c22f475"
+      ],
+      "ceasn:codedNotation": "3.3.4",
+      "ceasn:competencyText": {
+        "en-us": "Keeping customers informed"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-5dbb7371-b483-43ed-bfaa-25c135353793",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-5dbb7371-b483-43ed-bfaa-25c135353793",
+      "ceasn:comment": {
+        "en-us": [
+          "Developing plans and efficiently using resources to accomplish goals."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-0659fc57-0ffb-4d3e-8456-5f6957dfeb95",
+        "https://credentialengineregistry.org/resources/ce-056f1485-0527-420c-bad8-fbb5b2a35ec2",
+        "https://credentialengineregistry.org/resources/ce-a8cb03e4-fe93-47ab-93dd-552d69b63806",
+        "https://credentialengineregistry.org/resources/ce-afa1f7f9-8486-49cc-85fd-54084dc96a21"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4975d4ce-dfe4-4d6f-a3ef-274b1ad777fc"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.4",
+      "ceasn:competencyText": {
+        "en-us": "Strategic Planning and Organizing:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-0659fc57-0ffb-4d3e-8456-5f6957dfeb95",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-0659fc57-0ffb-4d3e-8456-5f6957dfeb95",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5dbb7371-b483-43ed-bfaa-25c135353793"
+      ],
+      "ceasn:codedNotation": "3.4.1",
+      "ceasn:competencyText": {
+        "en-us": "Planning and scheduling tasks so that work is completed on time"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-056f1485-0527-420c-bad8-fbb5b2a35ec2",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-056f1485-0527-420c-bad8-fbb5b2a35ec2",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5dbb7371-b483-43ed-bfaa-25c135353793"
+      ],
+      "ceasn:codedNotation": "3.4.2",
+      "ceasn:competencyText": {
+        "en-us": "Prioritizing various competing tasks and performing them quickly and efficiently according to their urgency"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a8cb03e4-fe93-47ab-93dd-552d69b63806",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a8cb03e4-fe93-47ab-93dd-552d69b63806",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5dbb7371-b483-43ed-bfaa-25c135353793"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.4.3",
+      "ceasn:competencyText": {
+        "en-us": "Allocating time and resources effectively and coordinating efforts with all affected parties"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-afa1f7f9-8486-49cc-85fd-54084dc96a21",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-afa1f7f9-8486-49cc-85fd-54084dc96a21",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5dbb7371-b483-43ed-bfaa-25c135353793"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.4.4",
+      "ceasn:competencyText": {
+        "en-us": "Anticipating obstacles to project completion and developing and implementing contingency plans to address them"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a17faa5e-e0fa-429e-b6c4-a64f5511d6f4",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a17faa5e-e0fa-429e-b6c4-a64f5511d6f4",
+      "ceasn:comment": {
+        "en-us": [
+          "Considering the relative costs and benefits of potential actions to choose the most appropriate one."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-3e567c54-b706-4f8c-a252-93049b702e73",
+        "https://credentialengineregistry.org/resources/ce-f94bf5e0-2386-40d0-9a77-d240b473fc6a",
+        "https://credentialengineregistry.org/resources/ce-21f35ac1-b1bb-4026-93ae-ddfee3e13168",
+        "https://credentialengineregistry.org/resources/ce-ed661bd3-2d10-4d57-b2e0-d899c04c2b05",
+        "https://credentialengineregistry.org/resources/ce-b1b73f3b-5d14-4a04-a23a-aeb2b9776b4d",
+        "https://credentialengineregistry.org/resources/ce-f04ade16-add6-4f49-bac7-6419e7f1ca99"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4975d4ce-dfe4-4d6f-a3ef-274b1ad777fc"
+      ],
+      "ceasn:codedNotation": "3.5",
+      "ceasn:competencyText": {
+        "en-us": "Problem Solving/Decision-Making:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-3e567c54-b706-4f8c-a252-93049b702e73",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-3e567c54-b706-4f8c-a252-93049b702e73",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a17faa5e-e0fa-429e-b6c4-a64f5511d6f4"
+      ],
+      "ceasn:codedNotation": "3.5.1",
+      "ceasn:competencyText": {
+        "en-us": "Identifying the problem"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-f94bf5e0-2386-40d0-9a77-d240b473fc6a",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-f94bf5e0-2386-40d0-9a77-d240b473fc6a",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a17faa5e-e0fa-429e-b6c4-a64f5511d6f4"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.5.2",
+      "ceasn:competencyText": {
+        "en-us": "Seeing the big picture"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-21f35ac1-b1bb-4026-93ae-ddfee3e13168",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-21f35ac1-b1bb-4026-93ae-ddfee3e13168",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a17faa5e-e0fa-429e-b6c4-a64f5511d6f4"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.5.3",
+      "ceasn:competencyText": {
+        "en-us": "Decompose a problem into component parts"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-ed661bd3-2d10-4d57-b2e0-d899c04c2b05",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-ed661bd3-2d10-4d57-b2e0-d899c04c2b05",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a17faa5e-e0fa-429e-b6c4-a64f5511d6f4"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.5.4",
+      "ceasn:competencyText": {
+        "en-us": "Researching and organizing relevant information"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-b1b73f3b-5d14-4a04-a23a-aeb2b9776b4d",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-b1b73f3b-5d14-4a04-a23a-aeb2b9776b4d",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a17faa5e-e0fa-429e-b6c4-a64f5511d6f4"
+      ],
+      "ceasn:codedNotation": "3.5.5",
+      "ceasn:competencyText": {
+        "en-us": "Generating innovative solutions"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-f04ade16-add6-4f49-bac7-6419e7f1ca99",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-f04ade16-add6-4f49-bac7-6419e7f1ca99",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a17faa5e-e0fa-429e-b6c4-a64f5511d6f4"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.5.6",
+      "ceasn:competencyText": {
+        "en-us": "Choosing a solution"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-0b2528df-1437-451f-b687-59dda7e2c69e",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-0b2528df-1437-451f-b687-59dda7e2c69e",
+      "ceasn:comment": {
+        "en-us": [
+          "Proficiency in applying basic computer functions."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-428892a9-d5e8-4e00-b570-071f42c2adf3",
+        "https://credentialengineregistry.org/resources/ce-9148fa5c-152e-4d42-9507-d021f8db4642",
+        "https://credentialengineregistry.org/resources/ce-09c7db10-cdd5-49e7-95d5-b6f8c69baa39",
+        "https://credentialengineregistry.org/resources/ce-294f4314-60b3-4eeb-87a3-2aa7ec3ec4ac",
+        "https://credentialengineregistry.org/resources/ce-bd2ed8fe-2317-4b4b-83d9-a8ffef7a8840"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4975d4ce-dfe4-4d6f-a3ef-274b1ad777fc"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "3.6",
+      "ceasn:competencyText": {
+        "en-us": "Using Computers:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-428892a9-d5e8-4e00-b570-071f42c2adf3",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-428892a9-d5e8-4e00-b570-071f42c2adf3",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0b2528df-1437-451f-b687-59dda7e2c69e"
+      ],
+      "ceasn:codedNotation": "3.6.1",
+      "ceasn:competencyText": {
+        "en-us": "Keyboarding and word processing"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-9148fa5c-152e-4d42-9507-d021f8db4642",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-9148fa5c-152e-4d42-9507-d021f8db4642",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0b2528df-1437-451f-b687-59dda7e2c69e"
+      ],
+      "ceasn:codedNotation": "3.6.2",
+      "ceasn:competencyText": {
+        "en-us": "Internet applications"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-09c7db10-cdd5-49e7-95d5-b6f8c69baa39",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-09c7db10-cdd5-49e7-95d5-b6f8c69baa39",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0b2528df-1437-451f-b687-59dda7e2c69e"
+      ],
+      "ceasn:codedNotation": "3.6.3",
+      "ceasn:competencyText": {
+        "en-us": "E-mailing"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-294f4314-60b3-4eeb-87a3-2aa7ec3ec4ac",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-294f4314-60b3-4eeb-87a3-2aa7ec3ec4ac",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0b2528df-1437-451f-b687-59dda7e2c69e"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.6.4",
+      "ceasn:competencyText": {
+        "en-us": "Spreadsheets"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-bd2ed8fe-2317-4b4b-83d9-a8ffef7a8840",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-bd2ed8fe-2317-4b4b-83d9-a8ffef7a8840",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-0b2528df-1437-451f-b687-59dda7e2c69e"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "3.6.5",
+      "ceasn:competencyText": {
+        "en-us": "Database Concepts"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-574a89eb-0602-4baf-a6dd-c2ed87e03dff",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-574a89eb-0602-4baf-a6dd-c2ed87e03dff",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-e4b6202b-a7b4-4c44-b916-1e5c4ddf9491",
+        "https://credentialengineregistry.org/resources/ce-3364e290-9c3e-4878-8dc7-bd7c0afd2d0c",
+        "https://credentialengineregistry.org/resources/ce-719c63ac-a18f-49fa-8549-9b7c3d2f8386",
+        "https://credentialengineregistry.org/resources/ce-4d2a6842-930b-4a3b-bc06-e7589efb03cc",
+        "https://credentialengineregistry.org/resources/ce-783a30b6-6bbf-43c6-beee-00114d7a9890",
+        "https://credentialengineregistry.org/resources/ce-d6f05068-9959-4403-821e-fc06054e4713"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isTopChildOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:codedNotation": "4",
+      "ceasn:competencyText": {
+        "en-us": "Industry-Wide Technical Competencies"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-e4b6202b-a7b4-4c44-b916-1e5c4ddf9491",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-e4b6202b-a7b4-4c44-b916-1e5c4ddf9491",
+      "ceasn:comment": {
+        "en-us": [
+          "Knowledge of the products and concepts relating to the financial services industry, including financial instruments, financial management, insurance principles, and cash and capital principles."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-32036619-3b10-4375-bb8a-cd91a269dbbc",
+        "https://credentialengineregistry.org/resources/ce-067a0beb-1f2c-4579-9dc4-79a895957ff9",
+        "https://credentialengineregistry.org/resources/ce-6ec6e3fc-5295-4115-a0c4-c7aa4b86e281",
+        "https://credentialengineregistry.org/resources/ce-f014ca87-0f3f-40f7-b372-68340a38f9e8",
+        "https://credentialengineregistry.org/resources/ce-50c27b74-f83f-4e59-820a-cf89b9ef6569"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-574a89eb-0602-4baf-a6dd-c2ed87e03dff"
+      ],
+      "ceasn:codedNotation": "4.1",
+      "ceasn:competencyText": {
+        "en-us": "Products and Concepts:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-32036619-3b10-4375-bb8a-cd91a269dbbc",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-32036619-3b10-4375-bb8a-cd91a269dbbc",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-a85b558e-ee4c-4bae-a5c2-67cf4f9f13fd",
+        "https://credentialengineregistry.org/resources/ce-65149657-1fcf-4d81-b041-5aa65540bfe3",
+        "https://credentialengineregistry.org/resources/ce-d94986f5-45fc-4d35-bd74-eacd2cc201f0",
+        "https://credentialengineregistry.org/resources/ce-4d14ca0d-be0b-46bb-8877-f5874f660ed2",
+        "https://credentialengineregistry.org/resources/ce-375f8814-1c5c-4dbc-b689-64b5b8e76ef3"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-e4b6202b-a7b4-4c44-b916-1e5c4ddf9491"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:competencyText": {
+        "en-us": "Critical Work Functions:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a85b558e-ee4c-4bae-a5c2-67cf4f9f13fd",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a85b558e-ee4c-4bae-a5c2-67cf4f9f13fd",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-32036619-3b10-4375-bb8a-cd91a269dbbc"
+      ],
+      "ceasn:codedNotation": "4.1.1",
+      "ceasn:competencyText": {
+        "en-us": "Examine characteristics to distinguish between stocks, bonds, and commodities."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-65149657-1fcf-4d81-b041-5aa65540bfe3",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-65149657-1fcf-4d81-b041-5aa65540bfe3",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-32036619-3b10-4375-bb8a-cd91a269dbbc"
+      ],
+      "ceasn:codedNotation": "4.1.1",
+      "ceasn:competencyText": {
+        "en-us": "Examine characteristics to distinguish between insurance and annuity products."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d94986f5-45fc-4d35-bd74-eacd2cc201f0",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d94986f5-45fc-4d35-bd74-eacd2cc201f0",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-32036619-3b10-4375-bb8a-cd91a269dbbc"
+      ],
+      "ceasn:codedNotation": "4.1.1",
+      "ceasn:competencyText": {
+        "en-us": "Develop procedures to create a financial plan."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-4d14ca0d-be0b-46bb-8877-f5874f660ed2",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-4d14ca0d-be0b-46bb-8877-f5874f660ed2",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-32036619-3b10-4375-bb8a-cd91a269dbbc"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.1.1",
+      "ceasn:competencyText": {
+        "en-us": "Analyze tax structures and consequences to assist in business decision-making."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-375f8814-1c5c-4dbc-b689-64b5b8e76ef3",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-375f8814-1c5c-4dbc-b689-64b5b8e76ef3",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-32036619-3b10-4375-bb8a-cd91a269dbbc"
+      ],
+      "ceasn:codedNotation": "4.1.1",
+      "ceasn:competencyText": {
+        "en-us": "Examine characteristics to explain underwriting functions."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-067a0beb-1f2c-4579-9dc4-79a895957ff9",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-067a0beb-1f2c-4579-9dc4-79a895957ff9",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-ff0a7089-79e0-40b7-bdff-fa30ef306432",
+        "https://credentialengineregistry.org/resources/ce-f2876a49-5906-428a-948b-2b52205d71c6",
+        "https://credentialengineregistry.org/resources/ce-49660ed2-f9b5-4e17-8abf-7cca38af4cd6",
+        "https://credentialengineregistry.org/resources/ce-bac45325-9185-482e-ae02-d8476c49564f",
+        "https://credentialengineregistry.org/resources/ce-6371cbdb-2a98-41a1-a136-817fa0a59afb"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-e4b6202b-a7b4-4c44-b916-1e5c4ddf9491"
+      ],
+      "ceasn:codedNotation": "4.1.2",
+      "ceasn:competencyText": {
+        "en-us": "Financial Instruments"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-ff0a7089-79e0-40b7-bdff-fa30ef306432",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-ff0a7089-79e0-40b7-bdff-fa30ef306432",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-067a0beb-1f2c-4579-9dc4-79a895957ff9"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.1.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Understands the available financial instruments and risk associated with each instrument;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-f2876a49-5906-428a-948b-2b52205d71c6",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-f2876a49-5906-428a-948b-2b52205d71c6",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-067a0beb-1f2c-4579-9dc4-79a895957ff9"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.1.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Recognizes appropriate situations for each instrument;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-49660ed2-f9b5-4e17-8abf-7cca38af4cd6",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-49660ed2-f9b5-4e17-8abf-7cca38af4cd6",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-067a0beb-1f2c-4579-9dc4-79a895957ff9"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.1.2.3",
+      "ceasn:competencyText": {
+        "en-us": "Understands basic differences and similarities between debt-based, equity based, and foreign exchange instruments;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-bac45325-9185-482e-ae02-d8476c49564f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-bac45325-9185-482e-ae02-d8476c49564f",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-067a0beb-1f2c-4579-9dc4-79a895957ff9"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.1.2.4",
+      "ceasn:competencyText": {
+        "en-us": "Recognizes appropriate investment opportunities associated with each instrument."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-6371cbdb-2a98-41a1-a136-817fa0a59afb",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-6371cbdb-2a98-41a1-a136-817fa0a59afb",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-9ed5166b-3183-490c-b84b-efd178c9c8e3",
+        "https://credentialengineregistry.org/resources/ce-916f20e9-deda-4832-b5cf-1774e19ebfe0",
+        "https://credentialengineregistry.org/resources/ce-69560d70-8ae3-484f-a8c4-0602f476e984",
+        "https://credentialengineregistry.org/resources/ce-e8484aad-751e-4642-8c5c-6d551f989bd5"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-067a0beb-1f2c-4579-9dc4-79a895957ff9"
+      ],
+      "ceasn:codedNotation": "4.1.2.5",
+      "ceasn:competencyText": {
+        "en-us": "Financial instruments include:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-9ed5166b-3183-490c-b84b-efd178c9c8e3",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-9ed5166b-3183-490c-b84b-efd178c9c8e3",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-6371cbdb-2a98-41a1-a136-817fa0a59afb"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.1.2.5.1",
+      "ceasn:competencyText": {
+        "en-us": "Securities (Stocks, Bonds, T-bills)"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-916f20e9-deda-4832-b5cf-1774e19ebfe0",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-916f20e9-deda-4832-b5cf-1774e19ebfe0",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-6371cbdb-2a98-41a1-a136-817fa0a59afb"
+      ],
+      "ceasn:codedNotation": "4.1.2.5.2",
+      "ceasn:competencyText": {
+        "en-us": "Other cash (Loans, Certificates of Deposit)"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-69560d70-8ae3-484f-a8c4-0602f476e984",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-69560d70-8ae3-484f-a8c4-0602f476e984",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-6371cbdb-2a98-41a1-a136-817fa0a59afb"
+      ],
+      "ceasn:codedNotation": "4.1.2.5.3",
+      "ceasn:competencyText": {
+        "en-us": "Exchange traded derivatives (Futures, Options)"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-e8484aad-751e-4642-8c5c-6d551f989bd5",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-e8484aad-751e-4642-8c5c-6d551f989bd5",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-6371cbdb-2a98-41a1-a136-817fa0a59afb"
+      ],
+      "ceasn:codedNotation": "4.1.2.5.4",
+      "ceasn:competencyText": {
+        "en-us": "Over-the-counter derivatives (Swaps, Caps, Exotic Instruments)"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-6ec6e3fc-5295-4115-a0c4-c7aa4b86e281",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-6ec6e3fc-5295-4115-a0c4-c7aa4b86e281",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-7e5e06f7-a61d-44e7-8434-61b49c4d0a2e",
+        "https://credentialengineregistry.org/resources/ce-a625ae1f-3c56-4858-9510-17356fe50bbf"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-e4b6202b-a7b4-4c44-b916-1e5c4ddf9491"
+      ],
+      "ceasn:codedNotation": "4.1.3",
+      "ceasn:competencyText": {
+        "en-us": "Financial Management"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-7e5e06f7-a61d-44e7-8434-61b49c4d0a2e",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-7e5e06f7-a61d-44e7-8434-61b49c4d0a2e",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-6ec6e3fc-5295-4115-a0c4-c7aa4b86e281"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.1.3.1",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrates an awareness of the available analytical functions associated within the financial services industry;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a625ae1f-3c56-4858-9510-17356fe50bbf",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a625ae1f-3c56-4858-9510-17356fe50bbf",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-6ec6e3fc-5295-4115-a0c4-c7aa4b86e281"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.1.3.2",
+      "ceasn:competencyText": {
+        "en-us": "Understands the basic concepts associated with financial analysis, credit analysis, debt management, risk management, valuation strategies, investment profitability, and underwriting."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-f014ca87-0f3f-40f7-b372-68340a38f9e8",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-f014ca87-0f3f-40f7-b372-68340a38f9e8",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-39b1b780-b49a-4649-8b7e-beb0b510970b",
+        "https://credentialengineregistry.org/resources/ce-aa4004f4-7091-49a4-9419-ecb4aadcfcfd"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-e4b6202b-a7b4-4c44-b916-1e5c4ddf9491"
+      ],
+      "ceasn:codedNotation": "4.1.4",
+      "ceasn:competencyText": {
+        "en-us": "Insurance Principles"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-39b1b780-b49a-4649-8b7e-beb0b510970b",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-39b1b780-b49a-4649-8b7e-beb0b510970b",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-f014ca87-0f3f-40f7-b372-68340a38f9e8"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.1.4.1",
+      "ceasn:competencyText": {
+        "en-us": "Understands the principles of insurance and insurance contracts;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-aa4004f4-7091-49a4-9419-ecb4aadcfcfd",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-aa4004f4-7091-49a4-9419-ecb4aadcfcfd",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-f014ca87-0f3f-40f7-b372-68340a38f9e8"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.1.4.2",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrates a knowledge of the different types of insurance (e.g., life, health, property, liability) and the associated risk covered by the insurance."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-50c27b74-f83f-4e59-820a-cf89b9ef6569",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-50c27b74-f83f-4e59-820a-cf89b9ef6569",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-5a5505fc-70db-48bd-8a42-aaafbfc5b433",
+        "https://credentialengineregistry.org/resources/ce-d799cadc-b2e4-4f4d-af3d-b45b21963491"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-e4b6202b-a7b4-4c44-b916-1e5c4ddf9491"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.1.5",
+      "ceasn:competencyText": {
+        "en-us": "Cash and Capital Principles"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-5a5505fc-70db-48bd-8a42-aaafbfc5b433",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-5a5505fc-70db-48bd-8a42-aaafbfc5b433",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-50c27b74-f83f-4e59-820a-cf89b9ef6569"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.1.5.1",
+      "ceasn:competencyText": {
+        "en-us": "Understands the nature of cash, the United States monetary system, and the time value of money;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d799cadc-b2e4-4f4d-af3d-b45b21963491",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d799cadc-b2e4-4f4d-af3d-b45b21963491",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-50c27b74-f83f-4e59-820a-cf89b9ef6569"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.1.5.2",
+      "ceasn:competencyText": {
+        "en-us": "Recognizes the risk, return, and opportunity costs associated with capital."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-3364e290-9c3e-4878-8dc7-bd7c0afd2d0c",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-3364e290-9c3e-4878-8dc7-bd7c0afd2d0c",
+      "ceasn:comment": {
+        "en-us": [
+          "Performs activities associated with transaction management and understands the business operations performed by organizations within the financial services industry."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-8ee0efc9-1e66-4057-beaf-c18769159d1b",
+        "https://credentialengineregistry.org/resources/ce-b62089d7-bcbd-4e0e-a910-5d269f2e5793",
+        "https://credentialengineregistry.org/resources/ce-4bf4a608-fdfd-484d-ab9c-aa21f826fbc3"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-574a89eb-0602-4baf-a6dd-c2ed87e03dff"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.2",
+      "ceasn:competencyText": {
+        "en-us": "Business Operations:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-8ee0efc9-1e66-4057-beaf-c18769159d1b",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-8ee0efc9-1e66-4057-beaf-c18769159d1b",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-20dc4094-5a2c-4e7e-9d2d-852c1a18c0bb",
+        "https://credentialengineregistry.org/resources/ce-eead7a8c-9a7a-44a0-9159-ef0bcf8308aa",
+        "https://credentialengineregistry.org/resources/ce-43a5275a-79e4-4534-8b53-b602c7a3f774",
+        "https://credentialengineregistry.org/resources/ce-b63a73b1-3cd0-4817-ab6e-57142db57b6d"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-3364e290-9c3e-4878-8dc7-bd7c0afd2d0c"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:competencyText": {
+        "en-us": "Critical Work Functions:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-20dc4094-5a2c-4e7e-9d2d-852c1a18c0bb",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-20dc4094-5a2c-4e7e-9d2d-852c1a18c0bb",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8ee0efc9-1e66-4057-beaf-c18769159d1b"
+      ],
+      "ceasn:codedNotation": "4.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Exercise appropriate techniques to gather client information."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-eead7a8c-9a7a-44a0-9159-ef0bcf8308aa",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-eead7a8c-9a7a-44a0-9159-ef0bcf8308aa",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8ee0efc9-1e66-4057-beaf-c18769159d1b"
+      ],
+      "ceasn:codedNotation": "4.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Examine client’s money management patterns to determine a client’s financial situation."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-43a5275a-79e4-4534-8b53-b602c7a3f774",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-43a5275a-79e4-4534-8b53-b602c7a3f774",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8ee0efc9-1e66-4057-beaf-c18769159d1b"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Describe procedures necessary to execute financial transactions."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-b63a73b1-3cd0-4817-ab6e-57142db57b6d",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-b63a73b1-3cd0-4817-ab6e-57142db57b6d",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-8ee0efc9-1e66-4057-beaf-c18769159d1b"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Use financial information to manage client records."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-b62089d7-bcbd-4e0e-a910-5d269f2e5793",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-b62089d7-bcbd-4e0e-a910-5d269f2e5793",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-115a6047-8581-4539-a655-944c91770c2e",
+        "https://credentialengineregistry.org/resources/ce-db15b57c-643e-4531-a840-083755e3708a",
+        "https://credentialengineregistry.org/resources/ce-66708e86-29c0-497f-86c8-887836a9fa61"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-3364e290-9c3e-4878-8dc7-bd7c0afd2d0c"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Transaction Management"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-115a6047-8581-4539-a655-944c91770c2e",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-115a6047-8581-4539-a655-944c91770c2e",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-b62089d7-bcbd-4e0e-a910-5d269f2e5793"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.2.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrates the ability to process financial transactions without error;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-db15b57c-643e-4531-a840-083755e3708a",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-db15b57c-643e-4531-a840-083755e3708a",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-b62089d7-bcbd-4e0e-a910-5d269f2e5793"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.2.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Resolves cash discrepancies, and maintains accurate records of transactions;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-66708e86-29c0-497f-86c8-887836a9fa61",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-66708e86-29c0-497f-86c8-887836a9fa61",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-b62089d7-bcbd-4e0e-a910-5d269f2e5793"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.2.2.3",
+      "ceasn:competencyText": {
+        "en-us": "Understands the principles of confidentiality as they relate to transaction management."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-4bf4a608-fdfd-484d-ab9c-aa21f826fbc3",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-4bf4a608-fdfd-484d-ab9c-aa21f826fbc3",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-ad8af2bd-dc67-4361-8d79-4e847eec3670"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-3364e290-9c3e-4878-8dc7-bd7c0afd2d0c"
+      ],
+      "ceasn:codedNotation": "4.2.3",
+      "ceasn:competencyText": {
+        "en-us": "Financial Organizations"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-ad8af2bd-dc67-4361-8d79-4e847eec3670",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-ad8af2bd-dc67-4361-8d79-4e847eec3670",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4bf4a608-fdfd-484d-ab9c-aa21f826fbc3"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.2.3.1",
+      "ceasn:competencyText": {
+        "en-us": "Understands the roles and activities provided by organizations within the financial services industry, including banks, investment banks, insurance companies, and stock brokerages."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-719c63ac-a18f-49fa-8549-9b7c3d2f8386",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-719c63ac-a18f-49fa-8549-9b7c3d2f8386",
+      "ceasn:comment": {
+        "en-us": [
+          "Knowledge of the documents associated with measuring a business’ financial information."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-1e32ae87-ba0b-4417-9645-da2b73598329",
+        "https://credentialengineregistry.org/resources/ce-d2578b7a-2bc8-4934-8308-b87c3ba00255"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-574a89eb-0602-4baf-a6dd-c2ed87e03dff"
+      ],
+      "ceasn:codedNotation": "4.3",
+      "ceasn:competencyText": {
+        "en-us": "Financial Reporting:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-1e32ae87-ba0b-4417-9645-da2b73598329",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-1e32ae87-ba0b-4417-9645-da2b73598329",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-063e7558-3f19-438d-ab88-6e8e550ec842",
+        "https://credentialengineregistry.org/resources/ce-de2cb914-456d-4852-a9a3-2bfc7a90fcfd",
+        "https://credentialengineregistry.org/resources/ce-f7eca6f9-d24d-4b3f-9298-c6a8c772f291"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-719c63ac-a18f-49fa-8549-9b7c3d2f8386"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:competencyText": {
+        "en-us": "Critical Work Functions:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-063e7558-3f19-438d-ab88-6e8e550ec842",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-063e7558-3f19-438d-ab88-6e8e550ec842",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-1e32ae87-ba0b-4417-9645-da2b73598329"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.3.1",
+      "ceasn:competencyText": {
+        "en-us": "Review client financial information to develop a client’s account statement."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-de2cb914-456d-4852-a9a3-2bfc7a90fcfd",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-de2cb914-456d-4852-a9a3-2bfc7a90fcfd",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-1e32ae87-ba0b-4417-9645-da2b73598329"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.3.1",
+      "ceasn:competencyText": {
+        "en-us": "Analyze and interpret financial data to produce accurate reports."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-f7eca6f9-d24d-4b3f-9298-c6a8c772f291",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-f7eca6f9-d24d-4b3f-9298-c6a8c772f291",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-1e32ae87-ba0b-4417-9645-da2b73598329"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.3.1",
+      "ceasn:competencyText": {
+        "en-us": "Compile business transaction data to report financial information."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d2578b7a-2bc8-4934-8308-b87c3ba00255",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d2578b7a-2bc8-4934-8308-b87c3ba00255",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-539bc978-a9bb-401b-aa9d-065ace42f9ed",
+        "https://credentialengineregistry.org/resources/ce-7476cb99-3d54-4e17-8bea-c981693b3053"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-719c63ac-a18f-49fa-8549-9b7c3d2f8386"
+      ],
+      "ceasn:codedNotation": "4.3.2",
+      "ceasn:competencyText": {
+        "en-us": "Financial Statements"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-539bc978-a9bb-401b-aa9d-065ace42f9ed",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-539bc978-a9bb-401b-aa9d-065ace42f9ed",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d2578b7a-2bc8-4934-8308-b87c3ba00255"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.3.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrates the ability to prepare and interpret balance sheets, income statements, cash flow statements, and statements of retained earnings;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-7476cb99-3d54-4e17-8bea-c981693b3053",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-7476cb99-3d54-4e17-8bea-c981693b3053",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d2578b7a-2bc8-4934-8308-b87c3ba00255"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.3.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Adheres to record keeping requirements associated with financial statements."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-4d2a6842-930b-4a3b-bc06-e7589efb03cc",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-4d2a6842-930b-4a3b-bc06-e7589efb03cc",
+      "ceasn:comment": {
+        "en-us": [
+          "Knowledge of basic technology as it specifically relates to the financial services industry."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-923a8d6f-7e5b-4a9e-80e9-25e1072013b6",
+        "https://credentialengineregistry.org/resources/ce-4c2c4646-1b84-4af2-b870-9e8ca1fc744b"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-574a89eb-0602-4baf-a6dd-c2ed87e03dff"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.4",
+      "ceasn:competencyText": {
+        "en-us": "Technology Applications:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-923a8d6f-7e5b-4a9e-80e9-25e1072013b6",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-923a8d6f-7e5b-4a9e-80e9-25e1072013b6",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-67021fda-f51d-4b09-a4de-5277c3821360",
+        "https://credentialengineregistry.org/resources/ce-56180a8b-8458-4386-9a81-40a5a5b756ab"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4d2a6842-930b-4a3b-bc06-e7589efb03cc"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:competencyText": {
+        "en-us": "Critical Work Functions"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-67021fda-f51d-4b09-a4de-5277c3821360",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-67021fda-f51d-4b09-a4de-5277c3821360",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-923a8d6f-7e5b-4a9e-80e9-25e1072013b6"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.4.1",
+      "ceasn:competencyText": {
+        "en-us": "Use spreadsheets and accounting software to maintain and update records;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-56180a8b-8458-4386-9a81-40a5a5b756ab",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-56180a8b-8458-4386-9a81-40a5a5b756ab",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-923a8d6f-7e5b-4a9e-80e9-25e1072013b6"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.4.1",
+      "ceasn:competencyText": {
+        "en-us": "Use data bases and other computer management tools to manage office records."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-4c2c4646-1b84-4af2-b870-9e8ca1fc744b",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-4c2c4646-1b84-4af2-b870-9e8ca1fc744b",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-65cf8903-81da-40b6-a4bf-aba96551d94f",
+        "https://credentialengineregistry.org/resources/ce-039ae898-934f-4d6b-80d7-4f705635ae5f",
+        "https://credentialengineregistry.org/resources/ce-17c0f031-83f6-4eff-a68f-434a60e39aa2"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4d2a6842-930b-4a3b-bc06-e7589efb03cc"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.4.2",
+      "ceasn:competencyText": {
+        "en-us": "Technology Applications"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-65cf8903-81da-40b6-a4bf-aba96551d94f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-65cf8903-81da-40b6-a4bf-aba96551d94f",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4c2c4646-1b84-4af2-b870-9e8ca1fc744b"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.4.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrates a proficiency in the use of financial software, including applications relating to accounting and monetary transactions;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-039ae898-934f-4d6b-80d7-4f705635ae5f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-039ae898-934f-4d6b-80d7-4f705635ae5f",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4c2c4646-1b84-4af2-b870-9e8ca1fc744b"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.4.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Understands the appropriate digital channels for exchanging electronic transaction information;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-17c0f031-83f6-4eff-a68f-434a60e39aa2",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-17c0f031-83f6-4eff-a68f-434a60e39aa2",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-4c2c4646-1b84-4af2-b870-9e8ca1fc744b"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.4.2.3",
+      "ceasn:competencyText": {
+        "en-us": "Recognizes appropriate techniques for storing and retrieving data."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-783a30b6-6bbf-43c6-beee-00114d7a9890",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-783a30b6-6bbf-43c6-beee-00114d7a9890",
+      "ceasn:comment": {
+        "en-us": [
+          "Knowledge of relevant regulations and codes that impact the financial services industry."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-75d5243c-d4d5-4fbf-9017-837eaa8d91bc",
+        "https://credentialengineregistry.org/resources/ce-92e312a3-3986-413a-8452-9e4825842652"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-574a89eb-0602-4baf-a6dd-c2ed87e03dff"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.5",
+      "ceasn:competencyText": {
+        "en-us": "Regulations and Codes:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-75d5243c-d4d5-4fbf-9017-837eaa8d91bc",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-75d5243c-d4d5-4fbf-9017-837eaa8d91bc",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-7ac311c7-39c1-4c38-a4d2-7b4553cb74d9",
+        "https://credentialengineregistry.org/resources/ce-bd900e03-a056-4497-b0ac-89329d760a0e",
+        "https://credentialengineregistry.org/resources/ce-0ca7f755-c581-4d61-8657-81ec96528369",
+        "https://credentialengineregistry.org/resources/ce-c0a13b2c-ce6d-4798-88be-a883f2836898"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-783a30b6-6bbf-43c6-beee-00114d7a9890"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:competencyText": {
+        "en-us": "Critical Work Functions:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-7ac311c7-39c1-4c38-a4d2-7b4553cb74d9",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-7ac311c7-39c1-4c38-a4d2-7b4553cb74d9",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-75d5243c-d4d5-4fbf-9017-837eaa8d91bc"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.5.1",
+      "ceasn:competencyText": {
+        "en-us": "Research the regulatory requirements of financial and investment planning and security sales to assure compliance with codes."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-bd900e03-a056-4497-b0ac-89329d760a0e",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-bd900e03-a056-4497-b0ac-89329d760a0e",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-75d5243c-d4d5-4fbf-9017-837eaa8d91bc"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.5.1",
+      "ceasn:competencyText": {
+        "en-us": "Use federal, state, and local regulations to determine financial records management."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-0ca7f755-c581-4d61-8657-81ec96528369",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-0ca7f755-c581-4d61-8657-81ec96528369",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-75d5243c-d4d5-4fbf-9017-837eaa8d91bc"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.5.1",
+      "ceasn:competencyText": {
+        "en-us": "Review most current state and federal regulations to apply the tax code professionally."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-c0a13b2c-ce6d-4798-88be-a883f2836898",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-c0a13b2c-ce6d-4798-88be-a883f2836898",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-75d5243c-d4d5-4fbf-9017-837eaa8d91bc"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.5.1",
+      "ceasn:competencyText": {
+        "en-us": "Compare legal interpretations to clarify regulations."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-92e312a3-3986-413a-8452-9e4825842652",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-92e312a3-3986-413a-8452-9e4825842652",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-a737fc6c-5f91-4a8d-b598-792324306560",
+        "https://credentialengineregistry.org/resources/ce-b77c3776-d860-4122-84d5-21d473c59eeb",
+        "https://credentialengineregistry.org/resources/ce-89ae1ad0-057d-442a-9615-330f99e100d7"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-783a30b6-6bbf-43c6-beee-00114d7a9890"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.5.2",
+      "ceasn:competencyText": {
+        "en-us": "Regulation and Code Compliance"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a737fc6c-5f91-4a8d-b598-792324306560",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a737fc6c-5f91-4a8d-b598-792324306560",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-097fb165-c344-4e5c-a2fb-a7e69729a8c6",
+        "https://credentialengineregistry.org/resources/ce-d3e3d274-2211-44c8-bb2d-2039e28cfd81",
+        "https://credentialengineregistry.org/resources/ce-df91c56f-09fd-4261-b434-e6c5713e1d7e",
+        "https://credentialengineregistry.org/resources/ce-d5b2eaf5-1272-47fa-ac1c-41560504c84a",
+        "https://credentialengineregistry.org/resources/ce-0b4578f7-0fe5-4ea8-82a5-0102312c9545",
+        "https://credentialengineregistry.org/resources/ce-6d300c0c-6ca6-43db-91f6-bfb91bb53fec",
+        "https://credentialengineregistry.org/resources/ce-de6b4594-64e6-4d44-b9ff-d09301da1a16"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-92e312a3-3986-413a-8452-9e4825842652"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.5.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Understands and complies with all relevant laws imposed by regulatory agencies including:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-097fb165-c344-4e5c-a2fb-a7e69729a8c6",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-097fb165-c344-4e5c-a2fb-a7e69729a8c6",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a737fc6c-5f91-4a8d-b598-792324306560"
+      ],
+      "ceasn:codedNotation": "4.5.2.1.1",
+      "ceasn:competencyText": {
+        "en-us": "Federal Deposit Insurance Corporation"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d3e3d274-2211-44c8-bb2d-2039e28cfd81",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d3e3d274-2211-44c8-bb2d-2039e28cfd81",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a737fc6c-5f91-4a8d-b598-792324306560"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.5.2.1.2",
+      "ceasn:competencyText": {
+        "en-us": "Board of Governors of the Federal Reserve System"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-df91c56f-09fd-4261-b434-e6c5713e1d7e",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-df91c56f-09fd-4261-b434-e6c5713e1d7e",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a737fc6c-5f91-4a8d-b598-792324306560"
+      ],
+      "ceasn:codedNotation": "4.5.2.1.3",
+      "ceasn:competencyText": {
+        "en-us": "Federal Trade Commission"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d5b2eaf5-1272-47fa-ac1c-41560504c84a",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d5b2eaf5-1272-47fa-ac1c-41560504c84a",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a737fc6c-5f91-4a8d-b598-792324306560"
+      ],
+      "ceasn:codedNotation": "4.5.2.1.4",
+      "ceasn:competencyText": {
+        "en-us": "Internal Revenue Service"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-0b4578f7-0fe5-4ea8-82a5-0102312c9545",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-0b4578f7-0fe5-4ea8-82a5-0102312c9545",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a737fc6c-5f91-4a8d-b598-792324306560"
+      ],
+      "ceasn:codedNotation": "4.5.2.1.5",
+      "ceasn:competencyText": {
+        "en-us": "National Credit Union Administration"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-6d300c0c-6ca6-43db-91f6-bfb91bb53fec",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-6d300c0c-6ca6-43db-91f6-bfb91bb53fec",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a737fc6c-5f91-4a8d-b598-792324306560"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.5.2.1.6",
+      "ceasn:competencyText": {
+        "en-us": "U.S. Securities and Exchange Commission"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-de6b4594-64e6-4d44-b9ff-d09301da1a16",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-de6b4594-64e6-4d44-b9ff-d09301da1a16",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-a737fc6c-5f91-4a8d-b598-792324306560"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.5.2.1.7",
+      "ceasn:competencyText": {
+        "en-us": "State agencies"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-b77c3776-d860-4122-84d5-21d473c59eeb",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-b77c3776-d860-4122-84d5-21d473c59eeb",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-92e312a3-3986-413a-8452-9e4825842652"
+      ],
+      "ceasn:codedNotation": "4.5.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Follows the financial services industry codes of practice;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-89ae1ad0-057d-442a-9615-330f99e100d7",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-89ae1ad0-057d-442a-9615-330f99e100d7",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-92e312a3-3986-413a-8452-9e4825842652"
+      ],
+      "ceasn:codedNotation": "4.5.2.3",
+      "ceasn:competencyText": {
+        "en-us": "Monitors new legislation impacting the financial services industry."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d6f05068-9959-4403-821e-fc06054e4713",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d6f05068-9959-4403-821e-fc06054e4713",
+      "ceasn:comment": {
+        "en-us": [
+          "Knowledge of the appropriate procedures for identifying, reporting, and preventing fraud."
+        ]
+      },
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-5c91dcb1-9b1f-42bf-bcc5-520d266dd5ee",
+        "https://credentialengineregistry.org/resources/ce-616b7609-dba8-48e0-80a7-f07afacd968f"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-574a89eb-0602-4baf-a6dd-c2ed87e03dff"
+      ],
+      "ceasn:codedNotation": "4.6",
+      "ceasn:competencyText": {
+        "en-us": "Fraud Prevention:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-5c91dcb1-9b1f-42bf-bcc5-520d266dd5ee",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-5c91dcb1-9b1f-42bf-bcc5-520d266dd5ee",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-d8fcb896-0964-4379-ac97-9b5c41a3d9cb",
+        "https://credentialengineregistry.org/resources/ce-a0d30e6e-845c-4e0e-8459-cfbc85bb9ab4"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d6f05068-9959-4403-821e-fc06054e4713"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:competencyText": {
+        "en-us": "Critical Work Functions:"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-d8fcb896-0964-4379-ac97-9b5c41a3d9cb",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-d8fcb896-0964-4379-ac97-9b5c41a3d9cb",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5c91dcb1-9b1f-42bf-bcc5-520d266dd5ee"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.6.1",
+      "ceasn:competencyText": {
+        "en-us": "Analyze current laws and regulations to maintain appropriate financial practices."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-a0d30e6e-845c-4e0e-8459-cfbc85bb9ab4",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-a0d30e6e-845c-4e0e-8459-cfbc85bb9ab4",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-5c91dcb1-9b1f-42bf-bcc5-520d266dd5ee"
+      ],
+      "ceasn:codedNotation": "4.6.1",
+      "ceasn:competencyText": {
+        "en-us": "Examine accounting system elements to demonstrate good accounting practices."
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-616b7609-dba8-48e0-80a7-f07afacd968f",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-616b7609-dba8-48e0-80a7-f07afacd968f",
+      "ceasn:hasChild": [
+        "https://credentialengineregistry.org/resources/ce-46b97fa9-ba71-4a4a-89d8-2c351b3fc7b1",
+        "https://credentialengineregistry.org/resources/ce-6092049e-aa8d-46a2-a915-43bb8e5e46fc"
+      ],
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-d6f05068-9959-4403-821e-fc06054e4713"
+      ],
+      "ceasn:codedNotation": "4.6.2",
+      "ceasn:competencyText": {
+        "en-us": "Fraud Prevention"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-46b97fa9-ba71-4a4a-89d8-2c351b3fc7b1",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-46b97fa9-ba71-4a4a-89d8-2c351b3fc7b1",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-616b7609-dba8-48e0-80a7-f07afacd968f"
+      ],
+      "ceasn:dateCreated": "2019-11-05",
+      "ceasn:codedNotation": "4.6.2.1",
+      "ceasn:competencyText": {
+        "en-us": "Demonstrates an awareness of the necessary steps for preventing fraud;"
+      }
+    },
+    {
+      "@id": "https://credentialengineregistry.org/resources/ce-6092049e-aa8d-46a2-a915-43bb8e5e46fc",
+      "@type": "ceasn:Competency",
+      "ceterms:ctid": "ce-6092049e-aa8d-46a2-a915-43bb8e5e46fc",
+      "ceasn:isPartOf": "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2",
+      "ceasn:isChildOf": [
+        "https://credentialengineregistry.org/resources/ce-616b7609-dba8-48e0-80a7-f07afacd968f"
+      ],
+      "ceasn:dateCreated": "2019-11-04",
+      "ceasn:codedNotation": "4.6.2.2",
+      "ceasn:competencyText": {
+        "en-us": "Understands the appropriate procedures for fraud investigations and internal audits as they relate to detecting and reporting of fraudulent behavior;"
+      }
+    }
+  ]
+}

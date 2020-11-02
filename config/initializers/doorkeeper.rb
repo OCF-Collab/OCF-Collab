@@ -494,10 +494,10 @@ Doorkeeper::JWT.configure do
   #     { token: "RANDOM-TOKEN" }
   token_payload do |opts|
     {
-      iss: 'OCF Collab',
-      iat: Time.current.utc.to_i,
-
       # @see JWT reserved claims - https://tools.ietf.org/html/draft-jones-json-web-token-07#page-7
+      iss: 'OCF Collab',
+      iat: opts[:created_at].utc.to_i,
+      exp: (opts[:created_at] + opts[:expires_in]).utc.to_i,
       jti: SecureRandom.uuid,
 
       rna: {
@@ -519,12 +519,12 @@ Doorkeeper::JWT.configure do
 
   # Set the encryption secret. This would be shared with any other applications
   # that should be able to read the payload of the token. Defaults to "secret".
-  # secret_key ENV['JWT_SECRET']
+  secret_key ENV['JWT_SECRET']
 
   # If you want to use RS* encoding specify the path to the RSA key to use for
   # signing. If you specify a `secret_key_path` it will be used instead of
   # `secret_key`.
-  secret_key_path Rails.root.join('config', 'jwt_key.pem')
+  # secret_key_path Rails.root.join('config', 'jwt_key.pem')
 
 
   # Specify encryption type (https://github.com/progrium/ruby-jwt). Defaults to

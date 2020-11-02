@@ -16,14 +16,11 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'doorkeeper', '5.4.0'
 gem 'doorkeeper-jwt', '0.4.0'
-
 gem 'aws-sdk-s3', '1.80.0'
-
 gem 'sidekiq', '6.1.2'
-
 gem 'searchkick', '4.4.1'
-
 gem 'input_sanitizer', '0.4.0'
+gem 'faraday', '1.1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -44,6 +41,7 @@ end
 
 group :test do
   gem 'minitest-spec-rails'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

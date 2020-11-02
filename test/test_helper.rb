@@ -2,6 +2,7 @@ ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 require 'rails/test_help'
 require 'minitest/mock'
+require 'webmock/minitest'
 
 require 'helpers/doorkeeper_helpers'
 
@@ -23,3 +24,5 @@ end
 class ActionDispatch::IntegrationTest
   include DoorkeeperHelpers
 end
+
+WebMock.disable_net_connect!(allow: ENV["ELASTICSEARCH_URL"])
