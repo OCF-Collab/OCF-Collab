@@ -12,12 +12,22 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
       "cybersecurity"
     end
 
+    let(:expected_fields) do
+      [
+        "name^10",
+        "description^5",
+        "competencies.name^3",
+        "competencies.comment^1",
+      ]
+    end
+
     describe ".results" do
       context "without specified limit" do
         it "returns competency frameworks search results for given query with max limit" do
           verify_search_call(query, {
             limit: CompetencyFrameworksSearch::MAX_LIMIT,
             includes: nil,
+            fields: expected_fields,
           })
         end
       end
@@ -39,6 +49,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
             verify_search_call(query, {
               limit: limit,
               includes: nil,
+              fields: expected_fields,
             })
           end
         end
@@ -52,6 +63,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
             verify_search_call(query, {
               limit: CompetencyFrameworksSearch::MAX_LIMIT,
               includes: nil,
+              fields: expected_fields,
             })
           end
         end
@@ -73,6 +85,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
           verify_search_call(query, {
             limit: CompetencyFrameworksSearch::MAX_LIMIT,
             includes: includes,
+            fields: expected_fields,
           })
         end
       end

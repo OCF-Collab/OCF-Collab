@@ -6,9 +6,9 @@
 
 * Open items
 ** Working for IMS (id scrape)
-** Logo on details page
-** Expand/collapse all
-** Fix table on scroll
 ** Ensure proper attribute values
-** Deploy to C66
+** Framework details not showing in flat frameworks
+** Show competency text in details
+** Total count in search results
+** Add pagination to results
 

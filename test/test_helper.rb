@@ -26,3 +26,4 @@ class ActionDispatch::IntegrationTest
 end
 
 WebMock.disable_net_connect!(allow: ENV["ELASTICSEARCH_URL"])
+Searchkick.disable_callbacks

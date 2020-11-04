@@ -17,6 +17,7 @@ class CompetencyFrameworksSearch
     {
       limit: results_limit,
       includes: includes,
+      fields: fields,
     }
   end
 
@@ -26,5 +27,14 @@ class CompetencyFrameworksSearch
     end
 
     [limit, MAX_LIMIT].min
+  end
+
+  def fields
+    [
+      "name^10",
+      "description^5",
+      "competencies.name^3",
+      "competencies.comment^1",
+    ]
   end
 end
