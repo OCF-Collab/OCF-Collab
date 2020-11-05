@@ -8,10 +8,11 @@ class CompetencyFrameworkSearchResultRepresenter
   def represent
     {
       root_key => {
-        "@id" => attribute(:external_id),
-        "title" => attribute(:name),
-        "description" => attribute(:description),
-        "attributionName" => attribute(:attribution_name),
+        "@id" => competency_framework.external_id,
+        "title" => competency_framework.name,
+        "description" => competency_framework.description,
+        "attributionName" => competency_framework.attribution_name,
+        "providerMetaModel" => competency_framework.provider_meta_model,
         "attributionLogoUrl" => node_directory.logo_url,
       }
     }
@@ -19,10 +20,6 @@ class CompetencyFrameworkSearchResultRepresenter
 
   def root_key
     "framework"
-  end
-
-  def attribute(name)
-    competency_framework[name]
   end
 
   def node_directory

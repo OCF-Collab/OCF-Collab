@@ -37,6 +37,10 @@ class CompetencyFrameworkSearchResultRepresenterTest < ActiveSupport::TestCase
         it "contains proper attributionLogoUrl attribute" do
           assert_equal competency_framework.node_directory.logo_url, result["attributionLogoUrl"]
         end
+
+        it "contains proper metamodel attribute" do
+          assert_equal competency_framework.provider_meta_model, result["providerMetaModel"]
+        end
       end
     end
   end
