@@ -9,7 +9,7 @@ class CompetencyFrameworkSearchResultRepresenter
     {
       root_key => {
         "@id" => attribute(:external_id),
-        "name" => attribute(:name),
+        "title" => attribute(:name),
         "description" => attribute(:description),
         "attributionName" => attribute(:attribution_name),
         "attributionLogoUrl" => node_directory.logo_url,

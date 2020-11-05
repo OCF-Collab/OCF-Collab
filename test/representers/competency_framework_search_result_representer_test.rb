@@ -13,20 +13,30 @@ class CompetencyFrameworkSearchResultRepresenterTest < ActiveSupport::TestCase
     end
 
     describe ".represent" do
-      it "returns hash with proper attributes" do
-        result = subject.represent
+      describe "result" do
+        let(:result) do
+          subject.represent["framework"]
+        end
 
-        expected_data = {
-          "framework" => {
-            "@id" => competency_framework.external_id,
-            "name" => competency_framework.name,
-            "description" => competency_framework.description,
-            "attributionName" => competency_framework.attribution_name,
-            "attributionLogoUrl" => competency_framework.node_directory.logo_url,
-          }
-        }
+        it "contains proper @id attribute" do
+          assert_equal competency_framework.external_id, result["@id"]
+        end
 
-        assert_equal expected_data, result
+        it "contains proper title attribute" do
+          assert_equal competency_framework.name, result["title"]
+        end
+
+        it "contains proper title attribute" do
+          assert_equal competency_framework.description, result["description"]
+        end
+
+        it "contains proper attributionName attribute" do
+          assert_equal competency_framework.attribution_name, result["attributionName"]
+        end
+
+        it "contains proper attributionLogoUrl attribute" do
+          assert_equal competency_framework.node_directory.logo_url, result["attributionLogoUrl"]
+        end
       end
     end
   end
