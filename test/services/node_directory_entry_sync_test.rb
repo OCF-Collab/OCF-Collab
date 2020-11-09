@@ -134,7 +134,7 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
             assert subject.competencies.all?(&:persisted?)
 
             competencies_data.each do |competency_data|
-              competency = subject.competencies.find_by(name: competency_data["competencyText"]["en-us"])
+              competency = subject.competencies.find_by(competency_text: competency_data["competencyText"]["en-us"])
 
               assert competency.present?
 

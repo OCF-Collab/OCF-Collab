@@ -68,7 +68,7 @@ class NodeDirectoryEntrySync
   def competencies
     parsed_framework[:competencies].map do |parsed_competency|
       Competency.new(
-        name: parsed_competency[:competency_text],
+        competency_text: parsed_competency[:competency_text],
         comment: parsed_competency[:comment],
       )
     end

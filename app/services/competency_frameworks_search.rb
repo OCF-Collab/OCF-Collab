@@ -33,7 +33,7 @@ class CompetencyFrameworksSearch
     [
       "name^10",
       "description^5",
-      "competencies.name^3",
+      "competencies.competency_text^3",
       "competencies.comment^1",
     ]
   end

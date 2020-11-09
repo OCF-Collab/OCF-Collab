@@ -19,6 +19,6 @@ FactoryBot.define do
   end
 
   factory :competency do
-    name { Faker::Job.title }
+    competency_text { Faker::Job.title }
   end
 end
