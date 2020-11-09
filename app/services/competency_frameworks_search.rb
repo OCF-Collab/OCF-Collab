@@ -1,5 +1,5 @@
 class CompetencyFrameworksSearch
-  MAX_LIMIT = 10
+  MAX_LIMIT = 25
 
   attr_reader :query, :limit, :includes
 
