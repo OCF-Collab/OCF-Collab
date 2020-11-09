@@ -33,6 +33,7 @@ class CompetencyFrameworksSearch
     [
       "name^10",
       "description^5",
+      "concept_keywords^5",
       "competencies.competency_text^3",
       "competencies.comment^1",
     ]
