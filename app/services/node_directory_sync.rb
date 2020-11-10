@@ -5,6 +5,12 @@ class NodeDirectorySync
     @node_directory = node_directory
   end
 
+  def self.sync_all!
+    NodeDirectory.find_each do |node_directory|
+      self.new(node_directory: node_directory).sync!
+    end
+  end
+
   def sync!
     destroy_existing_frameworks!
     sync_page!
