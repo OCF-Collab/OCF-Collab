@@ -6,6 +6,7 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
       CompetencyFrameworkAssetFileFetcher.new(
         competency_framework: competency_framework,
         access_token: access_token.token,
+        requested_metamodel: requested_metamodel,
       )
     end
 
@@ -50,42 +51,95 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
       before do
         stub_request(:get, expected_url).with(
           headers: expected_headers
-        ).to_return(response)
+        ).to_return(pna_response)
+
       end
 
-      let(:response) do
+      let(:pna_response) do
         {
-          body: response_body,
-          headers: response_headers,
+          body: pna_response_body,
+          headers: pna_response_headers,
           status: 200,
         }
       end
 
-      let(:response_body) do
-        file_fixture("competency_frameworks/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2.json").read
+      let(:pna_response_body) do
+        "pna-response-body"
       end
 
-      let(:response_headers) do
+      let(:pna_response_headers) do
         {
           "Content-Type" => "application/json"
         }
       end
 
-      describe ".body" do
-        it "returns PNA response body" do
-          assert_equal response_body, subject.body
+      let(:metamodel_interchanger_init_mock) do
+        mock = Minitest::Mock.new
+        mock.expect(:call, metamodel_interchanger_mock, [{
+          competency_framework: competency_framework,
+          competency_framework_body: pna_response_body,
+          competency_framework_content_type: pna_response_headers["Content-Type"],
+          requested_metamodel: requested_metamodel,
+        }])
+        mock
+      end
+
+      let(:metamodel_interchanger_mock) do
+        mock = Minitest::Mock.new
+        mock.expect(:transformed_body, metamodel_interchanger_transformed_body)
+        mock.expect(:transformed_content_type, metamodel_interchanger_transformed_content_type)
+        mock
+      end
+
+      let(:metamodel_interchanger_transformed_body) do
+        "metmodel-interchanger-transformed-body"
+      end
+
+      let(:metamodel_interchanger_transformed_content_type) do
+        "metmodel-interchanger-transformed-content-type"
+      end
+
+      context "without requested metamodel" do
+        let(:requested_metamodel) do
+          nil
+        end
+
+        describe ".body" do
+          it "returns PNA response body" do
+            CompetencyFrameworkMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
+              assert_equal pna_response_body, subject.body
+            end
+          end
+        end
+
+        describe ".content_type" do
+          it "returns PNA response content type" do
+            CompetencyFrameworkMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
+              assert_equal pna_response_headers["Content-Type"], subject.content_type
+            end
+          end
         end
       end
 
-      describe ".content_type" do
-        it "returns PNA response content type" do
-          assert_equal response_headers["Content-Type"], subject.content_type
+      context "with requested metamodel" do
+        let(:requested_metamodel) do
+          "metamodel-id"
         end
-      end
 
-      describe ".status" do
-        it "returns PNA response status" do
-          assert_equal response[:status], subject.status
+        describe ".body" do
+          it "returns metamodel interchanger response body" do
+            CompetencyFrameworkMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
+              assert_equal metamodel_interchanger_transformed_body, subject.body
+            end
+          end
+        end
+
+        describe ".content_type" do
+          it "returns metamodel interchanger response content type" do
+            CompetencyFrameworkMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
+              assert_equal metamodel_interchanger_transformed_content_type, subject.content_type
+            end
+          end
         end
       end
     end

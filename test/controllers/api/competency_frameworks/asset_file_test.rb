@@ -23,6 +23,10 @@ class ApiCompetencyFrameworksAssetFileTest < ActionDispatch::IntegrationTest
         create(:access_token)
       end
 
+      let(:metamodel) do
+        "metamodel-id"
+      end
+
       context "valid response" do
         let(:pna_response_status) do
           200
@@ -36,24 +40,28 @@ class ApiCompetencyFrameworksAssetFileTest < ActionDispatch::IntegrationTest
           "application/json"
         end
 
-        it "returns proper framework metadata" do
+        it "returns proper framework asset file" do
           fetcher_init_mock = Minitest::Mock.new
           fetcher_mock = Minitest::Mock.new
-          fetcher_mock.expect(:status, pna_response_status)
           fetcher_mock.expect(:body, pna_response_body)
           fetcher_mock.expect(:content_type, pna_response_content_type)
 
           fetcher_init_mock.expect(:call, fetcher_mock, [{
             competency_framework: competency_framework,
             access_token: access_token.token,
+            requested_metamodel: metamodel,
           }])
 
           CompetencyFrameworkAssetFileFetcher.stub(:new, fetcher_init_mock) do
-            authorized_get(asset_file_api_competency_framework_url(id: id), access_token: access_token)
+            authorized_get(
+              asset_file_api_competency_framework_url(id: id),
+              access_token: access_token,
+              params: { metamodel: metamodel },
+            )
 
             assert_response :success
 
-            assert_equal pna_response_status, @response.status
+            assert_equal 200, @response.status
             assert_equal pna_response_body, @response.body
             assert_equal pna_response_content_type, @response.content_type
           end

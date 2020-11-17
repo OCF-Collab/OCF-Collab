@@ -3,23 +3,38 @@ require "cgi"
 class CompetencyFrameworkAssetFileFetcher
   ASSET_FILE_PATH = "/competency_frameworks"
 
-  attr_reader :competency_framework, :access_token
+  attr_reader :competency_framework, :access_token, :requested_metamodel
 
-  def initialize(competency_framework:, access_token:)
+  def initialize(competency_framework:, access_token:, requested_metamodel: nil)
     @competency_framework = competency_framework
     @access_token = access_token
+    @requested_metamodel = requested_metamodel
   end
 
   def body
-    pna_response.body
+    if requested_metamodel.blank?
+      return pna_response_body
+    end
+
+    metamodel_interchanger.transformed_body
   end
 
   def content_type
-    pna_response.headers["content-type"]
+    if requested_metamodel.blank?
+      return pna_response_content_type
+    end
+
+    metamodel_interchanger.transformed_content_type
   end
 
-  def status
-    pna_response.status
+  private
+
+  def pna_response_body
+    pna_response.body
+  end
+
+  def pna_response_content_type
+    pna_response.headers["content-type"]
   end
 
   def pna_response
@@ -49,5 +64,14 @@ class CompetencyFrameworkAssetFileFetcher
       ASSET_FILE_PATH,
       CGI.escape(competency_framework.external_id),
     ]
+  end
+
+  def metamodel_interchanger
+    @metamodel_interchanger = CompetencyFrameworkMetamodelInterchanger.new(
+      competency_framework: competency_framework,
+      competency_framework_body: pna_response_body,
+      competency_framework_content_type: pna_response_content_type,
+      requested_metamodel: requested_metamodel,
+    )
   end
 end

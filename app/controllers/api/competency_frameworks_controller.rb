@@ -31,9 +31,10 @@ module Api
       fetcher = CompetencyFrameworkAssetFileFetcher.new(
         competency_framework: competency_framework,
         access_token: doorkeeper_token.token,
+        requested_metamodel: params[:metamodel],
       )
 
-      send_data fetcher.body, type: fetcher.content_type, status: fetcher.status, disposition: :inline
+      send_data fetcher.body, type: fetcher.content_type, status: 200, disposition: :inline
     end
   end
 end
