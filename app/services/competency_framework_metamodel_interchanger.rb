@@ -1,4 +1,5 @@
 class CompetencyFrameworkMetamodelInterchanger
+  TIMEOUT_SECONDS = 120
   METAMODEL_INTERCHANGER_URL = "https://dev.cassproject.org/api/transform"
   METAMODEL_KEYS = {
     "https://ocf-collab.org/concepts/6ad27cff-5832-4b3d-bd3e-892208b80cad" => "ctdl/asn",
@@ -43,6 +44,7 @@ class CompetencyFrameworkMetamodelInterchanger
 
   def connection
     @connection ||= Faraday.new(METAMODEL_INTERCHANGER_URL) do |c|
+      c.options[:timeout] = TIMEOUT_SECONDS
       c.request :multipart
       c.request :url_encoded
       c.adapter :net_http
