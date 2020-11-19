@@ -59,7 +59,7 @@
       "topConceptOf": "https://ocf-collab.org/concepts/2f7e8fc4-7924-4f4b-af2a-b8e134e4f47e"
     },
     {
-      "@id": "https://ocf-collab.org/concepts/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c",
+      "@id": "https://ocf-collab.org/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c",
       "@type": "skos:Concept",
       "prefLabel": {"en-US": "CTDL-ASN"},
       "definition": {"en-US": "Credential Transparency Description Language (CTDL) profile of the ASN Description Language specification."},      
