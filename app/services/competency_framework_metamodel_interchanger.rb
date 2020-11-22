@@ -2,9 +2,9 @@ class CompetencyFrameworkMetamodelInterchanger
   TIMEOUT_SECONDS = 120
   METAMODEL_INTERCHANGER_URL = "https://dev.cassproject.org/api/transform"
   METAMODEL_KEYS = {
-    "https://ocf-collab.org/concepts/6ad27cff-5832-4b3d-bd3e-892208b80cad" => "ctdl/asn",
+    "https://ocf-collab.org/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c" => "ctdl/asn",
+    "https://ocf-collab.org/concepts/6ad27cff-5832-4b3d-bd3e-892208b80cad" => "asn",
     "https://ocf-collab.org/concepts/f63b9a67-543a-49ab-b5ed-8296545c1db5" => "case",
-    "https://ocf-collab.org/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c" => "asn",
   }
 
   attr_reader :competency_framework,
