@@ -81,8 +81,8 @@ https://registry.ocf-collab.org/competency_frameworks/search
         "description": "The National Initiative for Cybersecurity Education (NICE) Cybersecurity Workforce Framework components provide ...",
         "attributionName": "Credential Engine",
         "attributionUrl": "https://credentialengine.org",
-        "attributionLogoUrl": "https://ocf-collab.github.io/scratch/registryLogos/IMS/imslogo.png", 
-        "providerMetaModel": "https://ocf-collab.org/concepts/6ad27cff-5832-4b3d-bd3e-892208b80cad",
+        "attributionLogoUrl": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/logo@2x.png", 
+        "providerMetaModel": "https://ocf-collab.org/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c",
         "registryRights": "https://ocf-collab.org/rights/29905411-553e-4872-9baf-e401dac157d2",
         "beneficiaryRights": "https://credentialengine.org/terms/",
       }, {
@@ -116,8 +116,8 @@ https://registry.ocf-collab.org/competency_frameworks/:id
     "description": "The National Initiative for Cybersecurity Education (NICE) Cybersecurity Workforce Framework components provide ...",
     "attributionName": "Credential Engine",
     "attributionUrl": "https://credentialengine.org",
-    "attributionLogoUrl": "https://ocf-collab.github.io/scratch/registryLogos/IMS/imslogo.png", 
-    "providerMetaModel": "https://ocf-collab.org/concepts/6ad27cff-5832-4b3d-bd3e-892208b80cad",
+    "attributionLogoUrl": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/logo@2x.png", 
+    "providerMetaModel": "https://ocf-collab.org/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c",
     "registryRights": "https://ocf-collab.org/rights/29905411-553e-4872-9baf-e401dac157d2",
     "beneficiaryRights": "https://credentialengine.org/terms/",
     "assetDownloadUrl": "https://registry.ocf-collab.org/competency_frameworks/ce-6f48f4bb-9d78-4947-8ab6-4722749f2733/download"
