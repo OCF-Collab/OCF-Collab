@@ -43,7 +43,7 @@
          "bucketURL": "http://s3.amazonaws.com/test-credential-engine-registry/"
       },
       "requesterNodeAgent": "[Some identifier string]",
-      "providerNodeAgent": "http://llama.t3-ocf-collab-pna-ce.qa.c66.me/",
+      "providerNodeAgent": "http://t3-ocf-collab-pna-ce-8873.c66.me/",
       "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
     },
     {
@@ -77,7 +77,7 @@
          "bucketURL": "http://s3.amazonaws.com/test-ims-global/"
       },
       "requesterNodeAgent": "[Some identifier string]",
-      "providerNodeAgent": "http://dinosaur.t3-ocf-collab-pna-ims-global.qa.c66.me/",
+      "providerNodeAgent": "http://t3-ocf-collab-pna-ims-global-8874.c66.me/",
       "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
     },
     {
@@ -111,7 +111,7 @@
          "bucketURL": "http://s3.amazonaws.com/test-desire2learn/"
       },
       "requesterNodeAgent": "[Some identifier string]",
-      "providerNodeAgent": "http://dragon.t3-ocf-collab-pna-d2l.qa.c66.me/",
+      "providerNodeAgent": "http://t3-ocf-collab-pna-d2l-8872.c66.me/",
       "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
     }
   ]
