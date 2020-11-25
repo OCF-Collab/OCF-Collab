@@ -29,7 +29,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/config/jwt_key.pem
 
 /public/packs
 /public/packs-test

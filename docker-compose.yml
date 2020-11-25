@@ -46,6 +46,8 @@ services:
       - db
       - redis
       - elasticsearch
+    stdin_open: true
+    tty: true
 
 networks:
   ocf_collab:

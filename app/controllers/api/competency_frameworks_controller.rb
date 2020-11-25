@@ -1,6 +1,8 @@
 module Api
   class CompetencyFrameworksController < Api::BaseController
     def search
+      TransactionLogger.info(message: "Initializing search", search_params: params[:search])
+
       input = CompetencyFrameworksSearchParamsSanitizer.clean(params.require(:search))
 
       search = CompetencyFrameworksSearch.new(

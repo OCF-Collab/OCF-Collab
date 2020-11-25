@@ -1,4 +1,4 @@
-TransactionLogger = ActiveSupport::TaggedLogging.new(Logger.new(Rails.root.join("log", "logstash.txt")))
+TransactionLogger = ActiveSupport::TaggedLogging.new(Logger.new(Rails.root.join("log", "transactions.log")))
 
 TransactionLogger.formatter.instance_eval do
   def call(severity, time, progname, msg)
