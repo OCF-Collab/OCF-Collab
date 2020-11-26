@@ -54,6 +54,7 @@ class CompetencyFrameworkAssetFileFetcher
       competency_framework_id: competency_framework.id,
       competency_framework_external_id: competency_framework.external_id,
       node_directory_id: node_directory.id,
+      node_directory_name: node_directory.name,
       node_directory_pna_url: pna_url,
       requested_metamodel: requested_metamodel,
     }
