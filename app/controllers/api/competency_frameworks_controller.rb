@@ -4,7 +4,10 @@ module Api
       TransactionLogger.tagged(
         search_params: params[:search],
       ) do
-        TransactionLogger.info("Handling competency frameworks search request")
+        TransactionLogger.info(
+          message: "Handling competency frameworks search request",
+          action: "competency_framework_search_request",
+        )
 
         input = CompetencyFrameworksSearchParamsSanitizer.clean(params.require(:search))
 
@@ -23,21 +26,30 @@ module Api
           }
         }
 
-        TransactionLogger.info("Returned competency frameworks search results")
+        TransactionLogger.info(
+          message: "Returned competency frameworks search results",
+          action: "competency_framework_search_response",
+        )
       end
     end
 
     def show
       TransactionLogger.tagged(
-        competenecy_framework_external_id: params[:id],
+        competency_framework_external_id: params[:id],
       ) do
-        TransactionLogger.info("Handling competency framework metadata request")
+        TransactionLogger.info(
+          message: "Handling competency framework metadata request",
+          action: "competency_framework_metadata_request",
+        )
 
         competency_framework = CompetencyFramework.find_by_external_id!(params[:id])
 
         render json: CompetencyFrameworkSearchResultRepresenter.new(competency_framework: competency_framework).represent
 
-        TransactionLogger.info("Returned competency framework metadata")
+        TransactionLogger.info(
+          message: "Returned competency framework metadata",
+          action: "competency_framework_metadata_response",
+        )
       end
     end
 
@@ -46,7 +58,10 @@ module Api
         competency_framework_external_id: params[:id],
         requested_metamodel: params[:metamodel],
       ) do
-        TransactionLogger.info("Handling competency framework asset file request")
+        TransactionLogger.info(
+          message: "Handling competency framework asset file request",
+          action: "competency_framework_asset_file_request",
+        )
 
         competency_framework = CompetencyFramework.find_by_external_id!(params[:id])
 
@@ -58,7 +73,10 @@ module Api
 
         send_data fetcher.body, type: fetcher.content_type, status: 200, disposition: :inline
 
-        TransactionLogger.info("Returned competency framework asset file")
+        TransactionLogger.info(
+          message: "Returned competency framework asset file",
+          action: "competency_framework_asset_file_response",
+        )
       end
     end
   end

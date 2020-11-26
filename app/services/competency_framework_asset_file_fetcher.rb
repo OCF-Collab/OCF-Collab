@@ -40,10 +40,16 @@ class CompetencyFrameworkAssetFileFetcher
   def pna_response
     @pna_response ||= begin
       TransactionLogger.tagged(transaction_logger_tags) do
-        TransactionLogger.info("Requesting competency framework asset file from PNA")
+        TransactionLogger.info(
+          message: "Requesting competency framework asset file from PNA",
+          action: "competency_framework_asset_file_pna_request",
+        )
 
         connection.get(path).tap do |response|
-          TransactionLogger.info("Fetched competency framework asset file from PNA")
+          TransactionLogger.info(
+            message: "Fetched competency framework asset file from PNA",
+            action: "competency_framework_asset_file_pna_response",
+          )
         end
       end
     end
