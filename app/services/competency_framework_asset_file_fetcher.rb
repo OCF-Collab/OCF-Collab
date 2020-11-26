@@ -38,11 +38,32 @@ class CompetencyFrameworkAssetFileFetcher
   end
 
   def pna_response
-    @pna_response ||= connection.get(path)
+    @pna_response ||= begin
+      TransactionLogger.tagged(transaction_logger_tags) do
+        TransactionLogger.info("Requesting competency framework asset file from PNA")
+
+        connection.get(path).tap do |response|
+          TransactionLogger.info("Fetched competency framework asset file from PNA")
+        end
+      end
+    end
   end
 
+  def transaction_logger_tags
+    {
+      competency_framework_id: competency_framework.id,
+      competency_framework_external_id: competency_framework.external_id,
+      node_directory_id: node_directory.id,
+      node_directory_pna_url: pna_url,
+      requested_metamodel: requested_metamodel,
+    }
+  end
+
+
   def connection
-    @connection ||= Faraday.new(pna_url, headers: headers)
+    @connection ||= Faraday.new(pna_url, headers: headers) do |c|
+      c.use Faraday::Response::RaiseError
+    end
   end
 
   def pna_url

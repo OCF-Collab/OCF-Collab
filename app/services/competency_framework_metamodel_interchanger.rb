@@ -36,10 +36,25 @@ class CompetencyFrameworkMetamodelInterchanger
   end
 
   def metamodel_interchanger_response
-    @metamodel_interchanger_response ||= connection.post do |req|
-      req.body = metamodel_interchanger_payload
-      req.params = metamodel_interchanger_params
+    @metamodel_interchanger_response ||= begin
+      TransactionLogger.tagged(transaction_logger_tags) do
+        TransactionLogger.info("Requesting competency framework metamodel interchange")
+
+        connection.post do |req|
+          req.body = metamodel_interchanger_payload
+          req.params = metamodel_interchanger_params
+        end.tap do
+          TransactionLogger.info("Finished competency framework metamodel interchange")
+        end
+      end
     end
+  end
+
+  def transaction_logger_tags
+    {
+      provider_metamodel: provider_metamodel,
+      requested_metamodel: requested_metamodel,
+    }
   end
 
   def connection
