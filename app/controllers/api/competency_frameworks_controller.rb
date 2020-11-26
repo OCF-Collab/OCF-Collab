@@ -49,6 +49,9 @@ module Api
         TransactionLogger.info(
           message: "Returned competency framework metadata",
           action: "competency_framework_metadata_response",
+          competency_framework_id: competency_framework.id,
+          node_directory_id: competency_framework.node_directory.id,
+          node_directory_name: competency_framework.node_directory.name,
         )
       end
     end
@@ -76,6 +79,9 @@ module Api
         TransactionLogger.info(
           message: "Returned competency framework asset file",
           action: "competency_framework_asset_file_response",
+          competency_framework_id: competency_framework.id,
+          node_directory_id: competency_framework.node_directory.id,
+          node_directory_name: competency_framework.node_directory.name,
         )
       end
     end
