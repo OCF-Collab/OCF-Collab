@@ -42,13 +42,13 @@ class CompetencyFrameworkAssetFileFetcher
       TransactionLogger.tagged(transaction_logger_tags) do
         TransactionLogger.info(
           message: "Requesting competency framework asset file from PNA",
-          action: "competency_framework_asset_file_pna_request",
+          event: "competency_framework_asset_file_pna_request",
         )
 
         connection.get(path).tap do |response|
           TransactionLogger.info(
             message: "Fetched competency framework asset file from PNA",
-            action: "competency_framework_asset_file_pna_response",
+            event: "competency_framework_asset_file_pna_response",
           )
         end
       end

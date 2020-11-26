@@ -6,7 +6,7 @@ module Api
       ) do
         TransactionLogger.info(
           message: "Handling competency frameworks search request",
-          action: "competency_framework_search_request",
+          event: "competency_framework_search_request",
         )
 
         input = CompetencyFrameworksSearchParamsSanitizer.clean(params.require(:search))
@@ -28,7 +28,7 @@ module Api
 
         TransactionLogger.info(
           message: "Returned competency frameworks search results",
-          action: "competency_framework_search_response",
+          event: "competency_framework_search_response",
         )
       end
     end
@@ -39,7 +39,7 @@ module Api
       ) do
         TransactionLogger.info(
           message: "Handling competency framework metadata request",
-          action: "competency_framework_metadata_request",
+          event: "competency_framework_metadata_request",
         )
 
         competency_framework = CompetencyFramework.find_by_external_id!(params[:id])
@@ -48,7 +48,7 @@ module Api
 
         TransactionLogger.info(
           message: "Returned competency framework metadata",
-          action: "competency_framework_metadata_response",
+          event: "competency_framework_metadata_response",
           competency_framework_id: competency_framework.id,
           node_directory_id: competency_framework.node_directory.id,
           node_directory_name: competency_framework.node_directory.name,
@@ -63,7 +63,7 @@ module Api
       ) do
         TransactionLogger.info(
           message: "Handling competency framework asset file request",
-          action: "competency_framework_asset_file_request",
+          event: "competency_framework_asset_file_request",
         )
 
         competency_framework = CompetencyFramework.find_by_external_id!(params[:id])
@@ -78,7 +78,7 @@ module Api
 
         TransactionLogger.info(
           message: "Returned competency framework asset file",
-          action: "competency_framework_asset_file_response",
+          event: "competency_framework_asset_file_response",
           competency_framework_id: competency_framework.id,
           node_directory_id: competency_framework.node_directory.id,
           node_directory_name: competency_framework.node_directory.name,

@@ -40,7 +40,7 @@ class CompetencyFrameworkMetamodelInterchanger
       TransactionLogger.tagged(transaction_logger_tags) do
         TransactionLogger.info(
           message: "Requesting competency framework metamodel interchange",
-          action: "competency_framework_metamodel_interchange_request",
+          event: "competency_framework_metamodel_interchange_request",
         )
 
         connection.post do |req|
@@ -49,7 +49,7 @@ class CompetencyFrameworkMetamodelInterchanger
         end.tap do
           TransactionLogger.info(
             message: "Finished competency framework metamodel interchange",
-            action: "competency_framework_metamodel_interchange_response",
+            event: "competency_framework_metamodel_interchange_response",
           )
         end
       end
