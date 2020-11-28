@@ -1,5 +1,5 @@
 class OauthApplication < ApplicationRecord
   include ::Doorkeeper::Orm::ActiveRecord::Mixins::Application
 
-  belongs_to :node_directory
+  belongs_to :node_directory, optional: true
 end
