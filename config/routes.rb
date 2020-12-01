@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     skip_controllers :applications, :authorized_applications
   end
 
+  namespace :auth do
+    get :keys
+  end
+
   namespace :api do
     resources :competency_frameworks, only: [:show], constraints: { :id => /.*/ } do
       member do

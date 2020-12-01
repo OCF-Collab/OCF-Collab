@@ -495,13 +495,14 @@ Doorkeeper::JWT.configure do
   token_payload do |opts|
     {
       # @see JWT reserved claims - https://tools.ietf.org/html/draft-jones-json-web-token-07#page-7
-      iss: 'OCF Collab',
+      iss: 'https://registry.ocf-collab.org',
       iat: opts[:created_at].utc.to_i,
       exp: (opts[:created_at] + opts[:expires_in]).utc.to_i,
       jti: SecureRandom.uuid,
 
       rna: {
-        application: opts[:application].name,
+        id: opts[:application].id,
+        name: opts[:application].name,
       }
     }
   end
@@ -509,7 +510,12 @@ Doorkeeper::JWT.configure do
   # Optionally set additional headers for the JWT. See
   # https://tools.ietf.org/html/rfc7515#section-4.1
   token_headers do |opts|
-    { kid: opts[:application][:uid] }
+    rsa_keypair = Doorkeeper::JWT.send(:secret_key, opts)
+    jwk = JWT::JWK.new(rsa_keypair)
+    {
+      kid: jwk.kid,
+      typ: "JWT",
+    }
   end
 
   # Use the application secret specified in the access grant token. Defaults to
