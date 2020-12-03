@@ -7,9 +7,11 @@ module RegistryDirectory
     end
 
     def sync!
+      puts "Updating node directories:"
       registries_data.each do |registry_data|
         RegistrySync.new(data: registry_data).sync!
       end
+      puts "Done."
     end
 
     def registries_data
@@ -31,6 +33,8 @@ module RegistryDirectory
     end
 
     def sync!
+      puts "  * %s" % data["name"]["en-us"]
+
       update_node_directory!
     end
 
@@ -58,11 +62,7 @@ module RegistryDirectory
     end
 
     def s3_bucket
-      data[s3_bucket_environment_key]["bucketName"]
-    end
-
-    def s3_bucket_environment_key
-      Rails.env.production? ? "s3Production" : "s3Test"
+      data["s3"]["bucketName"]
     end
 
     def contact_points

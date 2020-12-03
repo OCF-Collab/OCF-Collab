@@ -32,15 +32,10 @@
         }
       ],
       "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/logo@2x.png",
-      "s3Production": {
+      "s3": {
          "bucketName": "credential-engine-registry",
          "arn": "arn:aws:s3:::credential-engine-registry",
          "bucketURL": "http://s3.amazonaws.com/credential-engine-registry/"
-      },
-      "s3Test": {
-         "bucketName": "test-credential-engine-registry",
-         "arn": "arn:aws:s3:::test-credential-engine-registry",
-         "bucketURL": "http://s3.amazonaws.com/test-credential-engine-registry/"
       },
       "requesterNodeAgent": "[Some identifier string]",
       "providerNodeAgent": "http://t3-ocf-collab-pna-ce-8873.c66.me/",
@@ -66,15 +61,10 @@
         }
       ],
       "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/IMS/imslogo.png",
-      "s3Production": {
+      "s3": {
          "bucketName": "ims-global",
          "arn": "arn:aws:s3:::ims-global",
          "bucketURL": "http://s3.amazonaws.com/ims-global/"
-      },
-      "s3Test": {
-         "bucketName": "test-ims-global",
-         "arn": "arn:aws:s3:::test-ims-global",
-         "bucketURL": "http://s3.amazonaws.com/test-ims-global/"
       },
       "requesterNodeAgent": "[Some identifier string]",
       "providerNodeAgent": "http://t3-ocf-collab-pna-ims-global-8874.c66.me/",
@@ -100,15 +90,10 @@
         }
       ],
       "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/D2L/d2l-logo-full-2x.png",
-      "s3Production": {
+      "s3": {
          "bucketName": "desire2learn",
          "arn": "arn:aws:s3:::desire2learn",
          "bucketURL": "http://s3.amazonaws.com/desire2learn/"
-      },
-      "s3Test": {
-         "bucketName": "test-desire2learn",
-         "arn": "arn:aws:s3:::test-desire2learn",
-         "bucketURL": "http://s3.amazonaws.com/test-desire2learn/"
       },
       "requesterNodeAgent": "[Some identifier string]",
       "providerNodeAgent": "http://t3-ocf-collab-pna-d2l-8872.c66.me/",
