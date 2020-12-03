@@ -1,5 +1,5 @@
 {
-  "@context": "https://ocf-collab.org.org/ns/context.json",
+  "@context": "https://ocf-collab.org/ns/context.json",
   "@graph": [
     {
       "@id": "https://ocf-collab.org/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7",
@@ -37,7 +37,6 @@
          "arn": "arn:aws:s3:::credential-engine-registry",
          "bucketURL": "http://s3.amazonaws.com/credential-engine-registry/"
       },
-      "requesterNodeAgent": "[Some identifier string]",
       "providerNodeAgent": "http://t3-ocf-collab-pna-ce-8873.c66.me/",
       "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
     },
@@ -66,7 +65,6 @@
          "arn": "arn:aws:s3:::ims-global",
          "bucketURL": "http://s3.amazonaws.com/ims-global/"
       },
-      "requesterNodeAgent": "[Some identifier string]",
       "providerNodeAgent": "http://t3-ocf-collab-pna-ims-global-8874.c66.me/",
       "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
     },
@@ -95,7 +93,6 @@
          "arn": "arn:aws:s3:::desire2learn",
          "bucketURL": "http://s3.amazonaws.com/desire2learn/"
       },
-      "requesterNodeAgent": "[Some identifier string]",
       "providerNodeAgent": "http://t3-ocf-collab-pna-d2l-8872.c66.me/",
       "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
     }
