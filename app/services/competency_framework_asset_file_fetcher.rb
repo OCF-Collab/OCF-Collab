@@ -1,7 +1,7 @@
 require "cgi"
 
 class CompetencyFrameworkAssetFileFetcher
-  ASSET_FILE_PATH = "/competency_frameworks"
+  ASSET_FILE_PATH = "/competency_frameworks/asset_file"
 
   attr_reader :competency_framework, :access_token, :requested_metamodel
 
@@ -45,7 +45,7 @@ class CompetencyFrameworkAssetFileFetcher
           event: "competency_framework_asset_file_pna_request",
         )
 
-        connection.get(path).tap do |response|
+        connection.get(path, id: competency_framework.external_id).tap do |response|
           TransactionLogger.info(
             message: "Fetched competency framework asset file from PNA",
             event: "competency_framework_asset_file_pna_response",
@@ -88,10 +88,7 @@ class CompetencyFrameworkAssetFileFetcher
   end
 
   def path
-    "%s/%s" % [
-      ASSET_FILE_PATH,
-      CGI.escape(competency_framework.external_id),
-    ]
+    ASSET_FILE_PATH
   end
 
   def metamodel_interchanger

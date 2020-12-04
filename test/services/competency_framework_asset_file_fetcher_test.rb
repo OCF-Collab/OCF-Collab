@@ -36,8 +36,7 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
     let(:expected_url) do
       [
         pna_url,
-        "competency_frameworks",
-        CGI.escape(external_id),
+        "competency_frameworks/asset_file",
       ].join("/")
     end
 
@@ -50,6 +49,7 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
     context "valid response" do
       before do
         stub_request(:get, expected_url).with(
+          query: { id: external_id },
           headers: expected_headers
         ).to_return(pna_response)
 
