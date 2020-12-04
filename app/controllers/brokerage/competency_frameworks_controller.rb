@@ -2,14 +2,17 @@ module Brokerage
   class CompetencyFrameworksController < Brokerage::BaseController
     def search
       TransactionLogger.tagged(
-        search_params: params[:search],
+        search_params: {
+          query: params[:query],
+          limit: params[:limit],
+        },
       ) do
         TransactionLogger.info(
           message: "Handling competency frameworks search request",
           event: "competency_framework_search_request",
         )
 
-        input = sanitize_params!(CompetencyFrameworksSearchParamsSanitizer, params[:search])
+        input = sanitize_params!(CompetencyFrameworksSearchParamsSanitizer, params)
 
         search = CompetencyFrameworksSearch.new(
           query: input[:query],

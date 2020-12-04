@@ -34,10 +34,8 @@ class ApiCompetencyFrameworksSearchTest < ActionDispatch::IntegrationTest
         CompetencyFramework.reindex
 
         authorized_get(competency_frameworks_search_url, params: {
-          search: {
-            query: query,
-            limit: 2,
-          }
+          query: query,
+          limit: 2,
         })
 
         assert_response :success
