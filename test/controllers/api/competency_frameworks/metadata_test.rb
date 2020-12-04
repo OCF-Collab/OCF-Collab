@@ -1,7 +1,7 @@
 require "test_helper"
 
-class ApiCompetencyFrameworksShowTest < ActionDispatch::IntegrationTest
-  describe "GET /:id" do
+class ApiCompetencyFrameworksMetadataTest < ActionDispatch::IntegrationTest
+  describe "GET /competency_frameworks/metadata" do
     let(:id) do
       competency_framework.external_id
     end
@@ -12,7 +12,7 @@ class ApiCompetencyFrameworksShowTest < ActionDispatch::IntegrationTest
 
     context "unauthorized request" do
       it "returns 401" do
-        get api_competency_framework_url(id: id)
+        get competency_frameworks_metadata_url(id: id)
 
         assert_response 401
       end
@@ -20,7 +20,7 @@ class ApiCompetencyFrameworksShowTest < ActionDispatch::IntegrationTest
 
     context "authorized request" do
       it "returns proper framework metadata" do
-        authorized_get(api_competency_framework_url(id: id))
+        authorized_get(competency_frameworks_metadata_url(id: id))
 
         assert_response :success
 

@@ -1,10 +1,10 @@
 require "test_helper"
 
 class ApiCompetencyFrameworksSearchTest < ActionDispatch::IntegrationTest
-  describe "GET /search" do
+  describe "GET /competency_frameworks/search" do
     context "unauthorized request" do
       it "returns 401" do
-        get search_api_competency_frameworks_url
+        get competency_frameworks_search_url
 
         assert_response 401
       end
@@ -33,7 +33,7 @@ class ApiCompetencyFrameworksSearchTest < ActionDispatch::IntegrationTest
 
         CompetencyFramework.reindex
 
-        authorized_get(search_api_competency_frameworks_url, params: {
+        authorized_get(competency_frameworks_search_url, params: {
           search: {
             query: query,
             limit: 2,

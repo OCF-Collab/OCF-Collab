@@ -1,5 +1,5 @@
-module Api
-  class CompetencyFrameworksController < Api::BaseController
+module Brokerage
+  class CompetencyFrameworksController < Brokerage::BaseController
     def search
       TransactionLogger.tagged(
         search_params: params[:search],
@@ -9,7 +9,7 @@ module Api
           event: "competency_framework_search_request",
         )
 
-        input = CompetencyFrameworksSearchParamsSanitizer.clean(params.require(:search))
+        input = sanitize_params!(CompetencyFrameworksSearchParamsSanitizer, params[:search])
 
         search = CompetencyFrameworksSearch.new(
           query: input[:query],
@@ -33,7 +33,7 @@ module Api
       end
     end
 
-    def show
+    def metadata
       TransactionLogger.tagged(
         competency_framework_external_id: params[:id],
       ) do
@@ -42,7 +42,9 @@ module Api
           event: "competency_framework_metadata_request",
         )
 
-        competency_framework = CompetencyFramework.find_by_external_id!(params[:id])
+        input = sanitize_params!(CompetencyFrameworkMetadataParamsSanitizer, params)
+
+        competency_framework = CompetencyFramework.find_by_external_id!(input[:id])
 
         render json: CompetencyFrameworkSearchResultRepresenter.new(competency_framework: competency_framework).represent
 
@@ -66,12 +68,14 @@ module Api
           event: "competency_framework_asset_file_request",
         )
 
-        competency_framework = CompetencyFramework.find_by_external_id!(params[:id])
+        input = sanitize_params!(CompetencyFrameworkAssetFileParamsSanitizer, params)
+
+        competency_framework = CompetencyFramework.find_by_external_id!(input[:id])
 
         fetcher = CompetencyFrameworkAssetFileFetcher.new(
           competency_framework: competency_framework,
           access_token: doorkeeper_token.token,
-          requested_metamodel: params[:metamodel],
+          requested_metamodel: input[:metamodel],
         )
 
         send_data fetcher.body, type: fetcher.content_type, status: 200, disposition: :inline

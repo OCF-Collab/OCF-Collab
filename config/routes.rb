@@ -12,15 +12,11 @@ Rails.application.routes.draw do
     get :keys
   end
 
-  namespace :api do
-    resources :competency_frameworks, only: [:show], constraints: { :id => /.*/ } do
-      member do
-        get :asset_file
-      end
-
-      collection do
-        get :search
-      end
+  scope module: "brokerage" do
+    namespace :competency_frameworks do
+      get :search
+      get :metadata
+      get :asset_file
     end
   end
 end

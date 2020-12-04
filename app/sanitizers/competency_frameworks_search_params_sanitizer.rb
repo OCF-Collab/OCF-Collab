@@ -1,4 +1,4 @@
 class CompetencyFrameworksSearchParamsSanitizer < InputSanitizer::Sanitizer
-  string :query
+  string :query, required: true
   integer :limit
 end
