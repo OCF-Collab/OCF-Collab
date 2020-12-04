@@ -495,7 +495,7 @@ Doorkeeper::JWT.configure do
   token_payload do |opts|
     {
       # @see JWT reserved claims - https://tools.ietf.org/html/draft-jones-json-web-token-07#page-7
-      iss: 'https://registry.ocf-collab.org',
+      iss: 'https://ocf-collab.org',
       iat: opts[:created_at].utc.to_i,
       exp: (opts[:created_at] + opts[:expires_in]).utc.to_i,
       jti: SecureRandom.uuid,
