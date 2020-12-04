@@ -102,7 +102,7 @@ Returns metadata of specific competency framework in OCF Collab registry.
 
 #### URL
 
-https://registry.ocf-collab.org/competency_frameworks/:id
+https://registry.ocf-collab.org/competency_frameworks/metadata
 
 #### Parameters
 
@@ -138,7 +138,7 @@ This endpoint allows to convert the asset file to desired metamodel using the `m
 
 #### URL
 
-https://registry.ocf-collab.org/competency_frameworks/:id/asset_file
+https://registry.ocf-collab.org/competency_frameworks/asset_file
 
 #### Parameters
 
