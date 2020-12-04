@@ -105,7 +105,7 @@ authenticator.token_payload
 }
 ```
 
-##### Available attributes
+##### Token payload attributes
 
 | Attribute | Description                                                                                       |
 | --------- | ------------------------------------------------------------------------------------------------- |
@@ -123,12 +123,18 @@ PNA is required to expose an endpoint authenticated with above describe method t
 
 ### Path
 
-`/competency_frameworks/:id`
+`/competency_frameworks/asset_file`
+
+#### Parameters
+
+| Parameter | Required | Type   | Description                                                         |
+|-----------|----------|--------|---------------------------------------------------------------------|
+| id        | Yes      | String | ID of specific framework as provided in Node Directory entry files. |
 
 ### Sample request
 
 ```
-# GET https://pna-url.com/competency_frameworks/https:%2F%2Fcredentialengineregistry.org%2Fgraph%2Fce-6f48f4bb-9d78-4947-8ab6-4722749f2733
+# GET https://pna-url.com/competency_frameworks/asset_file?id=https:%2F%2Fcredentialengineregistry.org%2Fgraph%2Fce-6f48f4bb-9d78-4947-8ab6-4722749f2733
 
 {
   "@context": "https://credreg.net/ctdlasn/schema/context/json",
