@@ -1,11 +1,13 @@
 class CompetencyFrameworksSearch
-  MAX_LIMIT = 25
+  DEFAULT_PER_PAGE = 25
+  MAX_PER_PAGE = 100
 
-  attr_reader :query, :limit, :includes
+  attr_reader :query, :includes
 
-  def initialize(query:, limit: nil, includes: nil)
+  def initialize(query:, page: nil, per_page: DEFAULT_PER_PAGE, includes: nil)
     @query = query
-    @limit = limit
+    @page = page
+    @per_page = per_page
     @includes = includes
   end
 
@@ -13,20 +15,29 @@ class CompetencyFrameworksSearch
     @results ||= CompetencyFramework.search(query, **search_options)
   end
 
+  def total_results_count
+    results.total_count
+  end
+
   def search_options
     {
-      limit: results_limit,
+      page: page,
+      per_page: per_page,
       includes: includes,
       fields: fields,
     }
   end
 
-  def results_limit
-    if limit.nil?
-      return MAX_LIMIT
+  def page
+    @page || 1
+  end
+
+  def per_page
+    if @per_page.nil?
+      return MAX_PER_PAGE
     end
 
-    [limit, MAX_LIMIT].min
+    [@per_page, MAX_PER_PAGE].min
   end
 
   def fields

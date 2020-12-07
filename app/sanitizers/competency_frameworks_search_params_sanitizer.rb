@@ -1,4 +1,5 @@
 class CompetencyFrameworksSearchParamsSanitizer < InputSanitizer::Sanitizer
   string :query, required: true
-  integer :limit
+  integer :page
+  integer :per_page
 end

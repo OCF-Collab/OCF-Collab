@@ -23,46 +23,54 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
     end
 
     describe ".results" do
-      context "without specified limit" do
-        it "returns competency frameworks search results for given query with max limit" do
+      context "without query only" do
+        it "returns competency frameworks search results for given query with max per_page" do
           verify_search_call(query, {
-            limit: CompetencyFrameworksSearch::MAX_LIMIT,
+            per_page: CompetencyFrameworksSearch::DEFAULT_PER_PAGE,
+            page: 1,
             includes: nil,
             fields: expected_fields,
           })
         end
       end
 
-      context "with specified limit" do
+      context "with specified pagination params" do
+        let(:page) do
+          2
+        end
+
         subject do
           CompetencyFrameworksSearch.new(
             query: query,
-            limit: limit,
+            page: page,
+            per_page: per_page,
           )
         end
 
-        context "with specified limit below max" do
-          let(:limit) do
-            CompetencyFrameworksSearch::MAX_LIMIT - 5
+        context "with specified per_page below max" do
+          let(:per_page) do
+            CompetencyFrameworksSearch::MAX_PER_PAGE - 5
           end
 
-          it "returns competency frameworks search results for given query with provided limit" do
+          it "returns competency frameworks search results for given query with provided per_page" do
             verify_search_call(query, {
-              limit: limit,
+              per_page: per_page,
+              page: page,
               includes: nil,
               fields: expected_fields,
             })
           end
         end
 
-        context "with specified limit above max" do
-          let(:limit) do
-            CompetencyFrameworksSearch::MAX_LIMIT + 5
+        context "with specified per_page above max" do
+          let(:per_page) do
+            CompetencyFrameworksSearch::MAX_PER_PAGE + 5
           end
 
-          it "returns competency frameworks search results for given query with provided limit" do
+          it "returns competency frameworks search results for given query with provided per_page" do
             verify_search_call(query, {
-              limit: CompetencyFrameworksSearch::MAX_LIMIT,
+              per_page: CompetencyFrameworksSearch::MAX_PER_PAGE,
+              page: page,
               includes: nil,
               fields: expected_fields,
             })
@@ -84,7 +92,8 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
 
         it "passes includes option to Searchkick" do
           verify_search_call(query, {
-            limit: CompetencyFrameworksSearch::MAX_LIMIT,
+            per_page: CompetencyFrameworksSearch::DEFAULT_PER_PAGE,
+            page: 1,
             includes: includes,
             fields: expected_fields,
           })

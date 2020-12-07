@@ -47,7 +47,7 @@ curl --request GET \
   --url 'https://registry.ocf-collab.org/api/competency_frameworks/search' \
   --header 'Authorization: Bearer eyJraWQiOiJaUGJZWXE0eEN2Q2h6QTdvNk42Z3RSOFZh...' \
   --data 'query=cybersecurity' \
-  --data 'limit=10'
+  --data 'page=3'
 ```
 
 ## Available endpoints
@@ -61,19 +61,23 @@ https://registry.ocf-collab.org/competency_frameworks/search
 
 #### Parameters
 
-| Parameter | Required | Type                    | Description                                                                                                           |
-|-----------|----------|-------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| query     | Yes      | String                  | Text query used for searching for competency frameworks based on name, description, keywords and actual competencies. |
-| limit     | No       | Integer (range: 1 - 10) | Maximum number of returned items.                                                                                     |
+| Parameter | Required | Type                            | Description                                                                                                           |
+|-----------|----------|---------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| query     | Yes      | String                          | Text query used for searching for competency frameworks based on name, description, keywords and actual competencies. |
+| per_page  | No       | Integer (default: 25, max: 100) | Maximum number of returned items on a single page.                                                                    |
+| page      | No       | Integer (default: 1)            | Specify page of results in case their number exceeds `per_page` parameter.                                            |
 
 #### Sample response
 
 ```
-# GET https://registry.ocf-collab.org/competency_frameworks/search?query=cybersecurity
+# GET https://registry.ocf-collab.org/competency_frameworks/search?query=cybersecurity?per_page=50&page=2
 
 {
   "search": {
     "query": "cybersecurity",
+    "per_page": 50,
+    "page": 2,
+    "total_results_count": 124,
     "results": [
       {
         "id": "https://credentialengineregistry.org/graph/ce-70958c4e-b0c6-4cf7-ab08-fafe9f205384",

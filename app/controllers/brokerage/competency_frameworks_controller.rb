@@ -4,7 +4,8 @@ module Brokerage
       TransactionLogger.tagged(
         search_params: {
           query: params[:query],
-          limit: params[:limit],
+          page: params[:page],
+          per_page: params[:per_page],
         },
       ) do
         TransactionLogger.info(
@@ -16,13 +17,17 @@ module Brokerage
 
         search = CompetencyFrameworksSearch.new(
           query: input[:query],
-          limit: input[:limit],
+          page: input[:page],
+          per_page: input[:per_page],
           includes: [:node_directory],
         )
 
         render json: {
           search: {
-            query: input[:query],
+            query: search.query,
+            per_page: search.per_page,
+            page: search.page,
+            total_results_count: search.total_results_count,
             results: search.results.map { |r|
               CompetencyFrameworkSearchResultRepresenter.new(competency_framework: r).represent
             }

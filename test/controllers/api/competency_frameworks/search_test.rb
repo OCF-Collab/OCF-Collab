@@ -15,44 +15,118 @@ class ApiCompetencyFrameworksSearchTest < ActionDispatch::IntegrationTest
         "cybersecurity"
       end
 
-      it "returns proper results taking query and limit into account" do
+      let(:cybersecurity1) do
         create(:competency_framework, {
-          name: "Cybersecurity Industry Model: U.S. Department of Labor (DOL)",
-        })
-        cybersecurity1 = create(:competency_framework, {
           name: "NICE Cybersecurity Workforce Framework: Tasks",
-          description: "Cybersecurity word in description for higher search score."
+          description: "Cybersecurity word in description for higher search score. And cybersecurity one more time. Cybersecurity FTW."
         })
-        cybersecurity2 = create(:competency_framework, {
+      end
+
+      let(:cybersecurity2) do
+        create(:competency_framework, {
           name: "NICE Cybersecurity Workforce Framework: Knowledge",
           description: "Cybersecurity word in description for higher search score. And cybersecurity one more time."
         })
+      end
+
+      let(:cybersecurity3) do
+        create(:competency_framework, {
+          name: "NICE Cybersecurity Workforce Framework: Skills",
+          description: "Cybersecurity word in description for higher search score."
+        })
+      end
+
+      let(:cybersecurity4) do
+        create(:competency_framework, {
+          name: "NICE Cybersecurity Workforce Framework: Abilities",
+          description: "No query word in description this time."
+        })
+      end
+
+      let(:other) do
         create(:competency_framework, {
           name: "Building Blocks Model: U.S. Department of Labor (DOL)",
         })
+      end
 
+      let(:frameworks) do
+        [
+          cybersecurity3,
+          cybersecurity1,
+          cybersecurity4,
+          cybersecurity2,
+          other,
+        ]
+      end
+
+      let(:per_page) do
+        2
+      end
+
+      before do
+        frameworks
         CompetencyFramework.reindex
+      end
 
-        authorized_get(competency_frameworks_search_url, params: {
-          query: query,
-          limit: 2,
-        })
+      context "without page specified" do
+        it "returns first items respecting per_page param" do
+          authorized_get(competency_frameworks_search_url, params: {
+            query: query,
+            per_page: per_page,
+          })
 
-        assert_response :success
+          assert_response :success
 
-        expected_data = {
-          "search" => {
-            "query" => query,
-            "results" => [
-              CompetencyFrameworkSearchResultRepresenter.new(competency_framework: cybersecurity2).represent,
-              CompetencyFrameworkSearchResultRepresenter.new(competency_framework: cybersecurity1).represent,
-            ]
+          expected_data = {
+            "search" => {
+              "query" => query,
+              "per_page" => per_page,
+              "page" => 1,
+              "total_results_count" => 4,
+              "results" => [
+                CompetencyFrameworkSearchResultRepresenter.new(competency_framework: cybersecurity1).represent,
+                CompetencyFrameworkSearchResultRepresenter.new(competency_framework: cybersecurity2).represent,
+              ]
+            }
           }
-        }
 
-        response_data = JSON.parse(@response.body)
+          response_data = JSON.parse(@response.body)
 
-        assert_equal expected_data, response_data
+          assert_equal expected_data, response_data
+        end
+      end
+
+      context "with page specified" do
+        let(:page) do
+          2
+        end
+
+        it "returns specific page of items respecting per_page param" do
+          authorized_get(competency_frameworks_search_url, params: {
+            query: query,
+            page: page,
+            per_page: per_page,
+          })
+
+          assert_response :success
+
+          expected_data = {
+            "search" => {
+              "query" => query,
+              "per_page" => per_page,
+              "page" => page,
+              "total_results_count" => 4,
+              "results" => [
+                CompetencyFrameworkSearchResultRepresenter.new(competency_framework: cybersecurity3).represent,
+                CompetencyFrameworkSearchResultRepresenter.new(competency_framework: cybersecurity4).represent,
+              ]
+            }
+          }
+
+          response_data = JSON.parse(@response.body)
+
+          assert_equal expected_data, response_data
+        end
       end
     end
   end
