@@ -92,7 +92,7 @@ class CompetencyFrameworkAssetFileFetcher
   end
 
   def metamodel_interchanger
-    @metamodel_interchanger = CompetencyFrameworkMetamodelInterchanger.new(
+    @metamodel_interchanger ||= CompetencyFrameworkMetamodelInterchanger.new(
       competency_framework: competency_framework,
       competency_framework_body: pna_response_body,
       competency_framework_content_type: pna_response_content_type,
