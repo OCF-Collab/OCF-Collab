@@ -41,7 +41,7 @@
         "arn": "arn:aws:s3:::credential-engine-registry",
         "bucketURL": "http://s3.amazonaws.com/credential-engine-registry/"
       },
-      "providerNodeAgent": "http://t3-ocf-collab-pna-ce-8873.c66.me/",
+      "providerNodeAgent": "http://t3-ocf-collab-pna-ce-8945.c66.me/",
       "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
     },
     {
