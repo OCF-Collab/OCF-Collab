@@ -24,7 +24,7 @@ class CompetencyFrameworkAssetFileFetcher
       return pna_response_content_type
     end
 
-    metamodel_interchanger.transformed_content_type
+    metamodel_interchanger.transformed_content_type || pna_response_content_type
   end
 
   private
