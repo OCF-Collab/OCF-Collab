@@ -1,5 +1,5 @@
 class CompetencyFrameworkMetamodelInterchanger
-  TIMEOUT_SECONDS = 120
+  TIMEOUT_SECONDS = 600
   METAMODEL_INTERCHANGER_URL = "https://dev.cassproject.org/api/transform"
   METAMODEL_KEYS = {
     "https://ocf-collab.org/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c" => "ctdl/asn",
