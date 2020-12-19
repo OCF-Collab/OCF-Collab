@@ -43,3 +43,42 @@ Specify `node_directory` association if the Request Node Agent belongs to a node
 ### JWT tokens
 
 
+## Transaction Logs
+
+Request Broker generates a log containing detailed information about specific steps within all brokered transactions.
+
+The log file location is `log/transactions.log`.
+
+In order to allow easy access to the log it's fed into AWS CloudWatch and then ElasticSearch index with Kibana front-end.
+
+### Setup
+
+#### AWS IAM role
+
+In order to allow EC2 instance to push logs to CloudWatch the instance needs an [IAM Role](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html) configured as in [Create IAM Roles and Users for Use with the CloudWatch Agent](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/create-iam-roles-for-cloudwatch-agent.html) instructions.
+
+After creating the role with appropiate permissions policy attach it to the EC2 instance(s) running Request Broker as in [Attaching an IAM role to an instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html#attach-iam-role) instructions.
+
+#### CloudWatch agent on EC2 instance(s)
+
+After creating IAM role install and configure CloudWatch agent as in [Install and Configure the CloudWatch Logs Agent on a Running EC2 Linux Instance](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/QuickStartEC2Instance.html).
+
+Skip "Step 1: Configure Your IAM Role or User for CloudWatch Logs" and use the role created in previous step.
+
+Use following timestamp format when configuring the agent: `%Y-%m-%dT%H:%M:%S.%fZ`.
+
+##### Sample `/var/awslogs/etc/awslogs.conf` configuration
+
+```
+[/var/deploy/t3_ocf_collab__rb/web_head/shared/log/transactions.log]
+datetime_format = %Y-%m-%dT%H:%M:%S.%fZ
+file = /var/deploy/t3_ocf_collab__rb/web_head/shared/log/transactions.log
+buffer_duration = 5000
+log_stream_name = request-broker-transaction-log-production
+initial_position = start_of_file
+log_group_name = request-broker-production
+```
+
+#### Streaming CloudWatch logs to ElasticSearch
+
+Follow [Streaming CloudWatch Logs Data to Amazon Elasticsearch Service](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_ES_Stream.html) instructions.
