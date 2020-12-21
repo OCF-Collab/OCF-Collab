@@ -54,7 +54,7 @@ curl --request GET \
 
 ### Competency frameworks search
 
-Search competency frameworks available in OCF Collab registry.
+Returns metadata of competency frameworks matching provided search query.
 
 #### URL
 https://registry.ocf-collab.org/competency_frameworks/search
@@ -76,16 +76,15 @@ https://registry.ocf-collab.org/competency_frameworks/search
     "query": "cybersecurity",
     "results": [
       {
-        "id": "ce-6f48f4bb-9d78-4947-8ab6-4722749f2733",
-        "name": "NICE Cybersecurity Workforce Framework: Tasks",
+        "id": "https://credentialengineregistry.org/graph/ce-70958c4e-b0c6-4cf7-ab08-fafe9f205384",
+        "title": "NICE Cybersecurity Workforce Framework: Tasks",
         "description": "The National Initiative for Cybersecurity Education (NICE) Cybersecurity Workforce Framework components provide ...",
         "attributionName": "Credential Engine",
         "attributionUrl": "https://credentialengine.org",
-        "attributionLogoUrl": "https://ocf-collab.github.io/scratch/registryLogos/IMS/imslogo.png", 
-        "providerMetaModel": "https://ocf-collab.org/concepts/6ad27cff-5832-4b3d-bd3e-892208b80cad",
+        "attributionLogoUrl": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/logo@2x.png", 
+        "providerMetaModel": "https://ocf-collab.org/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c",
         "registryRights": "https://ocf-collab.org/rights/29905411-553e-4872-9baf-e401dac157d2",
         "beneficiaryRights": "https://credentialengine.org/terms/",
-        "assetDownloadUrl": "https://registry.ocf-collab.org/competency_frameworks/ce-6f48f4bb-9d78-4947-8ab6-4722749f2733/download",
       }, {
         ...
       }, {
@@ -99,7 +98,7 @@ https://registry.ocf-collab.org/competency_frameworks/search
 
 ### Competency framework metadata
 
-Fetch metadata of specific competency framework in OCF Collab registry.
+Returns metadata of specific competency framework in OCF Collab registry.
 
 #### URL
 
@@ -108,17 +107,17 @@ https://registry.ocf-collab.org/competency_frameworks/:id
 #### Sample request
 
 ```
-# GET https://registry.ocf-collab.org/competency_frameworks/ce-6f48f4bb-9d78-4947-8ab6-4722749f2733
+# GET https://registry.ocf-collab.org/competency_frameworks/https:%2F%2Fcredentialengineregistry.org%2Fgraph%2Fce-70958c4e-b0c6-4cf7-ab08-fafe9f205384
 
 {
   "framework": {
-    "id": "ce-6f48f4bb-9d78-4947-8ab6-4722749f2733",
+    "id": "https://credentialengineregistry.org/graph/ce-70958c4e-b0c6-4cf7-ab08-fafe9f205384",
     "name": "NICE Cybersecurity Workforce Framework: Tasks",
     "description": "The National Initiative for Cybersecurity Education (NICE) Cybersecurity Workforce Framework components provide ...",
     "attributionName": "Credential Engine",
     "attributionUrl": "https://credentialengine.org",
-    "attributionLogoUrl": "https://ocf-collab.github.io/scratch/registryLogos/IMS/imslogo.png", 
-    "providerMetaModel": "https://ocf-collab.org/concepts/6ad27cff-5832-4b3d-bd3e-892208b80cad",
+    "attributionLogoUrl": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/logo@2x.png", 
+    "providerMetaModel": "https://ocf-collab.org/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c",
     "registryRights": "https://ocf-collab.org/rights/29905411-553e-4872-9baf-e401dac157d2",
     "beneficiaryRights": "https://credentialengine.org/terms/",
     "assetDownloadUrl": "https://registry.ocf-collab.org/competency_frameworks/ce-6f48f4bb-9d78-4947-8ab6-4722749f2733/download"
@@ -126,13 +125,15 @@ https://registry.ocf-collab.org/competency_frameworks/:id
 }
 ```
 
-### Competency framework download
+### Competency framework asset file
 
-Download specific competency framework in OCF Collab registry.
+Returns the asset file of specific competency framework in OCF Collab registry.
+
+This endpoint allows to convert the asset file to desired metamodel using the `metamodel` parameter.
 
 #### URL
 
-https://registry.ocf-collab.org/competency_frameworks/:id/download
+https://registry.ocf-collab.org/competency_frameworks/:id/asset_file
 
 #### Parameters
 
@@ -140,10 +141,18 @@ https://registry.ocf-collab.org/competency_frameworks/:id/download
 |-----------|----------|--------|----------------------------------------------------------------------------|
 | metamodel | No       | String | Allows to fetch the competency framework converted to specified metamodel. |
 
+##### `metamodel` attribute available values
+
+| Metamodel | Value                                                                |
+|-----------|----------------------------------------------------------------------|
+| CTDL/ASN  | https://ocf-collab.org/concepts/f9a2b710-1cc4-4065-85fd-596b3c40906c |
+| ASN       | https://ocf-collab.org/concepts/6ad27cff-5832-4b3d-bd3e-892208b80cad |
+| CASE      | https://ocf-collab.org/concepts/f63b9a67-543a-49ab-b5ed-8296545c1db5 |
+
 #### Sample request
 
 ```
-# GET https://registry.ocf-collab.org/competency_frameworks/ce-6f48f4bb-9d78-4947-8ab6-4722749f2733/download?metamodel=ctdl
+# GET https://registry.ocf-collab.org/competency_frameworks/https:%2F%2Fcredentialengineregistry.org%2Fgraph%2Fce-70958c4e-b0c6-4cf7-ab08-fafe9f205384/asset_file?metamodel=https%3A%2F%2Focf-collab.org%2Fconcepts%2Ff63b9a67-543a-49ab-b5ed-8296545c1db5
 
 Returns converted competency framework file.
 ```
