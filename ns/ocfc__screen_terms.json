@@ -1,0 +1,324 @@
+{
+  "@context": {
+    "ocfc": "https://ocfc-collab.org/ns/ocfc_screen_context.json/",
+    "asn": "http://purl.org/asn/schema/core/",
+    "cc": "http://creativecommons.org/ns#",
+    "ceasn": "http://purl.org/ctdlasn/terms/",
+    "ceterms": "http://purl.org/ctdl/terms/",
+    "dct": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "ocfc:ScreenTerms",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "OCFC search result common display properties",
+      "dct:description": "This is an abstract schema defining properties used in the OCFC search service display screen where the rdsf:label property of the terms definition provides the competency display screen with labels to which mapped schema properties conform.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Screen Terms"
+    },
+{
+      "@id": "ocfc:abbreviatedCompetenctText",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Abbreviated version of the competency text.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Abbreviated Competency Text",
+      "schema:domainIncludes": "ocfc:AssetEnvelope",
+      "schema:rangeIncludes": "xsd:integer"
+    },
+    {
+      "@id": "ocfc:abilityEmbodied",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Enduring attributes of the individual that influence performance are embodied either directly or indirectly in this resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Ability Embodied",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:alternativeCode",
+      "@type": "rdf:Property",
+      "rdfs:comment": "An alternative URI provided by the creator of the resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Alternative Code",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:alternativeLabel",
+      "@type": "rdf:Property",
+      "rdfs:comment": "An alternative label provided by the creator of the resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Alternative Label",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:broadAlignment",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The target competency covers all of the relevant concepts in the competency being described as well as relevant concepts not found in the competency being described.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Broad Alignment",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:code",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A coded notation identifying the resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Codde",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:comment",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Additional explanatory text for the competency text",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Error Date",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:competencyCategory",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Category to which the competency belongs.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Competency Category",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:competencyText",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The exact text of the competency statement.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Competency Text",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+     {
+      "@id": "ocfc:complexityLevel",
+      "@type": "rdf:Property",
+      "dcterms:identifier": "ocfc:nativeProtocol",
+      "rdfs:comment": "Level of complexity of the resource",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Complexity Level",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:comprisedOf",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The resource being described includes, comprehends or encompass, in whole or in part, the meaning, nature or importance of the resource being referenced.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Comprised Of",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:conceptKeyword",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Concept keyword or phrase that describing the competency or its context",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Concept Keyword",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:creator",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The name of the creator of the resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Creator",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:curriculumSubject",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Subject area within a curriculum such as Mathematics, English, Chemistry.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Curriculum Subject",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsdLstring"
+    },
+    {
+      "@id": "ocfc:derivedFrom",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Resource from which this resource was derived..",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Derived From",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:educationLevel",
+      "@type": "rdf:Property",      
+      "rdfs:comment": "Level of education of the competency's intended person.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Education Level",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:exactAlignment",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The relevant concepts in both competencies are coextensive.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Exact Alignment",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:identifier",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Identifier of the resource",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Identifier",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+        {
+      "@id": "ocfc:isPartOf",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Competency framework that this competency is a part of.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Is Part Of",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:isTopChildOf",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicates that this competency is at the top of some arbitrary hierarchy.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Is Top Child Of",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:knowledgeEmbodied",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Body of information embodied either directly or indirectly in this resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Knowledge Embodied",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:language",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Human language of the competency text.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Language",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "schema:string"
+    },
+    {
+      "@id": "ocfc:license",
+      "@type": "rdf:Property",
+      "rdfs:comment": "License text of the resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "License",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:listID",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Alphanumeric character identifying the posiiton of the resource in a list.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "List ID",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:majorAlignment",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Major overlap of relevant concepts between the two competencies.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Major Alignment",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:minorAlignment",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Minor overlap of relevant concepts between the two competencies.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Minor Alignment",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:name",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The name of the resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Name",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:narrowAlignment",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The competency being described covers all of the relevant concepts in the target competency as well as relevant concepts not found in the target competency.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Narrow Alignment",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:prerequisite",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The referenced resource is a prerequisite to this resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Prerequisite",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:skillEmbodied",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Resource embodied either directly or indirectly in this competency defines a skill in applying knowledge and know-how in completing tasks and solving problems including types or categories of developed proficiency or dexterity in mental operations and physical processes.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Skill Embodied",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:subject",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The subject matter of the resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Subject",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:taskEmbodied",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Specifically defined piece of work embodied either directly or indirectly in this resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Task Embodied",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    },
+    {
+      "@id": "ocfc:weight",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Weight assigned to the resource.",
+      "rdfs:isDefinedBy": "ocfc:",
+      "rdfs:label": "Weight",
+      "schema:domainIncludes": "ocfc:ScreenTerms",
+      "schema:rangeIncludes": "xsd:string"
+    }
+  ]
+}
