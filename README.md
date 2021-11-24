@@ -1,8 +1,8 @@
 # Request Broker
 
-## Goal
+## Purpose
 
-The goal of Request Broker service is to be an intermediary between Requesters and Providers within the OCF Collab network serving couple of purposes:
+The purpose of Request Broker service is to be an intermediary between Requesters and Providers within the OCF Collab network serving couple of purposes:
 
 * Authenticate requests and make sure they come from authorized Requesters
 * Allow Requesters to search for competency frameowks across the whole network

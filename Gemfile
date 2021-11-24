@@ -22,6 +22,8 @@ gem 'searchkick', '4.4.1'
 gem 'input_sanitizer', '0.4.0'
 gem 'faraday', '1.1.0'
 gem 'logstash-event'
+gem 'shoryuken'
+gem 'aws-sdk-sqs'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -72,6 +72,9 @@ GEM
       aws-sdk-core (~> 3, >= 3.104.3)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
+    aws-sdk-sqs (1.33.0)
+      aws-sdk-core (~> 3, >= 3.99.0)
+      aws-sigv4 (~> 1.1)
     aws-sigv4 (1.2.2)
       aws-eventstream (~> 1, >= 1.0.2)
     bindex (0.8.1)
@@ -195,6 +198,10 @@ GEM
       activemodel (>= 5)
       elasticsearch (>= 6)
       hashie
+    shoryuken (5.0.5)
+      aws-sdk-core (>= 2)
+      concurrent-ruby
+      thor
     sidekiq (6.1.2)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
@@ -237,6 +244,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk-s3 (= 1.80.0)
+  aws-sdk-sqs
   bootsnap (>= 1.4.2)
   byebug
   doorkeeper (= 5.4.0)
@@ -253,6 +261,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.3)
   searchkick (= 4.4.1)
+  shoryuken
   sidekiq (= 6.1.2)
   spring
   spring-watcher-listen (~> 2.0.0)
