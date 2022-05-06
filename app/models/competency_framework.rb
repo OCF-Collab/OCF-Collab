@@ -13,7 +13,7 @@ class CompetencyFramework < ApplicationRecord
       include: {
         competencies: {
           only: [
-            :name,
+            :competency_text,
             :comment,
           ]
         }
