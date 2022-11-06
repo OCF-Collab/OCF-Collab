@@ -1,0 +1,10 @@
+default: &default
+  rails:
+    configuration:
+      asset_pipeline_enabled: false
+      asset_pipeline_precompile: false
+      operating_system: ubuntu2004
+      ruby_version: 3.1.2
+
+production:
+  <<: *default

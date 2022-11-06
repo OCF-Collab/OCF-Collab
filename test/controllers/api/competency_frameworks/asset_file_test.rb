@@ -46,11 +46,16 @@ class ApiCompetencyFrameworksAssetFileTest < ActionDispatch::IntegrationTest
           fetcher_mock.expect(:body, pna_response_body)
           fetcher_mock.expect(:content_type, pna_response_content_type)
 
-          fetcher_init_mock.expect(:call, fetcher_mock, [{
-            competency_framework: competency_framework,
-            access_token: access_token.token,
-            requested_metamodel: metamodel,
-          }])
+          fetcher_init_mock.expect(:call, fetcher_mock) do |**args|
+            assert_equal(
+              {
+                access_token: access_token.token,
+                competency_framework:,
+                requested_metamodel: metamodel
+              },
+              args
+            )
+          end
 
           CompetencyFrameworkAssetFileFetcher.stub(:new, fetcher_init_mock) do
             authorized_get(

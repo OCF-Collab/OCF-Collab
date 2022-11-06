@@ -1,39 +1,37 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.1'
+ruby '3.1.2'
 
-gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
+gem 'rails', '= 6.1.6.1'
 gem 'pg'
 gem 'puma', '~> 4.1'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '~> 1.13', require: false
 
-gem 'doorkeeper', '5.4.0'
+gem 'doorkeeper', '~> 5.6'
 gem 'doorkeeper-jwt', '0.4.0'
-gem 'aws-sdk-s3', '1.80.0'
+gem 'aws-sdk-s3', '~> 1.117'
 gem 'sidekiq', '6.1.2'
-gem 'searchkick', '4.4.1'
-gem 'input_sanitizer', '0.4.0'
-gem 'faraday', '1.1.0'
+gem 'searchkick', '~> 4.6'
+gem 'input_sanitizer', '~> 0.5'
+gem 'faraday', '~> 1.10'
 gem 'logstash-event'
+gem 'rexml', '~> 3.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'factory_bot_rails', '6.1.0'
-  gem 'faker', '2.13.0'
+  gem 'factory_bot_rails', '~> 6.2'
+  gem 'faker', '~> 3.0'
 end
 
 group :development do
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.2'
+  gem 'listen', '~> 3.7'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -41,9 +39,6 @@ group :development do
 end
 
 group :test do
-  gem 'minitest-spec-rails'
+  gem 'minitest-spec-rails', '~> 6.2'
   gem 'webmock'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

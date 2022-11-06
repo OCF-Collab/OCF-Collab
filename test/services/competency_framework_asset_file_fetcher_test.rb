@@ -75,12 +75,19 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
 
       let(:metamodel_interchanger_init_mock) do
         mock = Minitest::Mock.new
-        mock.expect(:call, metamodel_interchanger_mock, [{
-          competency_framework: competency_framework,
-          competency_framework_body: pna_response_body,
-          competency_framework_content_type: pna_response_headers["Content-Type"],
-          requested_metamodel: requested_metamodel,
-        }])
+
+        mock.expect(:call, metamodel_interchanger_mock) do |**args|
+          assert_equal(
+            {
+              competency_framework:,
+              competency_framework_body: pna_response_body,
+              competency_framework_content_type: pna_response_headers["Content-Type"],
+              requested_metamodel:
+            },
+            args
+          )
+        end
+
         mock
       end
 

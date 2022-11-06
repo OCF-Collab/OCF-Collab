@@ -105,7 +105,11 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
       search_mock = Minitest::Mock.new
       sample_results = [Object.new]
 
-      search_mock.expect(:call, sample_results, [expected_query, expected_options])
+      search_mock.expect(:call, sample_results) do |query, **options|
+        assert_equal expected_query, query
+        assert_equal expected_options, options
+        true
+      end
 
       CompetencyFramework.stub(:search, search_mock) do
         results = subject.results

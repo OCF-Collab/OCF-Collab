@@ -44,10 +44,9 @@ class NodeDirectorySyncTest < ActiveSupport::TestCase
     it "enqueues entry sync job for each S3 object (supporting pagination)" do
       entry_sync_job_perform_later = Minitest::Mock.new
       list_objects_response_stub.objects.each do |object|
-        entry_sync_job_perform_later.expect(:call, nil, [{
-          node_directory: node_directory,
-          s3_key: object[:key],
-        }])
+        entry_sync_job_perform_later.expect(:call, nil) do |**args|
+          assert_equal({ node_directory:, s3_key: object[:key] }, args)
+        end
       end
 
       NodeDirectoryEntrySyncJob.stub(:perform_later, entry_sync_job_perform_later) do
