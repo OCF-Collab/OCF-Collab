@@ -5,7 +5,7 @@ ruby '3.1.2'
 
 gem 'rails', '= 6.1.6.1'
 gem 'pg'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 6.0'
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -16,7 +16,7 @@ gem 'bootsnap', '~> 1.13', require: false
 gem 'doorkeeper', '~> 5.6'
 gem 'doorkeeper-jwt', '0.4.0'
 gem 'aws-sdk-s3', '~> 1.117'
-gem 'sidekiq', '6.1.2'
+gem 'sidekiq', '~> 6.5'
 gem 'searchkick', '~> 4.6'
 gem 'input_sanitizer', '~> 0.5'
 gem 'faraday', '~> 1.10'
