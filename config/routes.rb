@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   end
 
   scope module: "brokerage" do
+    namespace :competencies do
+      get :asset_file
+    end
+
     namespace :competency_frameworks do
       get :search
       get :metadata
