@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   end
 
   scope module: "brokerage" do
+    get "search" => "search#index"
+
     namespace :competencies do
       get :asset_file
     end
