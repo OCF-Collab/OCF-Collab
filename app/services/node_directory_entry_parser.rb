@@ -5,25 +5,25 @@ class NodeDirectoryEntryParser
     @entry_data = entry_data
   end
 
-  def parsed_framework
+  def parsed_container
     {
-      url: framework_data["frameworkURL"],
-      name: framework_data.dig("name").values.first,
-      description: framework_data.dig("description")&.values&.first,
-      concept_keywords: framework_data.dig("conceptKeyword")&.values&.first,
-      attribution_name: framework_data["attributionName"],
-      attribution_url: framework_data["attributionURL"],
-      provider_meta_model: framework_data["providerMetaModel"],
-      beneficiary_rights: framework_data["beneficiaryRights"],
-      registry_rights: framework_data["registryRights"],
+      url: container_data["id"],
+      name: container_data.dig("name").values.first,
+      description: container_data.dig("description")&.values&.first,
+      concept_keywords: container_data.dig("conceptKeyword")&.values&.first,
+      attribution_name: container_data["attributionName"]&.values&.first,
+      attribution_url: container_data["attributionURL"],
+      provider_meta_model: container_data["providerMetaModel"],
+      beneficiary_rights: container_data["beneficiaryRights"],
+      registry_rights: container_data["registryRights"],
       competencies: parsed_competencies,
     }
   end
 
   private
 
-  def framework_data
-    entry_data["framework"]
+  def container_data
+    entry_data["container"]
   end
 
   def parsed_competencies
@@ -31,6 +31,7 @@ class NodeDirectoryEntryParser
       {
         competency_text: competency_data["competencyText"].values.first,
         comment: competency_data.dig("comment")&.values&.first&.join("\n"),
+        id: competency_data["id"]
       }
     end
   end

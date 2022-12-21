@@ -23,7 +23,7 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
     end
 
     let(:node_directory_entry_file_body) do
-      file_fixture("node_directory/credential-engine-registry/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2.json").read
+      file_fixture("node_directory/credential-engine-registry/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8.json").read
     end
 
     describe ".sync!" do
@@ -43,7 +43,6 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
               node_directory_entry_sync.sync!
 
               framework = CompetencyFramework.find_by(node_directory_s3_key: s3_key)
-
               assert framework.present?
             end
           end
@@ -84,8 +83,8 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
             CompetencyFramework.find_by(node_directory_s3_key: s3_key)
           end
 
-          let(:framework_data) do
-            entry_data["framework"]
+          let(:container_data) do
+            entry_data["container"]
           end
 
           let(:competencies_data) do
@@ -93,39 +92,39 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
           end
 
           it "sets proper external_id" do
-            assert_equal framework_data["frameworkURL"], subject.external_id
+            assert_equal container_data["id"], subject.external_id
           end
 
           it "sets proper name" do
-            assert_equal framework_data["name"]["en-us"], subject.name
+            assert_equal container_data["name"]["en-us"], subject.name
           end
 
           it "sets proper description" do
-            assert_equal framework_data["description"]["en-us"], subject.description
+            assert_equal container_data["description"]["en-us"], subject.description
           end
 
           it "sets proper concept keywords" do
-            assert_equal framework_data["conceptKeyword"]["en-us"], subject.concept_keywords
+            assert_equal container_data.dig("conceptKeyword", "en-us"), subject.concept_keywords
           end
 
           it "sets proper attribution name" do
-            assert_equal framework_data["attributionName"], subject.attribution_name
+            assert_equal container_data.dig("attributionName", "en-US"), subject.attribution_name
           end
 
           it "sets proper attribution URL" do
-            assert_equal framework_data["attributionURL"], subject.attribution_url
+            assert_equal container_data["attributionURL"], subject.attribution_url
           end
 
           it "sets proper provider meta model" do
-            assert_equal framework_data["providerMetaModel"], subject.provider_meta_model
+            assert_equal container_data["providerMetaModel"], subject.provider_meta_model
           end
 
           it "sets proper beneficiary rights" do
-            assert_equal framework_data["beneficiaryRights"], subject.beneficiary_rights
+            assert_equal container_data["beneficiaryRights"], subject.beneficiary_rights
           end
 
           it "sets proper registry rights" do
-            assert_equal framework_data["registryRights"], subject.registry_rights
+            assert_equal container_data["registryRights"], subject.registry_rights
           end
 
           it "creates competencies with proper attributes" do
@@ -134,9 +133,12 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
             assert subject.competencies.all?(&:persisted?)
 
             competencies_data.each do |competency_data|
-              competency = subject.competencies.find_by(competency_text: competency_data["competencyText"]["en-us"])
+              competency = subject
+                .competencies
+                .find_by(external_id: competency_data.fetch("id"))
 
               assert competency.present?
+              assert_equal competency_data.dig("competencyText", "en-us"), competency.competency_text
 
               if competency_data["comment"].present?
                 assert_equal competency_data["comment"]["en-us"].join("\n"), competency.comment

@@ -8,27 +8,27 @@ class NodeDirectoryEntrySync
   end
 
   def sync!
-    update_framework!
+    update_container!
   rescue Aws::S3::Errors::NoSuchKey
-    delete_existing_framework!
+    delete_existing_container!
   end
 
   private
 
-  def update_framework!
-    competency_framework.update!(framework_attributes)
+  def update_container!
+    container.update!(container_attributes)
   end
 
-  def competency_framework
-    @competency_framework ||= CompetencyFramework.find_or_initialize_by(node_directory_s3_key: s3_key) do |framework|
-      framework.node_directory = node_directory
+  def container
+    @container ||= CompetencyFramework.find_or_initialize_by(node_directory_s3_key: s3_key) do |container|
+      container.node_directory = node_directory
     end
   end
 
-  def parsed_framework
-    @parsed_framework ||= NodeDirectoryEntryParser.new(
+  def parsed_container
+    @parsed_container ||= NodeDirectoryEntryParser.new(
       entry_data: entry_data,
-    ).parsed_framework
+    ).parsed_container
   end
 
   def entry_data
@@ -50,31 +50,32 @@ class NodeDirectoryEntrySync
     node_directory.s3_bucket
   end
 
-  def framework_attributes
+  def container_attributes
     {
-      external_id: parsed_framework[:url],
-      name: parsed_framework[:name],
-      description: parsed_framework[:description],
-      concept_keywords: parsed_framework[:concept_keywords],
-      attribution_name: parsed_framework[:attribution_name],
-      attribution_url: parsed_framework[:attribution_url],
-      provider_meta_model: parsed_framework[:provider_meta_model],
-      beneficiary_rights: parsed_framework[:beneficiary_rights],
-      registry_rights: parsed_framework[:registry_rights],
+      external_id: parsed_container[:url],
+      name: parsed_container[:name],
+      description: parsed_container[:description],
+      concept_keywords: parsed_container[:concept_keywords],
+      attribution_name: parsed_container[:attribution_name],
+      attribution_url: parsed_container[:attribution_url],
+      provider_meta_model: parsed_container[:provider_meta_model],
+      beneficiary_rights: parsed_container[:beneficiary_rights],
+      registry_rights: parsed_container[:registry_rights],
       competencies: competencies,
     }
   end
 
   def competencies
-    parsed_framework[:competencies].map do |parsed_competency|
+    parsed_container[:competencies].map do |parsed_competency|
       Competency.new(
         competency_text: parsed_competency[:competency_text],
         comment: parsed_competency[:comment],
+        external_id: parsed_competency[:id]
       )
     end
   end
 
-  def delete_existing_framework!
+  def delete_existing_container!
     CompetencyFramework.find_by(node_directory_s3_key: s3_key)&.destroy
   end
 end

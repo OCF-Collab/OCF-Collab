@@ -1,0 +1,95 @@
+{
+  "directory": {
+    "id": "786643e3-3fe2-4988-aa64-26a3f07f2e04",
+    "type": "Directory",
+    "name": "Credential Engine Competency Registry",
+    "dateCreated": "2020-08-18"
+  },
+  "container": {
+    "id": "https://credentialengineregistry.org/resources/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8",
+    "type": "Framework",
+    "fromDirectory": "786643e3-3fe2-4988-aa64-26a3f07f2e04",
+    "dataURL": "https://credentialengineregistry.org/graph/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8",
+    "name": {
+      "en-us": "Manufacturing Technology Management - Manufacturing Engineering Technology Concentration"
+    },
+    "description": {
+      "en-us": "Manufacturing Technology Management - Manufacturing Engineering Technology Concentration"
+    },
+    "attributionName": {
+      "en-US": "Clark State College"
+    },
+    "attributionURL": "https://credentialengineregistry.org/resources/ce-6be1eaf2-964f-48bd-89e4-da1b9abc000f",
+    "beneficiaryRights": "http://achievementstandards.org/legal/terms",
+    "providerMetaModel": "https://ocf-collab.org/concepts/6ad27cff-5832-4b3d-bd3e-892208b80cad",
+    "registryRights": "https://www.ocf-collab.org/rights/92be257b-e6b4-4628-9aa9-568787fde431"
+  },
+  "competencies": [
+    {
+      "id": "https://credentialengineregistry.org/resources/ce-894f056b-cb36-4635-84de-98fb365407ee",
+      "type": "Competency",
+      "containedIn": [
+        "https://credentialengineregistry.org/resources/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8"
+      ],
+      "competencyText": {
+        "en-us": "New CompetencyIntegrate principles of management with manufacturing processes, procedures, and production to develop problem solving and critical thinking skills in a manufacturing setting."
+      },
+      "dataURL": "https://credentialengineregistry.org/resources/ce-894f056b-cb36-4635-84de-98fb365407ee"
+    },
+    {
+      "id": "https://credentialengineregistry.org/resources/ce-f3815e03-b125-4cf1-a485-46f5e72fc4f3",
+      "type": "Competency",
+      "containedIn": [
+        "https://credentialengineregistry.org/resources/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8"
+      ],
+      "competencyText": {
+        "en-us": "Assess and apply operations management theory and best practices within the manufacturing environment to achieve operational goals."
+      },
+      "dataURL": "https://credentialengineregistry.org/resources/ce-f3815e03-b125-4cf1-a485-46f5e72fc4f3"
+    },
+    {
+      "id": "https://credentialengineregistry.org/resources/ce-6a94d35f-ed25-4d32-9a48-126bf99b0fbe",
+      "type": "Competency",
+      "containedIn": [
+        "https://credentialengineregistry.org/resources/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8"
+      ],
+      "competencyText": {
+        "en-us": "Demonstrate the management of integrated manufacturing processes within complex manufacturing environments"
+      },
+      "dataURL": "https://credentialengineregistry.org/resources/ce-6a94d35f-ed25-4d32-9a48-126bf99b0fbe"
+    },
+    {
+      "id": "https://credentialengineregistry.org/resources/ce-59c429ad-f689-4621-92db-f260e9789e5f",
+      "type": "Competency",
+      "containedIn": [
+        "https://credentialengineregistry.org/resources/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8"
+      ],
+      "competencyText": {
+        "en-us": "Analyze and improve operations management decisions to meet desired outcomes within the manufacturing facility from design to production to sustainability."
+      },
+      "dataURL": "https://credentialengineregistry.org/resources/ce-59c429ad-f689-4621-92db-f260e9789e5f"
+    },
+    {
+      "id": "https://credentialengineregistry.org/resources/ce-f870b021-4abf-438e-b9f8-bd5c05a33f7f",
+      "type": "Competency",
+      "containedIn": [
+        "https://credentialengineregistry.org/resources/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8"
+      ],
+      "competencyText": {
+        "en-us": "Generate training programs, evaluation methods and schedules to provide comprehensive training covering a broad range of technical skills used in manufacturing."
+      },
+      "dataURL": "https://credentialengineregistry.org/resources/ce-f870b021-4abf-438e-b9f8-bd5c05a33f7f"
+    },
+    {
+      "id": "https://credentialengineregistry.org/resources/ce-89cc7df4-513c-43ec-9309-8589fd2390e0",
+      "type": "Competency",
+      "containedIn": [
+        "https://credentialengineregistry.org/resources/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8"
+      ],
+      "competencyText": {
+        "en-us": "Evaluate communication, leadership, and human relations skills between all levels of personnel within a manufacturing setting."
+      },
+      "dataURL": "https://credentialengineregistry.org/resources/ce-89cc7df4-513c-43ec-9309-8589fd2390e0"
+    }
+  ]
+}
