@@ -1,11 +1,13 @@
 class CompetencyMapper
   MAPPING_DIR = Rails.root.join("config/competency_mappings")
 
-  attr_reader :body, :node_directory
+  attr_reader :body, :competency
 
-  def initialize(body:, node_directory:)
+  delegate :node_directory, to: :competency
+
+  def initialize(body:, competency:)
     @body = JSON(body)
-    @node_directory = node_directory
+    @competency = competency
   end
 
   def transformed_body
@@ -17,7 +19,7 @@ class CompetencyMapper
       [property.fetch("rdfs:label"), value]
     end
 
-    data.compact.to_h.to_json
+    { metadata:, properties: data.compact.to_h }.to_json
   end
 
   private
@@ -25,6 +27,14 @@ class CompetencyMapper
   def mapping
     filename = "#{node_directory.s3_bucket}.json"
     @mapper ||= JSON(File.read(MAPPING_DIR + filename))
+  end
+
+  def metadata
+    {
+      logo_url: node_directory.logo_url,
+      provider_name: node_directory.name,
+      title: competency.competency_text
+    }
   end
 
   def properties

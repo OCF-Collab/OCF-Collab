@@ -18,10 +18,7 @@ module Brokerage
           competency:
         )
 
-        mapper = CompetencyMapper.new(
-          body: fetcher.body,
-          node_directory: competency.node_directory
-        )
+        mapper = CompetencyMapper.new(body: fetcher.body, competency:)
 
         send_data mapper.transformed_body,
                   disposition: :inline,
