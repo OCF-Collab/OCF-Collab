@@ -11,6 +11,10 @@ class Search
     @per_page = per_page || DEFAULT_PER_PAGE
   end
 
+  def competency_result_hit_scores
+    @competency_result_hit_scores = group_hit_scores(competency_results)
+  end
+
   def competency_results
     @results ||= begin
       options = { fields: competency_fields }
@@ -37,6 +41,10 @@ class Search
 
   def competency_results_count
     competency_results.total_count
+  end
+
+  def container_result_hit_scores
+    @container_result_hit_scores = group_hit_scores(container_results)
   end
 
   def container_results
@@ -78,5 +86,9 @@ class Search
 
   def container_fields
     %w[external_id name]
+  end
+
+  def group_hit_scores(results)
+    results.hits.map { |hit| [hit.fetch("_id"), hit.fetch("_score")] }.to_h
   end
 end

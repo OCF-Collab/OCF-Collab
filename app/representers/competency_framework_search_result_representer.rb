@@ -1,8 +1,9 @@
 class CompetencyFrameworkSearchResultRepresenter
-  attr_reader :competency_framework
+  attr_reader :competency_framework, :hit_score
 
-  def initialize(competency_framework:)
+  def initialize(competency_framework:, hit_score: nil)
     @competency_framework = competency_framework
+    @hit_score = hit_score
   end
 
   def represent
@@ -16,6 +17,7 @@ class CompetencyFrameworkSearchResultRepresenter
       "providerMetaModel" => competency_framework.provider_meta_model,
       "registryRights" => competency_framework.registry_rights,
       "beneficiaryRights" => competency_framework.beneficiary_rights,
+      "hitScore" => hit_score
     }
   end
 
