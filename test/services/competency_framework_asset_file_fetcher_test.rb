@@ -11,10 +11,7 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
     end
 
     let(:competency_framework) do
-      create(:competency_framework,
-        node_directory: node_directory,
-        external_id: external_id,
-      )
+      create(:competency_framework, data_url:, node_directory:, external_id:)
     end
 
     let(:node_directory) do
@@ -22,6 +19,10 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
     end
 
     let(:external_id) do
+      "https://credentialengineregistry.org/resources/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2"
+    end
+
+    let(:data_url) do
       "https://credentialengineregistry.org/graph/ce-001ef2e8-3f11-43b7-9adc-38801341c5b2"
     end
 
@@ -49,7 +50,7 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
     context "valid response" do
       before do
         stub_request(:get, expected_url).with(
-          query: { id: external_id },
+          query: { id: data_url },
           headers: expected_headers
         ).to_return(pna_response)
 

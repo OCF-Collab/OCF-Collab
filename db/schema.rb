@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_09_082403) do
+ActiveRecord::Schema.define(version: 2023_01_09_092611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 2022_12_09_082403) do
     t.string "provider_meta_model", null: false
     t.string "beneficiary_rights", null: false
     t.string "registry_rights", null: false
+    t.string "data_url"
+    t.index ["data_url"], name: "index_competency_frameworks_on_data_url"
     t.index ["external_id"], name: "index_competency_frameworks_on_external_id"
     t.index ["node_directory_id"], name: "index_competency_frameworks_on_node_directory_id"
   end

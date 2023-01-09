@@ -45,7 +45,7 @@ class CompetencyFrameworkAssetFileFetcher
           event: "competency_framework_asset_file_pna_request",
         )
 
-        connection.get(path, id: competency_framework.external_id).tap do |response|
+        connection.get(path, id: competency_framework.data_url).tap do |response|
           TransactionLogger.info(
             message: "Fetched competency framework asset file from PNA",
             event: "competency_framework_asset_file_pna_response",
