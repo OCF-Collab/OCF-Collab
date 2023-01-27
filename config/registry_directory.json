@@ -107,6 +107,32 @@
       },
       "providerNodeAgent": "http://t3-ocf-collab-pna-d2l-8872.c66.me/",
       "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
+    },
+    {
+      "@id": "https://ocf-collab.org/registryEntry/786643e3-3fe2-4988-aa64-26a3f07f2e05",
+      "@type": "RegistryEntry",
+      "name": {
+        "en-us": "Demo Registry"
+      },
+      "description": {
+        "en-us": "Demo competency frameworks."
+      },
+      "contactPoint": [
+        {
+          "@type": "schema:ContactPoint",
+          "name": "Joe Baird",
+          "email": "joe@learningtapestry.com",
+          "contactType": "Chief Demonstrator"
+        }
+      ],
+      "registryLogo": "https://ocf-collab.github.io/scratch/registryLogos/CredEngine/logo@2x.png",
+      "s3": {
+        "bucketName": "ocn-demo-registry",
+        "arn": "arn:aws:s3:::ocn-demo-registry",
+        "bucketURL": "http://s3.amazonaws.com/ocn-demo-registry/"
+      },
+      "providerNodeAgent": "https://2yah3frsun6isejs3cbgw5k7uu0xatfv.lambda-url.us-east-1.on.aws/",
+      "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
     }
   ]
 }
