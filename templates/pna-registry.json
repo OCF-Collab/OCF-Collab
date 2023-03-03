@@ -1,0 +1,26 @@
+{
+      "@id": "https://ocf-collab.org/registryEntry/<UUID>",
+      "@type": "RegistryEntry",
+      "name": {
+        "en-us": "<NAME>"
+      },
+      "description": {
+        "en-us": "<DESCRIPTION>"
+      },
+      "contactPoint": [
+        {
+          "@type": "schema:ContactPoint",
+          "name": "<CONTACT POINT NAME>",
+          "email": "<CONTACT POINT EMAIL>",
+          "contactType": "<CONTACT POINT TYPE>",
+        }
+      ],
+      "registryLogo": "<LOGO URL>",
+      "s3": {
+        "bucketName": "<S3 BUCKET NAME>",
+        "arn": "<S3 BUCKET ARN>",
+        "bucketURL": "<S3 BUCKET URL>"
+      },
+      "providerNodeAgent": "<PROVIDER NODE URL>",
+      "isPartOf": "https://ocf-collab.org/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
+  }
