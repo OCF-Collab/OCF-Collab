@@ -1,0 +1,63 @@
+{
+  "directory": {
+    "id": "b59c6176-964b-4e20-bf13-43d6f8efff89",
+    "type": "Directory",
+    "name": "Example Node Directory",
+    "dateCreated": "2020-11-05"
+  },
+  "container": {
+    "id": "http://example.org/frameworks/EX0001",
+    "type": "Framework",
+    "fromDirectory": "b59c6176-964b-4e20-bf13-43d6f8efff89",
+    "dataURL": "https://example.org/containers/EX0001.jsonld",
+    "name": {
+      "en-us": "Example Container"
+    },
+    "description": {
+      "en-us": "Manufacturing Technology Management - Manufacturing Engineering Technology Concentration"
+    },
+    "attributionName": {
+      "en-us": "Examples Are Us"
+    },
+    "attributionURL": "http://example.org/",
+    "beneficiaryRights": "http://example.org/legal/terms",
+    "providerMetaModel": "https://ocf-collab.org/concepts/01234567-89ab-cdef-0123-456789abcdef",
+    "registryRights": "https://www.ocf-collab.org/rights/01234567-89ab-cdef-0123-456789abcdef""contextualizedBy": "http://example.org/contextualization/EX00001"
+  },
+  "competencies": [
+    {
+      "id": "http://example.org/competencies/EX00001",
+      "type": "Competency",
+      "containedIn": [
+        "http://example.org/frameworks/EX0001"
+      ],
+      "competencyText": {
+        "en-us": "New CompetencyIntegrate principles of management with manufacturing processes, procedures, and production to develop problem solving and critical thinking skills in a manufacturing setting."
+      },
+      "dataURL": "https://example.org/competencies/EX0001.jsonld",
+      "contextualizedBy": "http://example.org/contextualization/EX00001"
+    }
+  ],
+  "contextualizingObjects": [
+    {
+      "id": "http://example.org/contextualization/EX00001",
+      "type": "Occupation",
+      "name": {
+        "en": "ApplicationProgrammer"
+      },
+      "description": {
+        "en": "Programmersofapplications"
+      },
+      "dataURL": "http: //example.org/exjhjh",
+      "codedNotation": "AppProg""category": [
+        {
+          "type": "CategoryCode",
+          followsschema.org/CategoryCode"codeValue": "2514",
+          "name": "ApplicationsProgrammers",
+          "description": "...",
+          "inCodeSet": "https: //www.ilo.org/public/english/bureau/stat/isco/isco08/"
+        }
+      ]
+    }
+  ]
+}
