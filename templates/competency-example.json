@@ -52,7 +52,7 @@
       "codedNotation": "AppProg""category": [
         {
           "type": "CategoryCode",
-          followsschema.org/CategoryCode"codeValue": "2514",
+          "codeValue": "2514",
           "name": "ApplicationsProgrammers",
           "description": "...",
           "inCodeSet": "https: //www.ilo.org/public/english/bureau/stat/isco/isco08/"
