@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.2.1'
 
-gem 'rails', '= 6.1.6.1'
-gem 'pg'
+gem 'bundler', '= 2.4.6'
+gem 'rails', '= 7.0.4.3'
+gem 'pg', '~> 1.4'
 gem 'puma', '~> 6.0'
 
 # Use Active Model has_secure_password
@@ -33,8 +34,8 @@ end
 group :development do
   gem 'listen', '~> 3.7'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring', '~> 4.1'
+  gem 'spring-watcher-listen', '~> 2.1'
   gem 'pry-rails', '0.3.9'
 end
 
