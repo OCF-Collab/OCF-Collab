@@ -137,7 +137,7 @@
         "arn": "arn:aws:s3:::ocn-ariel-registry-2",
         "bucketURL": "http://s3.amazonaws.com/ocn-ariel-registry-2/"
       },
-      "providerNodeAgent": "http://t3-ocf-collab-pna-ce-8945.c66.me/",
+      "providerNodeAgent": "https://fi7t7puyk63oxqlvkvbf32223q0frvse.lambda-url.us-east-1.on.aws/",
       "isPartOf": "https://example.org/ocfc/registryDirectory/a211fb8b-9203-48be-b3ce-21868099bae7"
     }     
   ]
