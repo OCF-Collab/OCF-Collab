@@ -3,6 +3,8 @@ class Competency < ApplicationRecord
 
   belongs_to :competency_framework
   has_one :node_directory, through: :competency_framework
+  has_many :competency_contextualizing_objects
+  has_many :contextualizing_objects, through: :competency_contextualizing_objects
 
   validates :competency_text, presence: true
 

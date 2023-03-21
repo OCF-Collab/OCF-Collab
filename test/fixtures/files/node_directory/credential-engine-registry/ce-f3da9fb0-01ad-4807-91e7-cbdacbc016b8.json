@@ -17,7 +17,7 @@
       "en-us": "Manufacturing Technology Management - Manufacturing Engineering Technology Concentration"
     },
     "attributionName": {
-      "en-US": "Clark State College"
+      "en-us": "Clark State College"
     },
     "attributionURL": "https://credentialengineregistry.org/resources/ce-6be1eaf2-964f-48bd-89e4-da1b9abc000f",
     "beneficiaryRights": "http://achievementstandards.org/legal/terms",
@@ -32,9 +32,10 @@
         "https://credentialengineregistry.org/resources/ce-f3da9fb0-01ad-4807-91e7-cbdacbc016b8"
       ],
       "competencyText": {
-        "en-us": "New CompetencyIntegrate principles of management with manufacturing processes, procedures, and production to develop problem solving and critical thinking skills in a manufacturing setting."
+        "en-us": "Integrate principles of management with manufacturing processes, procedures, and production to develop problem solving and critical thinking skills in a manufacturing setting."
       },
-      "dataURL": "https://credentialengineregistry.org/resources/ce-894f056b-cb36-4635-84de-98fb365407ee"
+      "dataURL": "https://credentialengineregistry.org/resources/ce-894f056b-cb36-4635-84de-98fb365407ee",
+      "contextualizedBy": "http://example.org/contextualization/EX00001"
     },
     {
       "id": "https://credentialengineregistry.org/resources/ce-f3815e03-b125-4cf1-a485-46f5e72fc4f3",
@@ -90,6 +91,33 @@
         "en-us": "Evaluate communication, leadership, and human relations skills between all levels of personnel within a manufacturing setting."
       },
       "dataURL": "https://credentialengineregistry.org/resources/ce-89cc7df4-513c-43ec-9309-8589fd2390e0"
+    }
+  ],
+  "contextualizingObjects": [
+    {
+      "id": "http://example.org/contextualization/EX00001",
+      "type": "Occupation",
+      "name": {
+        "en-us": "Application Programmer"
+      },
+      "description": {
+        "en-us": "Programmers of applications"
+      },
+      "dataURL": "http://example.org/exjhjh",
+      "codedNotation": "AppProg",
+      "category": [
+         {
+           "type": "CategoryCode",
+           "codeValue": "2514",
+           "name": {
+             "en-us": "Applications Programmers"
+           },
+           "description" : {
+             "en-us": "Applications Programmers"
+           },
+           "inCodeSet": "https://www.ilo.org/public/english/bureau/stat/isco/isco08/"
+         }
+      ]
     }
   ]
 }

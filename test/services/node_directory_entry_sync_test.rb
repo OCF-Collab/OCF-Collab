@@ -104,11 +104,11 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
           end
 
           it "sets proper concept keywords" do
-            assert_equal container_data.dig("conceptKeyword", "en-us"), subject.concept_keywords
+            assert_nil subject.concept_keywords
           end
 
           it "sets proper attribution name" do
-            assert_equal container_data.dig("attributionName", "en-US"), subject.attribution_name
+            assert_equal container_data.dig("attributionName", "en-us"), subject.attribution_name
           end
 
           it "sets proper attribution URL" do
@@ -127,6 +127,23 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
             assert_equal container_data["registryRights"], subject.registry_rights
           end
 
+          it "creates contextualizing objects with codes" do
+            code = Code.last
+            assert_equal "Applications Programmers", code.description
+            assert_equal "https://www.ilo.org/public/english/bureau/stat/isco/isco08/", code.code_set.external_id
+            assert_equal "Applications Programmers", code.name
+            assert_equal "2514", code.value
+
+            contextualizing_object = ContextualizingObject.last
+            assert_equal "AppProg", contextualizing_object.coded_notation
+            assert_equal [code], contextualizing_object.codes
+            assert_equal "http://example.org/exjhjh", contextualizing_object.data_url
+            assert_equal "Programmers of applications", contextualizing_object.description
+            assert_equal "http://example.org/contextualization/EX00001", contextualizing_object.external_id
+            assert_equal "Application Programmer", contextualizing_object.name
+            assert_equal "Occupation", contextualizing_object.read_attribute_before_type_cast("type")
+          end
+
           it "creates competencies with proper attributes" do
             assert_equal competencies_data.count, subject.competencies.count
 
@@ -142,6 +159,10 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
 
               if competency_data["comment"].present?
                 assert_equal competency_data["comment"]["en-us"].join("\n"), competency.comment
+              end
+
+              if competency_data["contextualizedBy"].present?
+                assert_equal Array.wrap(competency_data["contextualizedBy"]), competency.contextualizing_objects.pluck(:external_id)
               end
             end
           end
