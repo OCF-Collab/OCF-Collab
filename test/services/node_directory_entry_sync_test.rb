@@ -95,6 +95,10 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
             assert_equal container_data["id"], subject.external_id
           end
 
+          it "sets proper type" do
+            assert_equal container_data["type"], subject.type
+          end
+
           it "sets proper name" do
             assert_equal container_data["name"]["en-us"], subject.name
           end

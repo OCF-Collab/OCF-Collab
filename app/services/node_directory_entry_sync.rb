@@ -88,6 +88,7 @@ class NodeDirectoryEntrySync
   def container_attributes
     {
       external_id: parsed_container[:url],
+      type: parsed_container[:type],
       name: parsed_container[:name],
       description: parsed_container[:description],
       concept_keywords: parsed_container[:concept_keywords],

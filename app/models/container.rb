@@ -1,4 +1,6 @@
 class Container < ApplicationRecord
+  self.inheritance_column = nil
+
   searchkick
 
   belongs_to :node_directory

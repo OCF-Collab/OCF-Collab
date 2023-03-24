@@ -8,6 +8,7 @@ class NodeDirectoryEntryParser
   def parsed_container
     {
       url: container_data["id"],
+      type: container_data["type"],
       name: container_data.dig("name").values.first,
       description: container_data.dig("description")&.values&.first,
       concept_keywords: container_data.dig("conceptKeyword")&.values&.first,

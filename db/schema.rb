@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_24_042234) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_24_114440) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -78,9 +78,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_24_042234) do
     t.string "beneficiary_rights", null: false
     t.string "registry_rights", null: false
     t.string "data_url"
+    t.string "type", default: "CompetencyFramework", null: false
     t.index ["data_url"], name: "index_containers_on_data_url"
     t.index ["external_id"], name: "index_containers_on_external_id"
     t.index ["node_directory_id"], name: "index_containers_on_node_directory_id"
+    t.index ["type"], name: "index_containers_on_type"
   end
 
   create_table "contextualizing_object_codes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
