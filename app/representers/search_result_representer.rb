@@ -10,30 +10,30 @@ class SearchResultRepresenter
       return search.container_results.map do |container|
         hit_score = search.container_result_hit_scores.fetch(container.id)
 
-        CompetencyFrameworkSearchResultRepresenter
-          .new(competency_framework: container, hit_score:)
+        ContainerSearchResultRepresenter
+          .new(container: container, hit_score:)
           .represent
       end
     end
 
     if search.container_query.blank?
       return search.competency_results.map do |competency|
-        container = competency.competency_framework
+        container = competency.Container
         hit_score = search.container_result_hit_scores.fetch(container.id)
 
-        container = CompetencyFrameworkSearchResultRepresenter
-          .new(competency_framework: container, hit_score:)
+        container = ContainerSearchResultRepresenter
+          .new(container: container, hit_score:)
           .represent
 
         { container:, **represent_competency(competency) }
       end
     end
 
-    search.competency_results.group_by(&:competency_framework).map do |container, competencies|
+    search.competency_results.group_by(&:container).map do |container, competencies|
       hit_score = search.container_result_hit_scores.fetch(container.id)
 
       {
-        **CompetencyFrameworkSearchResultRepresenter.new(competency_framework: container, hit_score:).represent,
+        **ContainerSearchResultRepresenter.new(container: container, hit_score:).represent,
         competencies: competencies.map { |competency| represent_competency(competency) }
       }
     end

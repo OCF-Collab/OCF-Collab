@@ -23,7 +23,7 @@ class NodeDirectorySync
   private
 
   def destroy_existing_frameworks!
-    node_directory.competency_frameworks.destroy_all
+    node_directory.containers.destroy_all
   end
 
   def sync_page!(continuation_token: nil)

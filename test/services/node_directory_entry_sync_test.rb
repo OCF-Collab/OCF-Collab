@@ -42,14 +42,14 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
 
               node_directory_entry_sync.sync!
 
-              framework = CompetencyFramework.find_by(node_directory_s3_key: s3_key)
+              framework = Container.find_by(node_directory_s3_key: s3_key)
               assert framework.present?
             end
           end
 
           context "competency framework already exists" do
             it "updates existing competency framework" do
-              competency_framework = create(:competency_framework,
+              container = create(:container,
                 node_directory: node_directory,
                 node_directory_s3_key: s3_key,
               )
@@ -59,10 +59,10 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
                 s3_key: s3_key,
               )
 
-              assert_changes(-> { competency_framework.external_id }) do
+              assert_changes(-> { container.external_id }) do
                 node_directory_entry_sync.sync!
 
-                competency_framework.reload
+                container.reload
               end
             end
           end
@@ -80,7 +80,7 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
           end
 
           subject do
-            CompetencyFramework.find_by(node_directory_s3_key: s3_key)
+            Container.find_by(node_directory_s3_key: s3_key)
           end
 
           let(:container_data) do
@@ -188,7 +188,7 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
 
         context "competency framework exists" do
           it "deletes existing competency framework" do
-            create(:competency_framework,
+            create(:container,
               node_directory: node_directory,
               node_directory_s3_key: s3_key,
             )
@@ -200,7 +200,7 @@ class NodeDirectoryEntrySyncTest < ActiveSupport::TestCase
 
             node_directory_entry_sync.sync!
 
-            assert_not CompetencyFramework.exists?(node_directory_s3_key: s3_key)
+            assert_not Container.exists?(node_directory_s3_key: s3_key)
           end
         end
       end

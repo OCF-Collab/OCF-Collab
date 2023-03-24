@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_24_024702) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_24_042234) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -35,13 +35,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_24_024702) do
   end
 
   create_table "competencies", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "competency_framework_id", null: false
+    t.uuid "container_id", null: false
     t.text "competency_text", null: false
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "external_id"
-    t.index ["competency_framework_id"], name: "index_competencies_on_competency_framework_id"
+    t.index ["container_id"], name: "index_competencies_on_container_id"
     t.index ["external_id"], name: "index_competencies_on_external_id", unique: true
   end
 
@@ -53,7 +53,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_24_024702) do
     t.index ["competency_id", "contextualizing_object_id"], name: "index_competency_contextualizing_objects", unique: true
   end
 
-  create_table "competency_frameworks", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+  create_table "contact_points", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "node_directory_id"
+    t.string "email", null: false
+    t.string "name"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["node_directory_id"], name: "index_contact_points_on_node_directory_id"
+  end
+
+  create_table "containers", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "node_directory_id", null: false
     t.string "node_directory_s3_key", null: false
     t.string "external_id", null: false
@@ -68,19 +78,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_24_024702) do
     t.string "beneficiary_rights", null: false
     t.string "registry_rights", null: false
     t.string "data_url"
-    t.index ["data_url"], name: "index_competency_frameworks_on_data_url"
-    t.index ["external_id"], name: "index_competency_frameworks_on_external_id"
-    t.index ["node_directory_id"], name: "index_competency_frameworks_on_node_directory_id"
-  end
-
-  create_table "contact_points", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "node_directory_id"
-    t.string "email", null: false
-    t.string "name"
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["node_directory_id"], name: "index_contact_points_on_node_directory_id"
+    t.index ["data_url"], name: "index_containers_on_data_url"
+    t.index ["external_id"], name: "index_containers_on_external_id"
+    t.index ["node_directory_id"], name: "index_containers_on_node_directory_id"
   end
 
   create_table "contextualizing_object_codes", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|

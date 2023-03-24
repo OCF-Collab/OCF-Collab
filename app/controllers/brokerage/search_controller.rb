@@ -10,7 +10,7 @@ module Brokerage
       ) do
         TransactionLogger.info(
           message: "Handling competency frameworks search request",
-          event: "competency_framework_search_request",
+          event: "container_search_request",
         )
 
         input = sanitize_params!(SearchParamsSanitizer, params)
@@ -36,7 +36,7 @@ module Brokerage
 
         TransactionLogger.info(
           message: "Returned competency frameworks search results",
-          event: "competency_framework_search_response",
+          event: "container_search_response",
         )
       end
     end

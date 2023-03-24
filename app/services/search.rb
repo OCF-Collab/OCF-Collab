@@ -22,13 +22,13 @@ class Search
       if container_results&.any?
         container_condition = {
           where: {
-            competency_framework_id: container_results.pluck(:id)
+            container_id: container_results.pluck(:id)
           }
         }
 
         options.merge!(
-          aggs: { competency_framework_id: container_condition },
-          includes: { competency_framework: :node_directory },
+          aggs: { container_id: container_condition },
+          includes: { container: :node_directory },
           **container_condition
         )
       else
@@ -50,7 +50,7 @@ class Search
   def container_results
     return if container_query.blank?
 
-    @container_results ||= CompetencyFramework.search(
+    @container_results ||= Container.search(
       container_query,
       fields: container_fields,
       **search_options
@@ -60,7 +60,7 @@ class Search
   def container_results_count
     return container_results.total_count unless competency_query.present?
 
-    # competency_results.aggs.dig("competency_framework_id", "buckets").size
+    # competency_results.aggs.dig("container_id", "buckets").size
     competency_results.total_count
   end
 

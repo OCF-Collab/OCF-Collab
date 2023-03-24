@@ -55,7 +55,7 @@ class NodeDirectoryEntrySync
   end
 
   def container
-    @container ||= CompetencyFramework.find_or_initialize_by(node_directory_s3_key: s3_key) do |container|
+    @container ||= Container.find_or_initialize_by(node_directory_s3_key: s3_key) do |container|
       container.node_directory = node_directory
     end
   end
@@ -117,6 +117,6 @@ class NodeDirectoryEntrySync
   end
 
   def delete_existing_container!
-    CompetencyFramework.find_by(node_directory_s3_key: s3_key)&.destroy
+    Container.find_by(node_directory_s3_key: s3_key)&.destroy
   end
 end

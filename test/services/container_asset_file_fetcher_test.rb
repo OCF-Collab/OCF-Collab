@@ -1,17 +1,17 @@
 require 'test_helper'
 
-class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
-  describe CompetencyFrameworkAssetFileFetcher do
+class ContainerAssetFileFetcherTest < ActiveSupport::TestCase
+  describe ContainerAssetFileFetcher do
     subject do
-      CompetencyFrameworkAssetFileFetcher.new(
-        competency_framework: competency_framework,
+      ContainerAssetFileFetcher.new(
+        container: container,
         access_token: access_token.token,
         requested_metamodel: requested_metamodel,
       )
     end
 
-    let(:competency_framework) do
-      create(:competency_framework, data_url:, node_directory:, external_id:)
+    let(:container) do
+      create(:container, data_url:, node_directory:, external_id:)
     end
 
     let(:node_directory) do
@@ -80,9 +80,9 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
         mock.expect(:call, metamodel_interchanger_mock) do |**args|
           assert_equal(
             {
-              competency_framework:,
-              competency_framework_body: pna_response_body,
-              competency_framework_content_type: pna_response_headers["Content-Type"],
+              container:,
+              container_body: pna_response_body,
+              container_content_type: pna_response_headers["Content-Type"],
               requested_metamodel:
             },
             args
@@ -114,7 +114,7 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
 
         describe ".body" do
           it "returns PNA response body" do
-            CompetencyFrameworkMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
+            ContainerMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
               assert_equal pna_response_body, subject.body
             end
           end
@@ -122,7 +122,7 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
 
         describe ".content_type" do
           it "returns PNA response content type" do
-            CompetencyFrameworkMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
+            ContainerMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
               assert_equal pna_response_headers["Content-Type"], subject.content_type
             end
           end
@@ -136,7 +136,7 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
 
         describe ".body" do
           it "returns metamodel interchanger response body" do
-            CompetencyFrameworkMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
+            ContainerMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
               assert_equal metamodel_interchanger_transformed_body, subject.body
             end
           end
@@ -144,7 +144,7 @@ class CompetencyFrameworkAssetFileFetcherTest < ActiveSupport::TestCase
 
         describe ".content_type" do
           it "returns metamodel interchanger response content type" do
-            CompetencyFrameworkMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
+            ContainerMetamodelInterchanger.stub(:new, metamodel_interchanger_init_mock) do
               assert_equal metamodel_interchanger_transformed_content_type, subject.content_type
             end
           end

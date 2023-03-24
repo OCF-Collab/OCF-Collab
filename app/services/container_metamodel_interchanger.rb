@@ -1,4 +1,4 @@
-class CompetencyFrameworkMetamodelInterchanger
+class ContainerMetamodelInterchanger
   TIMEOUT_SECONDS = 600
   METAMODEL_INTERCHANGER_URL = "https://dev.cassproject.org/api/transform"
   METAMODEL_KEYS = {
@@ -7,21 +7,21 @@ class CompetencyFrameworkMetamodelInterchanger
     "https://ocf-collab.org/concepts/f63b9a67-543a-49ab-b5ed-8296545c1db5" => "case",
   }
 
-  attr_reader :competency_framework,
-    :competency_framework_body,
-    :competency_framework_content_type,
+  attr_reader :container,
+    :container_body,
+    :container_content_type,
     :requested_metamodel
 
-  def initialize(competency_framework:, competency_framework_body:, competency_framework_content_type:, requested_metamodel:)
-    @competency_framework = competency_framework
-    @competency_framework_body = competency_framework_body
-    @competency_framework_content_type = competency_framework_content_type
+  def initialize(container:, container_body:, container_content_type:, requested_metamodel:)
+    @container = container
+    @container_body = container_body
+    @container_content_type = container_content_type
     @requested_metamodel = requested_metamodel
   end
 
   def transformed_body
     if same_metamodel?
-      return competency_framework_body
+      return container_body
     end
 
     metamodel_interchanger_response.body
@@ -32,7 +32,7 @@ class CompetencyFrameworkMetamodelInterchanger
   end
 
   def provider_metamodel
-    competency_framework.provider_meta_model
+    container.provider_meta_model
   end
 
   def metamodel_interchanger_response
@@ -40,7 +40,7 @@ class CompetencyFrameworkMetamodelInterchanger
       TransactionLogger.tagged(transaction_logger_tags) do
         TransactionLogger.info(
           message: "Requesting competency framework metamodel interchange",
-          event: "competency_framework_metamodel_interchange_request",
+          event: "container_metamodel_interchange_request",
         )
 
         connection.post do |req|
@@ -49,7 +49,7 @@ class CompetencyFrameworkMetamodelInterchanger
         end.tap do
           TransactionLogger.info(
             message: "Finished competency framework metamodel interchange",
-            event: "competency_framework_metamodel_interchange_response",
+            event: "container_metamodel_interchange_response",
           )
         end
       end
@@ -79,11 +79,11 @@ class CompetencyFrameworkMetamodelInterchanger
   end
 
   def upload_io
-    @upload_io ||= Faraday::UploadIO.new(file_io, competency_framework_content_type)
+    @upload_io ||= Faraday::UploadIO.new(file_io, container_content_type)
   end
 
   def file_io
-    @file_io ||= StringIO.new(competency_framework_body)
+    @file_io ||= StringIO.new(container_body)
   end
 
   def metamodel_interchanger_params
@@ -103,7 +103,7 @@ class CompetencyFrameworkMetamodelInterchanger
 
   def transformed_content_type
     if same_metamodel?
-      return competency_framework_content_type
+      return container_content_type
     end
 
     metamodel_interchanger_response.headers["content-type"]

@@ -33,13 +33,13 @@ class CompetencyAssetFileFetcher
       TransactionLogger.tagged(transaction_logger_tags) do
         TransactionLogger.info(
           message: "Requesting competency framework asset file from PNA",
-          event: "competency_framework_asset_file_pna_request",
+          event: "container_asset_file_pna_request",
         )
 
         connection.get(path, id: competency.external_id).tap do |response|
           TransactionLogger.info(
             message: "Fetched competency framework asset file from PNA",
-            event: "competency_framework_asset_file_pna_response",
+            event: "container_asset_file_pna_response",
           )
         end
       end
@@ -48,8 +48,8 @@ class CompetencyAssetFileFetcher
 
   def transaction_logger_tags
     {
-      competency_framework_id: competency.id,
-      competency_framework_external_id: competency.external_id,
+      container_id: competency.id,
+      container_external_id: competency.external_id,
       node_directory_id: node_directory.id,
       node_directory_name: node_directory.name,
       node_directory_pna_url: pna_url

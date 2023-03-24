@@ -1,8 +1,8 @@
 class Competency < ApplicationRecord
   searchkick
 
-  belongs_to :competency_framework
-  has_one :node_directory, through: :competency_framework
+  belongs_to :container
+  has_one :node_directory, through: :container
   has_many :competency_contextualizing_objects
   has_many :contextualizing_objects, through: :competency_contextualizing_objects
 
@@ -11,7 +11,7 @@ class Competency < ApplicationRecord
   def search_data
     as_json(
       include: {
-        competency_framework: {
+        container: {
           only: %i[external_id name]
         }
       }

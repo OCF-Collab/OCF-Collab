@@ -1,4 +1,4 @@
-class CompetencyFramework < ApplicationRecord
+class Container < ApplicationRecord
   searchkick
 
   belongs_to :node_directory

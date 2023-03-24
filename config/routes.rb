@@ -19,7 +19,7 @@ Rails.application.routes.draw do
       get :asset_file
     end
 
-    namespace :competency_frameworks do
+    namespace :containers do
       get :search
       get :metadata
       get :asset_file

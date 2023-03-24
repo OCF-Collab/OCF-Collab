@@ -1,4 +1,4 @@
-class CompetencyFrameworksSearch
+class ContainersSearch
   DEFAULT_PER_PAGE = 25
   MAX_PER_PAGE = 100
 
@@ -12,7 +12,7 @@ class CompetencyFrameworksSearch
   end
 
   def results
-    @results ||= CompetencyFramework.search(query, **search_options)
+    @results ||= Container.search(query, **search_options)
   end
 
   def total_results_count

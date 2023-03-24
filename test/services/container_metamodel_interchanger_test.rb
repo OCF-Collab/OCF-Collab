@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CompetencyFrameworkMetamodelInterchangerTest < ActiveSupport::TestCase
+class ContainerMetamodelInterchangerTest < ActiveSupport::TestCase
   METAMODELS = [
     {
       mi_key: "ctdl/asn",
@@ -14,18 +14,18 @@ class CompetencyFrameworkMetamodelInterchangerTest < ActiveSupport::TestCase
     }
   ]
 
-  describe CompetencyFrameworkMetamodelInterchanger do
+  describe ContainerMetamodelInterchanger do
     subject do
-      CompetencyFrameworkMetamodelInterchanger.new(
-        competency_framework: competency_framework,
-        competency_framework_body: original_body,
-        competency_framework_content_type: original_content_type,
+      ContainerMetamodelInterchanger.new(
+        container: container,
+        container_body: original_body,
+        container_content_type: original_content_type,
         requested_metamodel: requested_metamodel,
       )
     end
 
-    let(:competency_framework) do
-      create(:competency_framework, {
+    let(:container) do
+      create(:container, {
         provider_meta_model: provider_metamodel,
       })
     end
@@ -79,7 +79,7 @@ class CompetencyFrameworkMetamodelInterchangerTest < ActiveSupport::TestCase
 
               let(:expected_mi_url) do
                 "%s?from=%s&to=%s" % [
-                  CompetencyFrameworkMetamodelInterchanger::METAMODEL_INTERCHANGER_URL,
+                  ContainerMetamodelInterchanger::METAMODEL_INTERCHANGER_URL,
                   provider_mm[:mi_key],
                   requested_mm[:mi_key],
                 ]

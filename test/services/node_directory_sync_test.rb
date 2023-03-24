@@ -24,11 +24,11 @@ class NodeDirectorySyncTest < ActiveSupport::TestCase
 
     it "deletes existing node directory competency frameworks" do
       another_node_directory = create(:node_directory)
-      another_node_directory_competency_framework = create(:competency_framework,
+      another_node_directory_container = create(:container,
         node_directory: another_node_directory,
       )
 
-      competency_framework = create(:competency_framework,
+      container = create(:container,
         node_directory: node_directory,
       )
 
@@ -36,8 +36,8 @@ class NodeDirectorySyncTest < ActiveSupport::TestCase
         subject.sync!
       end
 
-      assert CompetencyFramework.exists?(another_node_directory_competency_framework.id)
-      assert_not CompetencyFramework.exists?(competency_framework.id)
+      assert Container.exists?(another_node_directory_container.id)
+      assert_not Container.exists?(container.id)
     end
 
 

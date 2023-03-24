@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :competency_framework do
+  factory :container do
     transient do
       uuid { Faker::Internet.uuid }
     end

@@ -1,12 +1,12 @@
 require "cgi"
 
-class CompetencyFrameworkAssetFileFetcher
+class ContainerAssetFileFetcher
   ASSET_FILE_PATH = "/competency_frameworks/asset_file"
 
-  attr_reader :competency_framework, :access_token, :requested_metamodel
+  attr_reader :container, :access_token, :requested_metamodel
 
-  def initialize(competency_framework:, access_token:, requested_metamodel: nil)
-    @competency_framework = competency_framework
+  def initialize(container:, access_token:, requested_metamodel: nil)
+    @container = container
     @access_token = access_token
     @requested_metamodel = requested_metamodel
   end
@@ -42,13 +42,13 @@ class CompetencyFrameworkAssetFileFetcher
       TransactionLogger.tagged(transaction_logger_tags) do
         TransactionLogger.info(
           message: "Requesting competency framework asset file from PNA",
-          event: "competency_framework_asset_file_pna_request",
+          event: "container_asset_file_pna_request",
         )
 
-        connection.get(path, id: competency_framework.data_url).tap do |response|
+        connection.get(path, id: container.data_url).tap do |response|
           TransactionLogger.info(
             message: "Fetched competency framework asset file from PNA",
-            event: "competency_framework_asset_file_pna_response",
+            event: "container_asset_file_pna_response",
           )
         end
       end
@@ -57,8 +57,8 @@ class CompetencyFrameworkAssetFileFetcher
 
   def transaction_logger_tags
     {
-      competency_framework_id: competency_framework.id,
-      competency_framework_external_id: competency_framework.external_id,
+      container_id: container.id,
+      container_external_id: container.external_id,
       node_directory_id: node_directory.id,
       node_directory_name: node_directory.name,
       node_directory_pna_url: pna_url,
@@ -78,7 +78,7 @@ class CompetencyFrameworkAssetFileFetcher
   end
 
   def node_directory
-    competency_framework.node_directory
+    container.node_directory
   end
 
   def headers
@@ -92,10 +92,10 @@ class CompetencyFrameworkAssetFileFetcher
   end
 
   def metamodel_interchanger
-    @metamodel_interchanger ||= CompetencyFrameworkMetamodelInterchanger.new(
-      competency_framework: competency_framework,
-      competency_framework_body: pna_response_body,
-      competency_framework_content_type: pna_response_content_type,
+    @metamodel_interchanger ||= ContainerMetamodelInterchanger.new(
+      container: container,
+      container_body: pna_response_body,
+      container_content_type: pna_response_content_type,
       requested_metamodel: requested_metamodel,
     )
   end

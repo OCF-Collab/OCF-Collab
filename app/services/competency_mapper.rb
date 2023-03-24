@@ -45,7 +45,7 @@ class CompetencyMapper
 
   def detect_resource_type(value)
     return "competency" if Competency.exists?(external_id: value)
-    return "container" if CompetencyFramework.exists?(external_id: value)
+    return "container" if Container.exists?(external_id: value)
   end
 
   def detect_type(value)

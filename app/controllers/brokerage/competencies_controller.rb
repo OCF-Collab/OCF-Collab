@@ -2,11 +2,11 @@ module Brokerage
   class CompetenciesController < Brokerage::BaseController
     def asset_file
       TransactionLogger.tagged(
-        competency_framework_external_id: params[:id]
+        container_external_id: params[:id]
       ) do
         TransactionLogger.info(
           message: "Handling competency framework asset file request",
-          event: "competency_framework_asset_file_request",
+          event: "container_asset_file_request",
         )
 
         input = sanitize_params!(CompetencyAssetFileParamsSanitizer, params)
@@ -26,8 +26,8 @@ module Brokerage
 
         TransactionLogger.info(
           message: "Returned competency framework asset file",
-          event: "competency_framework_asset_file_response",
-          competency_framework_id: competency.id,
+          event: "container_asset_file_response",
+          container_id: competency.id,
           node_directory_id: competency.node_directory.id,
           node_directory_name: competency.node_directory.name,
         )
@@ -44,7 +44,7 @@ module Brokerage
       ) do
         TransactionLogger.info(
           message: "Handling competency frameworks search request",
-          event: "competency_framework_search_request",
+          event: "container_search_request",
         )
 
         input = sanitize_params!(CompetenciesSearchParamsSanitizer, params)
@@ -74,7 +74,7 @@ module Brokerage
 
         TransactionLogger.info(
           message: "Returned competency frameworks search results",
-          event: "competency_framework_search_response",
+          event: "container_search_response",
         )
       end
     end

@@ -1,18 +1,18 @@
 require "test_helper"
 
-class ApiCompetencyFrameworksAssetFileTest < ActionDispatch::IntegrationTest
-  describe "GET /competency_frameworks/asset_file" do
+class ApiContainersAssetFileTest < ActionDispatch::IntegrationTest
+  describe "GET /containers/asset_file" do
     let(:id) do
-      competency_framework.external_id
+      container.external_id
     end
 
-    let(:competency_framework) do
-      create(:competency_framework)
+    let(:container) do
+      create(:container)
     end
 
     context "unauthorized request" do
       it "returns 401" do
-        get competency_frameworks_asset_file_url(id: id)
+        get containers_asset_file_url(id: id)
 
         assert_response 401
       end
@@ -50,16 +50,16 @@ class ApiCompetencyFrameworksAssetFileTest < ActionDispatch::IntegrationTest
             assert_equal(
               {
                 access_token: access_token.token,
-                competency_framework:,
+                container:,
                 requested_metamodel: metamodel
               },
               args
             )
           end
 
-          CompetencyFrameworkAssetFileFetcher.stub(:new, fetcher_init_mock) do
+          ContainerAssetFileFetcher.stub(:new, fetcher_init_mock) do
             authorized_get(
-              competency_frameworks_asset_file_url(id: id),
+              containers_asset_file_url(id: id),
               access_token: access_token,
               params: { metamodel: metamodel },
             )

@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
-  describe CompetencyFrameworksSearch do
+class ContainersSearchTest < ActiveSupport::TestCase
+  describe ContainersSearch do
     subject do
-      CompetencyFrameworksSearch.new(
+      ContainersSearch.new(
         query: query,
       )
     end
@@ -26,7 +26,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
       context "without query only" do
         it "returns competency frameworks search results for given query with max per_page" do
           verify_search_call(query, {
-            per_page: CompetencyFrameworksSearch::DEFAULT_PER_PAGE,
+            per_page: ContainersSearch::DEFAULT_PER_PAGE,
             page: 1,
             includes: nil,
             fields: expected_fields,
@@ -40,7 +40,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
         end
 
         subject do
-          CompetencyFrameworksSearch.new(
+          ContainersSearch.new(
             query: query,
             page: page,
             per_page: per_page,
@@ -49,7 +49,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
 
         context "with specified per_page below max" do
           let(:per_page) do
-            CompetencyFrameworksSearch::MAX_PER_PAGE - 5
+            ContainersSearch::MAX_PER_PAGE - 5
           end
 
           it "returns competency frameworks search results for given query with provided per_page" do
@@ -64,12 +64,12 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
 
         context "with specified per_page above max" do
           let(:per_page) do
-            CompetencyFrameworksSearch::MAX_PER_PAGE + 5
+            ContainersSearch::MAX_PER_PAGE + 5
           end
 
           it "returns competency frameworks search results for given query with provided per_page" do
             verify_search_call(query, {
-              per_page: CompetencyFrameworksSearch::MAX_PER_PAGE,
+              per_page: ContainersSearch::MAX_PER_PAGE,
               page: page,
               includes: nil,
               fields: expected_fields,
@@ -84,7 +84,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
         end
 
         subject do
-          CompetencyFrameworksSearch.new(
+          ContainersSearch.new(
             query: query,
             includes: includes,
           )
@@ -92,7 +92,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
 
         it "passes includes option to Searchkick" do
           verify_search_call(query, {
-            per_page: CompetencyFrameworksSearch::DEFAULT_PER_PAGE,
+            per_page: ContainersSearch::DEFAULT_PER_PAGE,
             page: 1,
             includes: includes,
             fields: expected_fields,
@@ -111,7 +111,7 @@ class CompetencyFrameworksSearchTest < ActiveSupport::TestCase
         true
       end
 
-      CompetencyFramework.stub(:search, search_mock) do
+      Container.stub(:search, search_mock) do
         results = subject.results
 
         assert_equal sample_results, results
