@@ -1,5 +1,18 @@
 class Competency < ApplicationRecord
-  searchkick
+  searchkick mappings: {
+    properties: {
+      competency_text: { type: "text" },
+      container_attribution_name: { type: "text" },
+      container_description: { type: "text" },
+      container_external_id: { type: "keyword" },
+      container_name: { type: "text" },
+      container_text: { type: "text" },
+      container_type: { type: "keyword" },
+      text: { type: "text" },
+      type: { type: "keyword" },
+      **ContextualizingObject.types.keys.each_with_object(type: "text").to_h
+    }
+  }
 
   belongs_to :container
   has_one :node_directory, through: :container
@@ -8,13 +21,45 @@ class Competency < ApplicationRecord
 
   validates :competency_text, presence: true
 
+  delegate :attribution_name, :description, :external_id, :name, :type,
+           prefix: true,
+           to: :container
+
   def search_data
-    as_json(
-      include: {
-        container: {
-          only: %i[external_id name]
-        }
-      }
-    )
+    {
+      container_attribution_name:,
+      container_description:,
+      container_external_id:,
+      container_name:,
+      competency_text:,
+      container_text:,
+      container_type:,
+      text: [competency_text, container_text].join(" "),
+      **contextualizing_objects_search_data
+    }
+  end
+
+  private
+
+  def container_text
+    [
+      container_attribution_name,
+      container_description,
+      container_name
+    ].compact.join(" ")
+  end
+
+  def contextualizing_objects_search_data
+    data = contextualizing_objects
+      .group_by(&:type)
+      .map { |type, objects| [type, objects.map(&:text).join(" ")].presence }
+      .to_h
+
+    ContextualizingObject
+      .types
+      .keys
+      .each_with_object(nil)
+      .to_h
+      .merge(data)
   end
 end
