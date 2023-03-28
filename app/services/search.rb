@@ -1,12 +1,13 @@
 class Search
   DEFAULT_PER_PAGE = 25
   MAX_PER_PAGE = 100
+  MAX_SIZE = 10_000
 
-  attr_reader :competency_query, :container_query
+  attr_reader :container_type, :facets
 
-  def initialize(competency_query:, container_query:, page:, per_page:)
-    @competency_query = competency_query
-    @container_query = container_query
+  def initialize(container_type:, facets:, page:, per_page:)
+    @container_type = container_type.presence
+    @facets = facets
     @page = page
     @per_page = per_page || DEFAULT_PER_PAGE
   end
@@ -15,57 +16,33 @@ class Search
     @competency_result_hit_scores = group_hit_scores(competency_results)
   end
 
-  def competency_results
-    @results ||= begin
-      options = { fields: competency_fields }
-
-      if container_results&.any?
-        container_condition = {
-          where: {
-            container_id: container_results.pluck(:id)
-          }
-        }
-
-        options.merge!(
-          aggs: { container_id: container_condition },
-          includes: { container: :node_directory },
-          **container_condition
-        )
-      else
-        options.merge!(search_options)
-      end
-
-      Competency.search(competency_query, **options)
-    end
+  def competencies_count
+    containers.map { |c| c["doc_count"] }.sum
   end
 
-  def competency_results_count
-    competency_results.total_count
+  def containers_count
+    containers.size
   end
 
-  def container_result_hit_scores
-    @container_result_hit_scores = group_hit_scores(container_results)
-  end
-
-  def container_results
-    return if container_query.blank?
-
-    @container_results ||= Container.search(
-      container_query,
-      fields: container_fields,
-      **search_options
-    )
-  end
-
-  def container_results_count
-    return container_results.total_count unless competency_query.present?
-
-    # competency_results.aggs.dig("container_id", "buckets").size
-    competency_results.total_count
-  end
-
-  def search_options
-    { page:, per_page: }
+  def containers
+    @containers ||= Competency
+      .search(
+        body: {
+          aggs: {
+            containers: {
+              terms: {
+                field: :container_external_id,
+                size: MAX_SIZE
+              }
+            }
+          },
+          query:,
+          size: 0
+        },
+        per_page: MAX_SIZE
+      )
+      .aggs
+      .dig("containers", "buckets")
   end
 
   def page
@@ -78,17 +55,49 @@ class Search
     [@per_page, MAX_PER_PAGE].min
   end
 
+  def query
+    @query ||= begin
+      optional, required = facets.partition { |f| f[:optional] }
+      required_conditions = required.map { |f| build_condition(f) }
+      required_conditions << { match: { container_type: } } if container_type
+
+      {
+        bool: {
+          must: required_conditions,
+          should: optional.map { |f| build_condition(f) }
+        }
+      }
+    end
+  end
+
+  def results
+    @results ||= begin
+      container_ids = containers[(page - 1) * per_page, per_page].map { |c| c["key"] }
+
+      filter_terms = container_ids.map do |id|
+        { term: { container_external_id: id } }
+      end
+
+      Competency.search(
+        body: {
+          query: {
+            bool: {
+              filter: { bool: { should: filter_terms } },
+              **query.fetch(:bool)
+            }
+          }
+        },
+        includes: { container: :node_directory },
+        per_page: MAX_SIZE
+      )
+    end
+  end
+
   private
 
-  def competency_fields
-    %w[competency_text^10 comment^5]
-  end
-
-  def container_fields
-    %w[external_id name]
-  end
-
-  def group_hit_scores(results)
-    results.hits.map { |hit| [hit.fetch("_id"), hit.fetch("_score")] }.to_h
+  def build_condition(facet)
+    {
+      match: { facet[:key] => facet[:value] }
+    }
   end
 end

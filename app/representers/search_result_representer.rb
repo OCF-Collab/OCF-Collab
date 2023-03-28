@@ -6,35 +6,10 @@ class SearchResultRepresenter
   end
 
   def represent
-    if search.competency_query.blank?
-      return search.container_results.map do |container|
-        hit_score = search.container_result_hit_scores.fetch(container.id)
-
-        ContainerSearchResultRepresenter
-          .new(container: container, hit_score:)
-          .represent
-      end
-    end
-
-    if search.container_query.blank?
-      return search.competency_results.map do |competency|
-        container = competency.Container
-        hit_score = search.container_result_hit_scores.fetch(container.id)
-
-        container = ContainerSearchResultRepresenter
-          .new(container: container, hit_score:)
-          .represent
-
-        { container:, **represent_competency(competency) }
-      end
-    end
-
-    search.competency_results.group_by(&:container).map do |container, competencies|
-      hit_score = search.container_result_hit_scores.fetch(container.id)
-
+    search.results.group_by(&:container).map do |container, competencies|
       {
-        **ContainerSearchResultRepresenter.new(container: container, hit_score:).represent,
-        competencies: competencies.map { |competency| represent_competency(competency) }
+        **ContainerSearchResultRepresenter.new(container:).represent,
+        competencies: competencies.map { |c| represent_competency(c) }
       }
     end
   end
@@ -45,8 +20,7 @@ class SearchResultRepresenter
     {
       comment: competency.comment,
       competency_text: competency.competency_text,
-      external_id: competency.external_id,
-      hit_score: search.competency_result_hit_scores.fetch(competency.id)
+      external_id: competency.external_id
     }
   end
 end

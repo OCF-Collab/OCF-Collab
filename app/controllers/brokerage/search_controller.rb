@@ -13,21 +13,12 @@ module Brokerage
           event: "container_search_request",
         )
 
-        input = sanitize_params!(SearchParamsSanitizer, params)
-
-        search = Search.new(
-          competency_query: input[:competency_query],
-          container_query: input[:container_query],
-          page: input[:page],
-          per_page: input[:per_page]
-        )
+        search = Search.new(**sanitize_params!(SearchParamsSanitizer, params))
 
         render json: {
           search: {
-            competency_query: search.competency_query,
-            competency_results_count: search.competency_results_count,
-            container_query: search.container_query,
-            container_results_count: search.container_results_count,
+            competencies_count: search.competencies_count,
+            containers_count: search.containers_count,
             page: search.page,
             per_page: search.per_page,
             results: SearchResultRepresenter.new(search:).represent
