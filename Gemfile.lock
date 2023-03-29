@@ -238,6 +238,8 @@ GEM
       connection_pool (>= 2.2.5, < 3)
       rack (~> 2.0)
       redis (>= 4.5.0, < 5)
+    sidekiq-failures (1.0.4)
+      sidekiq (>= 4.0.0)
     spring (4.1.1)
     spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
@@ -279,6 +281,7 @@ DEPENDENCIES
   rexml (~> 3.2)
   searchkick (~> 4.6)
   sidekiq (~> 6.5)
+  sidekiq-failures (~> 1.0)
   spring (~> 4.1)
   spring-watcher-listen (~> 2.1)
   webmock
