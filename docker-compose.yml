@@ -20,6 +20,8 @@ services:
     image: elasticsearch:7.9.1
     environment:
       - "discovery.type=single-node"
+    logging:
+      driver: "none"
     networks:
       - ocf_collab
     ports:
