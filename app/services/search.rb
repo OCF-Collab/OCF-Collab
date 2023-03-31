@@ -25,24 +25,41 @@ class Search
   end
 
   def containers
-    @containers ||= Competency
-      .search(
-        body: {
-          aggs: {
-            containers: {
-              terms: {
-                field: :container_external_id,
-                size: MAX_SIZE
-              }
+    @containers ||= begin
+      container_query =
+        if container_type
+          {
+            bool: {
+              must: [
+                { term: { container_type: } },
+                *query.dig(:bool, :must)
+              ],
+              should: query.dig(:bool, :should)
             }
+          }
+        else
+          query
+        end
+
+      Competency
+        .search(
+          body: {
+            aggs: {
+              containers: {
+                terms: {
+                  field: :container_external_id,
+                  size: MAX_SIZE
+                }
+              }
+            },
+            query: container_query,
+            size: 0
           },
-          query:,
-          size: 0
-        },
-        per_page: MAX_SIZE
-      )
-      .aggs
-      .dig("containers", "buckets")
+          per_page: MAX_SIZE
+        )
+        .aggs
+        .dig("containers", "buckets")
+    end
   end
 
   def page
@@ -58,12 +75,10 @@ class Search
   def query
     @query ||= begin
       optional, required = facets.partition { |f| f[:optional] }
-      required_conditions = required.map { |f| build_condition(f) }
-      required_conditions << { match: { container_type: } } if container_type
 
       {
         bool: {
-          must: required_conditions,
+          must: required.map { |f| build_condition(f) },
           should: optional.map { |f| build_condition(f) }
         }
       }
@@ -74,7 +89,7 @@ class Search
     @results ||= begin
       container_ids = containers[(page - 1) * per_page, per_page].map { |c| c["key"] }
 
-      filter_terms = container_ids.map do |id|
+      container_terms = container_ids.map do |id|
         { term: { container_external_id: id } }
       end
 
@@ -82,8 +97,16 @@ class Search
         body: {
           query: {
             bool: {
-              filter: { bool: { should: filter_terms } },
-              **query.fetch(:bool)
+              must: [
+                {
+                  bool: {
+                    minimum_should_match: 1,
+                    should: container_terms
+                  }
+                },
+                *query.dig(:bool, :must)
+              ],
+              should: query.dig(:bool, :should)
             }
           }
         },

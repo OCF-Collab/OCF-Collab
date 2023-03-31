@@ -1,7 +1,7 @@
 default: &default
   elasticsearch:
     configuration:
-      version: 7.9.1
+      version: 8.6.2
   rails:
     configuration:
       asset_pipeline_enabled: false

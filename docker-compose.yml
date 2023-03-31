@@ -17,9 +17,10 @@ services:
     ports:
       - 6379:6379
   elasticsearch:
-    image: elasticsearch:7.9.1
+    image: elasticsearch:8.6.2
     environment:
       - "discovery.type=single-node"
+      - "xpack.security.enabled=false"
     logging:
       driver: "none"
     networks:
