@@ -20,6 +20,7 @@ services:
     image: elasticsearch:7.9.1
     environment:
       - "discovery.type=single-node"
+      - "xpack.security.enabled=false"
     logging:
       driver: "none"
     networks:
