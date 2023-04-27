@@ -19,6 +19,8 @@ class Competency < ApplicationRecord
   has_many :competency_contextualizing_objects
   has_many :contextualizing_objects, through: :competency_contextualizing_objects
 
+  scope :search_import, -> { includes(:container, contextualizing_objects: :codes) }
+
   validates :competency_text, presence: true
 
   delegate :attribution_name, :description, :external_id, :name, :type,
