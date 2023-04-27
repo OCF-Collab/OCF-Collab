@@ -1,4 +1,5 @@
 class SearchParamsSanitizer < InputSanitizer::Sanitizer
+  string :container_id
   string :container_type
 
   custom :facets, converter: -> (facets) {
@@ -12,5 +13,6 @@ class SearchParamsSanitizer < InputSanitizer::Sanitizer
   }
 
   integer :page
+  integer :per_container
   integer :per_page
 end

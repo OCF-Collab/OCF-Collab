@@ -1,29 +1,52 @@
 class SearchResultRepresenter
   attr_reader :search
 
-  delegate :competency_hit_scores, :competency_results, to: :search
+  attr_reader :competency_results
 
   def initialize(search:)
-    @search = search
+    @competency_results = search.competency_results
   end
 
   def represent
-    competency_results.group_by(&:container).map do |container, competencies|
+    competency_ids = competency_results.flat_map { |r| r.pluck(:id) }
+
+    competency_hash = Competency
+      .where(id: competency_ids)
+      .includes(container: :node_directory)
+      .map { |c| [c.id, c] }
+      .to_h
+
+    represented_competency_results = competency_results.map do |result|
+      competencies = result.pluck(:id).map { |id| competency_hash[id] }.compact
+      next if competencies.empty?
+
+      container = competencies.first.container
+
+      represented_competencies = competencies.each_with_index.map do |competency, index|
+        represent_competency(
+          competency:,
+          hit_score: result.hits.dig(index, "_score")
+        )
+      end
+
       {
         **ContainerSearchResultRepresenter.new(container:).represent,
-        competencies: competencies.map { |c| represent_competency(c) }
+        competencies: represented_competencies,
+        total_count: result.total_count
       }
     end
+
+    represented_competency_results.compact
   end
 
   private
 
-  def represent_competency(competency)
+  def represent_competency(competency:, hit_score:)
     {
       comment: competency.comment,
       competency_text: competency.competency_text,
       external_id: competency.external_id,
-      hit_score: competency_hit_scores.fetch(competency.id)
+      hit_score:
     }
   end
 end

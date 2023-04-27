@@ -20,6 +20,7 @@ module Brokerage
             competencies_count: search.competencies_count,
             containers_count: search.containers_count,
             page: search.page,
+            per_container: search.per_container,
             per_page: search.per_page,
             results: SearchResultRepresenter.new(search:).represent
           }

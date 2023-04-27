@@ -3,20 +3,22 @@ class Search
   MAX_PER_PAGE = 100
   MAX_SIZE = 10_000
 
-  attr_reader :container_type, :facets
+  attr_reader :container_id, :container_type, :facets, :per_container
 
-  def initialize(container_type:, facets:, page:, per_page:)
+  def initialize(
+    container_id:,
+    container_type:,
+    facets:,
+    page:,
+    per_container:,
+    per_page:
+  )
+    @container_id = container_id
     @container_type = container_type.presence
     @facets = facets
     @page = page
+    @per_container = per_container
     @per_page = per_page || DEFAULT_PER_PAGE
-  end
-
-  def competency_hit_scores
-    @competency_hit_scores = competency_results
-      .hits
-      .map { |hit| [hit.fetch("_id"), hit.fetch("_score")] }
-      .to_h
   end
 
   def competencies_count
@@ -26,33 +28,34 @@ class Search
   def competency_results
     return [] if containers.none?
 
-    @results ||= begin
-      container_ids = containers[(page - 1) * per_page, per_page].map { |c| c["key"] }
+    @competency_results ||= begin
+      container_ids =
+        if container_id.present?
+          [container_id]
+        else
+          containers[(page - 1) * per_page, per_page].map { |c| c["key"] }
+        end
 
-      container_terms = container_ids.map do |id|
-        { term: { container_external_id: id } }
+      queries = container_ids.map do |container_external_id|
+        Competency.search(
+          body: {
+            query: {
+              bool: {
+                must: [
+                  { bool: { should: { term: { container_external_id: } } } },
+                  *query.dig(:bool, :must)
+                ],
+                should: query.dig(:bool, :should)
+              }
+            }
+          },
+          includes: { container: :node_directory },
+          load: false,
+          per_page: container_id.present? ? MAX_SIZE : per_container
+        )
       end
 
-      Competency.search(
-        body: {
-          query: {
-            bool: {
-              must: [
-                {
-                  bool: {
-                    minimum_should_match: 1,
-                    should: container_terms
-                  }
-                },
-                *query.dig(:bool, :must)
-              ],
-              should: query.dig(:bool, :should)
-            }
-          }
-        },
-        includes: { container: :node_directory },
-        per_page: MAX_SIZE
-      )
+      Searchkick.multi_search(queries)
     end
   end
 
