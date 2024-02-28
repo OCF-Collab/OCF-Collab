@@ -36,13 +36,19 @@ class Search
           containers[(page - 1) * per_page, per_page].map { |c| c["key"] }
         end
 
-      queries = container_ids.map do |container_external_id|
+      queries = container_ids.map do |id|
         Competency.search(
           body: {
             query: {
               bool: {
                 must: [
-                  { bool: { should: { term: { container_external_id: } } } },
+                  {
+                    bool: {
+                      should: {
+                        term: { 'container_external_id.keyword' => id }
+                      }
+                    }
+                  },
                   *query.dig(:bool, :must)
                 ],
                 should: query.dig(:bool, :should)
@@ -86,7 +92,7 @@ class Search
             aggs: {
               containers: {
                 terms: {
-                  field: :container_external_id,
+                  field: 'container_external_id.keyword',
                   size: MAX_SIZE
                 }
               }
