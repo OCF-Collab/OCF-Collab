@@ -5,7 +5,10 @@ class AddDataUrlToCompetencyFrameworks < ActiveRecord::Migration[6.1]
 
     reversible do |dir|
       dir.up do
-        CompetencyFramework.update_all("data_url = external_id")
+        ApplicationRecord.connection.execute(<<~CMD)
+          UPDATE competency_frameworks
+          SET data_url = external_id
+        CMD
       end
     end
   end
