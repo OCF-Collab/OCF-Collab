@@ -118,6 +118,6 @@ class NodeDirectoryEntrySync
   end
 
   def delete_existing_container!
-    Container.find_by(node_directory_s3_key: s3_key)&.destroy
+    Container.find_by(node_directory_s3_key: s3_key)&.delete
   end
 end

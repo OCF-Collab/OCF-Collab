@@ -1,9 +1,9 @@
 class NodeDirectorySync
-  attr_reader :node_directory, :destroy_existing
+  attr_reader :node_directory, :delete_existing
 
-  def initialize(node_directory:, destroy_existing: true)
+  def initialize(node_directory:, delete_existing: true)
     @node_directory = node_directory
-    @destroy_existing = destroy_existing
+    @delete_existing = delete_existing
   end
 
   def self.sync_all!
@@ -13,17 +13,14 @@ class NodeDirectorySync
   end
 
   def sync!
-    if destroy_existing
-      destroy_existing_frameworks!
-    end
-
+    delete_existing_containers! if delete_existing
     sync_page!
   end
 
   private
 
-  def destroy_existing_frameworks!
-    node_directory.containers.destroy_all
+  def delete_existing_containers!
+    node_directory.containers.delete_all
   end
 
   def sync_page!(continuation_token: nil)
