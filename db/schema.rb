@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_24_114440) do
+ActiveRecord::Schema[7.1].define(version: 2023_07_11_051959) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -162,6 +162,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_24_114440) do
   end
 
   add_foreign_key "codes", "code_sets", on_delete: :cascade
+  add_foreign_key "competencies", "containers", on_delete: :cascade
   add_foreign_key "competency_contextualizing_objects", "competencies", on_delete: :cascade
   add_foreign_key "competency_contextualizing_objects", "contextualizing_objects", on_delete: :cascade
   add_foreign_key "contextualizing_object_codes", "codes", on_delete: :cascade
