@@ -5,7 +5,7 @@ ruby '3.2.1'
 
 gem 'bundler', '= 2.4.6'
 gem 'elasticsearch', '= 7.9.0'
-gem 'rails', '= 7.0.4.3'
+gem 'rails', '= 7.1.3.2'
 gem 'pg', '~> 1.4'
 gem 'puma', '~> 6.0'
 
