@@ -66,7 +66,7 @@ class NodeDirectorySync
     end
 
     def s3_client
-      S3Client
+      @s3_client ||= S3Client.new(node_directory:)
     end
 
     def has_next_page?

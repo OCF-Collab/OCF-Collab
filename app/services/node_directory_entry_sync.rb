@@ -75,7 +75,7 @@ class NodeDirectoryEntrySync
   end
 
   def s3_object_response
-    @s3_object_response ||= S3Client.get_object(
+    @s3_object_response ||= s3_client.get_object(
       bucket: s3_bucket,
       key: s3_key,
     )
@@ -83,6 +83,10 @@ class NodeDirectoryEntrySync
 
   def s3_bucket
     node_directory.s3_bucket
+  end
+
+  def s3_client
+    @s3_client ||= S3Client.new(node_directory:)
   end
 
   def container_attributes

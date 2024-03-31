@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_07_11_051959) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_29_091913) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -115,6 +115,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_07_11_051959) do
     t.string "external_id", null: false
     t.string "logo_url"
     t.string "pna_url"
+    t.string "s3_region", default: "us-east-1"
   end
 
   create_table "oauth_access_grants", force: :cascade do |t|
