@@ -10,6 +10,7 @@ class NodeDirectoryEntrySync
   def sync!
     update_contextualizing_objects!
     update_container!
+    reindex
   rescue Aws::S3::Errors::NoSuchKey
     delete_existing_container!
   end
@@ -123,5 +124,9 @@ class NodeDirectoryEntrySync
 
   def delete_existing_container!
     Container.find_by(node_directory_s3_key: s3_key)&.delete
+  end
+
+  def reindex
+    container.competencies.includes(contextualizing_objects: :codes).reindex
   end
 end
