@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   end
 
   scope module: "brokerage" do
-    get "search" => "search#index"
+    match "search" => "search#index", defaults: { format: :json }, via: %i[get post]
 
     namespace :competencies do
       get :asset_file

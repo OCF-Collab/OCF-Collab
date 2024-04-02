@@ -1,24 +1,26 @@
 class Search
+  DEFAULT_PER_CONTAINER = 20
   DEFAULT_PER_PAGE = 25
+  MAX_PER_CONTAINER = 50
   MAX_PER_PAGE = 100
   MAX_SIZE = 10_000
 
   attr_reader :container_id, :container_type, :facets, :per_container
 
   def initialize(
-    container_id:,
-    container_type:,
+    container_id: nil,
+    container_type: nil,
     facets:,
-    page:,
-    per_container:,
-    per_page:
+    page: 1,
+    per_container: DEFAULT_PER_CONTAINER,
+    per_page: DEFAULT_PER_PAGE
   )
     @container_id = container_id
     @container_type = container_type.presence
     @facets = facets
     @page = page
-    @per_container = per_container
-    @per_page = per_page || DEFAULT_PER_PAGE
+    @per_container = [per_container, MAX_PER_CONTAINER].max
+    @per_page = [per_page, MAX_PER_PAGE].max
   end
 
   def competencies_count
@@ -33,7 +35,7 @@ class Search
         if container_id.present?
           [container_id]
         else
-          containers[(page - 1) * per_page, per_page].map { |c| c["key"] }
+          (containers[(page - 1) * per_page, per_page] || []).map { _1["key"] }
         end
 
       queries = container_ids.map do |id|
@@ -60,6 +62,8 @@ class Search
           per_page: container_id.present? ? MAX_SIZE : per_container
         )
       end
+
+      return [] if queries.empty?
 
       Searchkick.multi_search(queries)
     end
