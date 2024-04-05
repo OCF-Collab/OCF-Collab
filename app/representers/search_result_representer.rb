@@ -1,10 +1,10 @@
 class SearchResultRepresenter
   attr_reader :search
 
-  attr_reader :competency_results
+  delegate :competency_results, to: :search
 
   def initialize(search:)
-    @competency_results = search.competency_results
+    @search = search
   end
 
   def represent
@@ -23,10 +23,8 @@ class SearchResultRepresenter
       container = competencies.first.container
 
       represented_competencies = competencies.each_with_index.map do |competency, index|
-        represent_competency(
-          competency:,
-          hit_score: result.hits.dig(index, "_score")
-        )
+        hit_score = result.hits.dig(index, "_score") unless search.empty?
+        represent_competency(competency:, hit_score:)
       end
 
       {

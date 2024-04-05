@@ -7,17 +7,19 @@ class Search
 
   attr_reader :container_id, :container_type, :facets, :per_container
 
+  delegate :empty?, to: :facets
+
   def initialize(
     container_id: nil,
     container_type: nil,
-    facets:,
+    facets: [],
     page: 1,
     per_container: DEFAULT_PER_CONTAINER,
     per_page: DEFAULT_PER_PAGE
   )
     @container_id = container_id
     @container_type = container_type.presence
-    @facets = facets
+    @facets = Array.wrap(facets)
     @page = page
     @per_container = [per_container, MAX_PER_CONTAINER].max
     @per_page = [per_page, MAX_PER_PAGE].max
