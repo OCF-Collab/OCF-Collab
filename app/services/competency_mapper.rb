@@ -62,8 +62,8 @@ class CompetencyMapper
   end
 
   def mapping
-    filename = "#{node_directory.s3_bucket}.json"
-    @mapper ||= JSON(File.read(MAPPING_DIR + filename))
+    path = MAPPING_DIR.join(node_directory.competency_mapping_name)
+    @mapper ||= JSON(File.read(path))
   end
 
   def metadata
