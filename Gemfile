@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.1'
 
+gem 'airbrake', '~> 13.0'
 gem 'bundler', '= 2.4.6'
 gem 'elasticsearch', '= 7.9.0'
 gem 'rails', '= 7.1.3.2'
