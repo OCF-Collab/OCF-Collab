@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_06_060233) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_01_072944) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -41,6 +41,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_06_060233) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "external_id"
+    t.string "competency_category"
+    t.string "competency_label"
+    t.string "keywords", default: [], array: true
+    t.string "html_url"
     t.index ["container_id"], name: "index_competencies_on_container_id"
     t.index ["external_id"], name: "index_competencies_on_external_id", unique: true
   end
@@ -79,6 +83,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_06_060233) do
     t.string "registry_rights", null: false
     t.string "data_url"
     t.string "type", default: "CompetencyFramework", null: false
+    t.string "html_url"
     t.index ["data_url"], name: "index_containers_on_data_url"
     t.index ["external_id"], name: "index_containers_on_external_id"
     t.index ["node_directory_id"], name: "index_containers_on_node_directory_id"

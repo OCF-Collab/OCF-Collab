@@ -32,10 +32,13 @@ class NodeDirectoryEntryParser
   def parsed_competencies
     competencies_data.map do |competency_data|
       {
+        competency_category: competency_data["competencyCategory"]&.values&.first,
+        competency_label: competency_data["competencyLabel"]&.values&.first,
         competency_text: competency_data["competencyText"].values.first,
         comment: competency_data.dig("comment")&.values&.first&.join("\n"),
         contextualized_by: competency_data["contextualizedBy"],
-        id: competency_data["id"]
+        id: competency_data["id"],
+        keywords: (competency_data["keywords"] || []).flat_map(&:values)
       }
     end
   end
@@ -48,7 +51,7 @@ class NodeDirectoryEntryParser
         data_url: contextualizing_object_data["dataURL"],
         description: contextualizing_object_data["description"]&.values&.first,
         id: contextualizing_object_data["id"],
-        name: contextualizing_object_data["name"].values.first,
+        name: contextualizing_object_data["name"]&.values&.first,
         type: contextualizing_object_data["type"]
       }
     end
@@ -60,7 +63,7 @@ class NodeDirectoryEntryParser
         code_value: category_data["codeValue"],
         description: category_data["description"]&.values&.first,
         in_code_set: category_data["inCodeSet"],
-        name: category_data["name"].values.first,
+        name: category_data["name"]&.values&.first,
         type: category_data["type"]
       }
     end

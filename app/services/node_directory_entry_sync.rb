@@ -32,7 +32,7 @@ class NodeDirectoryEntrySync
           codes: update_codes!(parsed_contextualizing_object[:category]),
           data_url:,
           description: parsed_contextualizing_object[:description],
-          name: parsed_contextualizing_object[:name],
+          name: parsed_contextualizing_object[:name] || "",
           type: parsed_contextualizing_object[:type]
         )
         .find_or_create_by!(external_id:)
@@ -49,7 +49,7 @@ class NodeDirectoryEntrySync
         .codes
         .create_with(
           description: parsed_category[:description],
-          name: parsed_category[:name]
+          name: parsed_category[:name] || ""
         )
         .find_or_create_by!(value: parsed_category[:code_value])
     end
@@ -114,10 +114,13 @@ class NodeDirectoryEntrySync
       )
 
       Competency.new(
+        competency_category: parsed_competency[:competency_category],
+        competency_label: parsed_competency[:competency_label],
         competency_text: parsed_competency[:competency_text],
         comment: parsed_competency[:comment],
         contextualizing_objects:,
-        external_id: parsed_competency[:id]
+        external_id: parsed_competency[:id],
+        keywords: parsed_competency[:keywords]
       )
     end
   end

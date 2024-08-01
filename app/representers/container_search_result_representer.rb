@@ -17,7 +17,8 @@ class ContainerSearchResultRepresenter
       "providerMetaModel" => container.provider_meta_model,
       "registryRights" => container.registry_rights,
       "beneficiaryRights" => container.beneficiary_rights,
-      "hitScore" => hit_score
+      "hitScore" => hit_score,
+      "htmlUrl" => container.html_url
     }
   end
 

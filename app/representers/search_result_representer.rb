@@ -44,7 +44,8 @@ class SearchResultRepresenter
       comment: competency.comment,
       competency_text: competency.competency_text,
       external_id: competency.external_id,
-      hit_score:
+      hit_score:,
+      html_url: competency.html_url
     }
   end
 end
