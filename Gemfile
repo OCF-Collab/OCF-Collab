@@ -6,9 +6,10 @@ ruby '3.2.1'
 gem 'airbrake', '~> 13.0'
 gem 'bundler', '= 2.4.6'
 gem 'elasticsearch', '= 7.9.0'
-gem 'rails', '= 7.1.3.2'
+gem 'parallel', '~> 1.26'
 gem 'pg', '~> 1.4'
 gem 'puma', '~> 6.0'
+gem 'rails', '= 7.1.3.2'
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

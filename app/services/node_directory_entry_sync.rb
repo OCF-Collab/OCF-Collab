@@ -99,7 +99,7 @@ class NodeDirectoryEntrySync
   def update_competencies!
     container.competencies.delete_all
 
-    parsed_container[:competencies].map do |parsed_competency|
+    Parallel.each(parsed_container[:competencies]) do |parsed_competency|
       contextualizing_objects = ContextualizingObject.where(
         external_id: Array.wrap(parsed_competency[:contextualized_by])
       )
