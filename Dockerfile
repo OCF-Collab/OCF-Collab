@@ -1,11 +1,11 @@
-FROM ruby:3.2.1
+FROM ruby:3.2.5
 
 ENV APP_PATH /app/
 ENV GEM_HOME="/usr/local/bundle"
 ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 
 RUN apt-get update -qqy && \
-    apt-get install -y --no-install-recommends postgresql-client
+    apt-get install -y --no-install-recommends libtool libyaml-dev postgresql-client
 
 RUN mkdir $APP_PATH
 WORKDIR $APP_PATH
