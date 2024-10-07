@@ -8,12 +8,9 @@ class NodeDirectoryEntrySync
   end
 
   def sync!
-    Container.transaction do
-      update_contextualizing_objects!
-      update_container!
-      update_competencies!
-    end
-
+    update_contextualizing_objects!
+    update_container!
+    update_competencies!
     reindex
   rescue Aws::S3::Errors::NoSuchKey
     delete_existing_container!
@@ -22,24 +19,25 @@ class NodeDirectoryEntrySync
   private
 
   def container
-    @container ||= node_directory.
-      containers.
-      find_or_initialize_by(node_directory_s3_key: s3_key)
+    @container ||= node_directory
+      .containers
+      .find_or_initialize_by(external_id: parsed_container[:url])
   end
 
   def container_attributes
     {
-      external_id: parsed_container[:url],
-      type: parsed_container[:type],
-      name: parsed_container[:name],
-      description: parsed_container[:description],
-      concept_keywords: parsed_container[:concept_keywords],
       attribution_name: parsed_container[:attribution_name],
       attribution_url: parsed_container[:attribution_url],
-      provider_meta_model: parsed_container[:provider_meta_model],
       beneficiary_rights: parsed_container[:beneficiary_rights],
+      concept_keywords: parsed_container[:concept_keywords],
+      data_url: parsed_container[:data_url],
+      description: parsed_container[:description],
+      html_url: parsed_container[:html_url],
+      name: parsed_container[:name],
+      node_directory_s3_key: s3_key,
+      provider_meta_model: parsed_container[:provider_meta_model],
       registry_rights: parsed_container[:registry_rights],
-      data_url: parsed_container[:data_url]
+      type: parsed_container[:type]
     }
   end
 
@@ -52,9 +50,9 @@ class NodeDirectoryEntrySync
   end
 
   def parsed_container
-    @parsed_container ||= NodeDirectoryEntryParser.new(
-      entry_data: entry_data,
-    ).parsed_container
+    @parsed_container ||= NodeDirectoryEntryParser
+      .new(entry_data:)
+      .parsed_container
   end
 
   def reindex
@@ -116,6 +114,7 @@ class NodeDirectoryEntrySync
             competency_text: parsed_competency[:competency_text],
             contextualizing_objects:,
             external_id:,
+            html_url: parsed_competency[:html_url],
             keywords: parsed_competency[:keywords]
           )
       rescue => e

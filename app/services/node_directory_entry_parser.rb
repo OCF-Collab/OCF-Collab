@@ -7,19 +7,20 @@ class NodeDirectoryEntryParser
 
   def parsed_container
     {
-      url: container_data["id"],
-      type: container_data["type"],
-      name: container_data.dig("name").values.first,
-      description: container_data.dig("description")&.values&.first,
-      concept_keywords: container_data.dig("conceptKeyword")&.values&.first,
       attribution_name: container_data["attributionName"]&.values&.first,
       attribution_url: container_data["attributionURL"],
-      provider_meta_model: container_data["providerMetaModel"],
       beneficiary_rights: container_data["beneficiaryRights"],
-      registry_rights: container_data["registryRights"],
       competencies: parsed_competencies,
+      concept_keywords: container_data.dig("conceptKeyword")&.values&.first,
+      contextualizing_objects: parsed_contextualizing_objects,
       data_url: container_data["dataURL"],
-      contextualizing_objects: parsed_contextualizing_objects
+      description: container_data.dig("description")&.values&.first,
+      html_url: container_data["htmlURL"],
+      name: container_data.dig("name").values.first,
+      provider_meta_model: container_data["providerMetaModel"],
+      registry_rights: container_data["registryRights"],
+      type: container_data["type"],
+      url: container_data["id"]
     }
   end
 
@@ -32,11 +33,12 @@ class NodeDirectoryEntryParser
   def parsed_competencies
     competencies_data.map do |competency_data|
       {
+        comment: competency_data.dig("comment")&.values&.first&.join("\n"),
         competency_category: competency_data["competencyCategory"]&.values&.first,
         competency_label: competency_data["competencyLabel"]&.values&.first,
         competency_text: competency_data["competencyText"].values.first,
-        comment: competency_data.dig("comment")&.values&.first&.join("\n"),
         contextualized_by: competency_data["contextualizedBy"],
+        html_url: competency_data["htmlURL"],
         id: competency_data["id"],
         keywords: (competency_data["keywords"] || []).flat_map(&:values)
       }
