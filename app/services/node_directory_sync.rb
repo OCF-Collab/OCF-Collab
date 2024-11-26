@@ -15,6 +15,12 @@ class NodeDirectorySync
   def sync!
     delete_existing_containers! if delete_existing
     sync_page!
+    return if delete_existing
+
+    CleanupRemovedContainersJob.perform_later(
+      node_directory:,
+      tracker_id: tracker.id
+    )
   end
 
   private
@@ -25,8 +31,9 @@ class NodeDirectorySync
 
   def sync_page!(continuation_token: nil)
     page_sync = NodeDirectoryPageSync.new(
-      node_directory: node_directory,
-      continuation_token: continuation_token,
+      continuation_token:,
+      node_directory:,
+      tracker:
     )
 
     page_sync.sync!
@@ -36,20 +43,28 @@ class NodeDirectorySync
     end
   end
 
-  class NodeDirectoryPageSync
-    attr_reader :node_directory,
-      :continuation_token
+  def tracker
+    @tracker ||= NodeDirectorySyncTracker.new
+  end
 
-    def initialize(node_directory:, continuation_token:)
+  class NodeDirectoryPageSync
+    attr_reader :continuation_token, :node_directory, :tracker
+
+    def initialize(continuation_token:, node_directory:, tracker:)
       @node_directory = node_directory
       @continuation_token = continuation_token
+      @tracker = tracker
     end
 
     def sync!
       s3_objects.each do |s3_object|
+        s3_key = s3_object[:key]
+        tracker.pending_entries << s3_key
+
         NodeDirectoryEntrySyncJob.perform_later(
-          node_directory: node_directory,
-          s3_key: s3_object[:key],
+          node_directory:,
+          s3_key:,
+          tracker_id: tracker.id
         )
       end
     end
