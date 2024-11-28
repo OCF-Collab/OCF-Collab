@@ -7,7 +7,7 @@ default: &default
       asset_pipeline_enabled: false
       asset_pipeline_precompile: false
       operating_system: ubuntu2204
-      ruby_version: 3.2.5
+      ruby_version: 3.3.6
   redis:
       version: 7.4.0
 
