@@ -262,8 +262,12 @@ GEM
     rbtree3 (0.7.1)
     rdoc (6.8.1)
       psych (>= 4.0.0)
+    redis (5.3.0)
+      redis-client (>= 0.22.0)
     redis-client (0.22.2)
       connection_pool
+    redis-objects (1.7.0)
+      redis
     reline (0.5.11)
       io-console (~> 0.5)
     rexml (3.3.9)
@@ -320,6 +324,7 @@ DEPENDENCIES
   pry-rails (~> 0.3)
   puma (~> 6.5)
   rails (= 8.0.0)
+  redis-objects (~> 1.7)
   rexml (~> 3.3)
   searchkick (~> 5.4)
   sidekiq (~> 7.3)

@@ -1,13 +1,16 @@
 class NodeDirectoryEntrySync
-  attr_reader :node_directory,
-    :s3_key
+  attr_reader :node_directory, :s3_key, :tracker
 
-  def initialize(node_directory:, s3_key:)
+  def initialize(node_directory:, s3_key:, tracker:)
     @node_directory = node_directory
     @s3_key = s3_key
+    @tracker = tracker
   end
 
   def sync!
+    tracker.pending_entries.delete(s3_key)
+    tracker.processed_container_ids << parsed_container[:url]
+
     update_contextualizing_objects!
     update_container!
     update_competencies!
@@ -80,15 +83,18 @@ class NodeDirectoryEntrySync
 
   def update_codes!(parsed_categories)
     parsed_categories.map do |parsed_category|
+      name = parsed_category[:name] || ""
+      external_id = parsed_category[:in_code_set] || name
+
       code_set = CodeSet
-        .create_with(name: parsed_category[:in_code_set])
-        .find_or_create_by!(external_id: parsed_category[:in_code_set])
+        .create_with(name: external_id)
+        .find_or_create_by!(external_id:)
 
       code_set
         .codes
         .create_with(
           description: parsed_category[:description],
-          name: parsed_category[:name] || ""
+          name:
         )
         .find_or_create_by!(value: parsed_category[:code_value])
     end
@@ -136,16 +142,17 @@ class NodeDirectoryEntrySync
       external_id = parsed_contextualizing_object[:id]
       data_url = parsed_contextualizing_object[:data_url] || external_id
 
-      ContextualizingObject
-        .create_with(
-          coded_notation: parsed_contextualizing_object[:coded_notation],
-          codes: update_codes!(parsed_contextualizing_object[:category]),
-          data_url:,
-          description: parsed_contextualizing_object[:description],
-          name: parsed_contextualizing_object[:name] || "",
-          type: parsed_contextualizing_object[:type]
-        )
-        .find_or_create_by!(external_id:)
+      contextualizing_object = ContextualizingObject
+        .find_or_initialize_by(external_id:)
+
+      contextualizing_object.update!(
+        coded_notation: parsed_contextualizing_object[:coded_notation],
+        codes: update_codes!(parsed_contextualizing_object[:category]).compact,
+        data_url:,
+        description: parsed_contextualizing_object[:description],
+        name: parsed_contextualizing_object[:name] || "",
+        type: parsed_contextualizing_object[:type]
+      )
     end
   end
 end
