@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.3.6'
 
+gem 'activerecord-import', '~> 2.0'
 gem 'airbrake', '~> 13.0'
 gem 'aws-sdk-s3', '~> 1.174'
 gem 'bundler', '= 2.5.22'

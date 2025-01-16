@@ -30,10 +30,18 @@ class Competency < ApplicationRecord
   validates :competency_text, presence: true
 
   delegate :attribution_name, :description, :external_id, :name, :type,
+           allow_nil: true,
            prefix: true,
            to: :container
 
-  before_save :assign_all_text
+  def assign_all_text
+    self.all_text = [
+      competency_text,
+      container_name,
+      container_description,
+      container_attribution_name
+    ].join(' ').squish
+  end
 
   def search_data
     {
@@ -74,14 +82,5 @@ class Competency < ApplicationRecord
       .each_with_object(nil)
       .to_h
       .merge(data)
-  end
-
-  def assign_all_text
-    self.all_text = [
-      competency_text,
-      container_name,
-      container_description,
-      container_attribution_name
-    ].join(' ')
   end
 end

@@ -53,6 +53,8 @@ GEM
       activemodel (= 8.0.0)
       activesupport (= 8.0.0)
       timeout (>= 0.4.0)
+    activerecord-import (2.0.0)
+      activerecord (>= 4.2)
     activestorage (8.0.0)
       actionpack (= 8.0.0)
       activejob (= 8.0.0)
@@ -312,6 +314,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activerecord-import (~> 2.0)
   airbrake (~> 13.0)
   aws-sdk-s3 (~> 1.174)
   bundler (= 2.5.22)
