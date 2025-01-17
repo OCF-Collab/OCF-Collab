@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   def codes
     render json: ContextualizingObject
       .select("type, array_agg(DISTINCT jsonb_build_object('name', name, 'value', coded_notation)) AS values")
+      .joins(:competencies)
       .where(type: %i[industry occupation])
       .where.not(coded_notation: "")
       .group(:type)
