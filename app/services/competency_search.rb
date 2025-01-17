@@ -43,8 +43,6 @@ class CompetencySearch
         .on(competencies_table[:id].eq(competency_contextualizing_objects_table[:competency_id]))
         .join(contextualizing_objects_table)
         .on(competency_contextualizing_objects_table[:contextualizing_object_id].eq(contextualizing_objects_table[:id]))
-        .join(contextualizing_object_codes_table)
-        .on(contextualizing_objects_table[:id].eq(contextualizing_object_codes_table[:contextualizing_object_id]))
 
       if industries.any?
         competencies = competencies
@@ -123,10 +121,6 @@ class CompetencySearch
 
   def containers_table
     Container.arel_table
-  end
-
-  def contextualizing_object_codes_table
-    ContextualizingObjectCode.arel_table
   end
 
   def contextualizing_objects_table
